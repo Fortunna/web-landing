@@ -3,6 +3,8 @@ import React, { useCallback, useEffect } from "react";
 import PageLoading from "./loading";
 import { getUserSession } from "@/utils/auth";
 import { AuthActionTypes } from "@/reducers/auth";
+import Header from "./header";
+import Sidebar from "./sidebar";
 
 type componentProps = {
   children: React.ReactNode;
@@ -34,17 +36,30 @@ export default function DashboardLayout({ children }: componentProps) {
     }
   }, [authDispatch]);
 
-  useEffect(() => {
-    handleGetSession();
-  }, [handleGetSession]);
+  // useEffect(() => {
+  //   handleGetSession();
+  // }, [handleGetSession]);
 
-  if (isLoading) {
-    return <PageLoading />;
-  }
+  // if (isLoading) {
+  //   return <PageLoading />;
+  // }
 
-  if (!isLoading && !isLoggedIn) {
-    location.href = "/auth/login";
-  }
+  // if (!isLoading && !isLoggedIn) {
+  //   location.href = "/auth/login";
+  // }
 
-  return <div>{children}</div>;
+  return (
+    <div className="grid lg:grid-cols-[18%_auto] gap-0 bg-theme-bg bg-cover   h-screen w-screen overflow-hidden">
+      <div className="">
+        <Sidebar />
+      </div>
+      <div>
+        <Header />
+        <div className="overflow-y-auto h-screen pb-[64px]">
+          <div className="mb-5"></div>
+          {children}
+        </div>
+      </div>
+    </div>
+  );
 }

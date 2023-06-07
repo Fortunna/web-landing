@@ -1,0 +1,30 @@
+.tab-component {
+  li {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      border-radius: 4px;
+      background: linear-gradient(
+        98.88deg,
+        #8c01fa 31%,
+        #eb08a4 102.28%
+      ) !important;
+    }
+    &:hover {
+      &::after {
+        transition: all 0.3s ease-in-out;
+        width: 100% !important;
+      }
+    }
+    &.current {
+      &::after {
+        transition: all 0.3s ease-in-out;
+        width: 100% !important;
+      }
+    }
+  }
+}

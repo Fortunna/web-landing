@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Aeonik Pro";
+    src: url(/font/AeonikPro/AeonikProTRIAL-Regular.otf);
+  }
+  @font-face {
+    font-family: "Aeonik Pro Bold";
+    src: url(/font/ProximaNova/AeonikProTRIAL-Bold.otf);
+  }
+  @font-face {
+    font-family: "Poppins";
+    src: url(/font/Poppins/Poppins-Regular.ttf);
+  }
+  @font-face {
+    font-family: "Poppins Light";
+    src: url(/font/Poppins/Poppins-Light.ttf);
+  }
+
+  @font-face {
+    font-family: "Poppins Semi Bold";
+    src: url(/font/Poppins/Poppins-Medium.ttf);
+  }
+
+  @font-face {
+    font-family: "Poppins Bold";
+    src: url(/font/Poppins/Poppins-Bold.ttf);
+  }
+  @font-face {
+    font-family: "DM Sans";
+    src: url(/font/DMSans/DMSans-Regular.ttf);
+  }
+  @font-face {
+    font-family: "DM Sans Bold";
+    src: url(../../public/font/DMSans/DMSans-Bold.ttf);
+  }
+
+  html,
+  body {
+    font-family: Aeonik Pro;
+    scroll-behavior: smooth !important;
+    min-width: 100vw;
+  }
+}
+
+.sidebar {
+  ul {
+    li {
+      a {
+        &:hover {
+          span {
+            color: #fff;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+        &.main {
+          &:hover {
+            svg {
+              height: 40px;
+              transition: all 0.3s ease-out;
+              width: 40px;
+            }
+          }
+        }
+        &.submenu {
+          &:hover {
+            svg:not(.no-animate) {
+              height: 35px;
+              transition: all 0.3s ease-out;
+              width: 35px;
+            }
+            svg.no-animate {
+              path: {
+                display: none !important;
+                fill: #de1efd !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
