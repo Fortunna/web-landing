@@ -35,7 +35,7 @@
   }
   @font-face {
     font-family: "DM Sans Bold";
-    src: url(../../public/font/DMSans/DMSans-Bold.ttf);
+    src: url(/font/DMSans/DMSans-Bold.ttf);
   }
 
   html,
@@ -54,6 +54,19 @@
           span {
             color: #fff;
             transition: all 0.3s ease-in-out;
+          }
+        }
+        &.active {
+          span {
+            color: #fff;
+            transition: all 0.3s ease-in-out;
+          }
+          &.main {
+            svg {
+              height: 40px;
+              transition: all 0.3s ease-out;
+              width: 40px;
+            }
           }
         }
         &.main {

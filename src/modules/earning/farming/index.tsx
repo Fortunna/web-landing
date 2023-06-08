@@ -1,3 +1,4 @@
+import { AnimateWhileInView } from "@/animations";
 import Button from "@/components/button";
 import PageWrapper from "@/components/pageWrapper";
 import Typography from "@/components/typography";
@@ -107,9 +108,11 @@ export default function FramingModule() {
       <PageWrapper>
         {[0, 1, 2, 3, 4, 5].map((_list, index) => {
           return (
-            <div className="mb-[32px]">
-              <FarmList key={index} />
-            </div>
+            <AnimateWhileInView key={index}>
+              <div className="mb-[32px] overflow-hidden relative">
+                <FarmList />
+              </div>
+            </AnimateWhileInView>
           );
         })}
       </PageWrapper>

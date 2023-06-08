@@ -1,10 +1,12 @@
+import { AnimateFadeIn } from "@/animations";
 import Divider from "@/components/divider";
 import AppLogo from "@/components/logo";
 import Typography from "@/components/typography";
 import classNames from "classnames";
 import { BOTTOM_MENU_DATA, TOP_MENU_DATA } from "config/theme/sidebar";
 import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 
 const MenuItem = ({
   data,
@@ -18,14 +20,17 @@ const MenuItem = ({
   to: string;
 }) => {
   const classStyles = classNames({
-    "hover:border-secondary  ": type == "main" || active,
+    "hover:border-secondary  ": type == "main" && !active,
+    "!border-secondary": type == "main" && active,
   });
 
   return (
     <li>
       <Link
         href={to}
-        className={`flex ps-2 border-l-2   cursor-pointer hover:border-l-2 border-transparent ${type}   items-center ${classStyles}`}
+        className={`flex ps-2 border-l-2  ${
+          active ? "active" : ""
+        }  cursor-pointer hover:border-l-2 border-transparent ${type}   items-center ${classStyles}`}
       >
         {type == "submenu" ? (
           <div>
@@ -44,7 +49,7 @@ const MenuItem = ({
             </svg>
           </div>
         ) : null}
-        <div className="w-[54px] flex justify-center items-center h-[54px]">
+        <div className={`w-[54px] flex justify-center items-center h-[54px] `}>
           {data.icon}
         </div>
 
@@ -75,6 +80,31 @@ const BottomMenuItem = ({
   );
 };
 export default function Sidebar() {
+  const [asPath, setAsPath] = useState("/");
+  const router = useRouter();
+
+  const menuIsActive = (link: string) => {
+    const getLink = asPath.split("/")[1];
+    let active = link.replace("/", "") == getLink;
+    return active;
+  };
+
+  const SubMenuIsActive = (mainLink: string, link: string) => {
+    const mainIsActive = menuIsActive(mainLink);
+    if (!mainIsActive) return false;
+
+    const getLink = asPath.split("?")[0];
+    let active = getLink.includes(link);
+
+    return active;
+  };
+
+  useEffect(() => {
+    if (router.isReady) {
+      setAsPath(router.asPath);
+    }
+  }, [router]);
+
   return (
     <div className="bg-background overflow-y-auto pb-10 sidebar flex flex-col justify-between h-screen">
       <div>
@@ -89,22 +119,27 @@ export default function Sidebar() {
                 <div key={index} className="">
                   <MenuItem
                     to={_data.to}
-                    active={false}
+                    active={menuIsActive(_data.to)}
                     type="main"
                     data={_data}
                   />
 
-                  {_data?.menu ? (
+                  {_data?.menu && menuIsActive(_data.to) ? (
                     <div className="ps-9">
                       {_data?.menu?.map((_subMenu, _index) => {
                         return (
-                          <div key={_index + index.toString()}>
-                            <MenuItem
-                              to={_subMenu.to}
-                              active={false}
-                              type="submenu"
-                              data={_subMenu}
-                            />
+                          <div
+                            className="relative overflow-hidden"
+                            key={_index + index.toString()}
+                          >
+                            <AnimateFadeIn>
+                              <MenuItem
+                                to={_subMenu.to}
+                                active={SubMenuIsActive(_data.to, _subMenu.to)}
+                                type="submenu"
+                                data={_subMenu}
+                              />
+                            </AnimateFadeIn>
                           </div>
                         );
                       })}

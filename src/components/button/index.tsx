@@ -9,6 +9,7 @@ type componentProps = {
   rounded?: boolean;
   className?: string;
   size?: "default" | "small";
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 export default function Button({
   outline = false,
@@ -17,6 +18,7 @@ export default function Button({
   rightComponent,
   rounded = false,
   size = "default",
+  onClick,
   theme = "white",
 }: componentProps) {
   const classRoundedStyles = classNames({
@@ -38,6 +40,7 @@ export default function Button({
   });
   return (
     <button
+      onClick={onClick}
       className={`
       flex items-center justify-center
     

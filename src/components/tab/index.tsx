@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Typography from "../typography";
 import styles from "./styles.module.scss";
 import { useRouter } from "next/router";
-import AnimateFadeIn from "@/animations/fadeIn";
+import { AnimateFadeIn } from "@/animations/index";
 import { AnimatePresence } from "framer-motion";
 
 type dataType = {

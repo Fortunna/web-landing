@@ -26,7 +26,7 @@ export default function Typography({
     "text-caption-2 text-white font-dm-sans ": variant == "body2",
     "text-caption-3 text-white font-poppins ": variant == "body3",
     "text-lg text-white font-poppins-semi-bold": variant == "heading",
-    "text-heading text-white dm-sans-bold": variant == "title",
+    "text-heading text-white !font-dm-sans-bold": variant == "title",
     "text-sub-heading  text-white font-poppins-semi-bold ":
       variant == "subtitle",
   });

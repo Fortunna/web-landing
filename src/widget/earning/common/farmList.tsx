@@ -12,7 +12,7 @@ type componentProps = {
     imaage: string;
   };
 };
-export default function FarmList({}: componentProps) {
+export default function FarmList({}: any) {
   return (
     <div
       style={{ backgroundColor: "rgba(27, 28, 32, 0.6)" }}

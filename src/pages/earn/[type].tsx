@@ -27,6 +27,12 @@ export default function HomePage() {
           <div>
             <FramingModule />
           </div>
+          <div>
+            <FramingModule />
+          </div>
+          <div>
+            <FramingModule />
+          </div>
         </TabComponent>
       </PageWrapper>
       <div className="mt-6"></div>
