@@ -9,7 +9,7 @@ type componentProps = {
   rounded?: boolean;
   className?: string;
   size?: "default" | "small";
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 export default function Button({
   outline = false,

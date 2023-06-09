@@ -106,15 +106,17 @@ export default function FramingModule() {
       <div className="mt-[32px]"></div>
 
       <PageWrapper>
-        {[0, 1, 2, 3, 4, 5].map((_list, index) => {
-          return (
-            <AnimateWhileInView key={index}>
-              <div className="mb-[32px] overflow-hidden relative">
-                <FarmList />
-              </div>
-            </AnimateWhileInView>
-          );
-        })}
+        <>
+          {[0, 1, 2, 3, 4, 5].map((_list, index) => {
+            return (
+              <AnimateWhileInView key={index}>
+                <div className="mb-[32px] overflow-hidden relative">
+                  <FarmList />
+                </div>
+              </AnimateWhileInView>
+            );
+          })}
+        </>
       </PageWrapper>
     </div>
   );

@@ -1,16 +1,12 @@
-import React from "react";
-import { redirect } from "next/navigation";
-import { GetStaticProps } from "next";
+import { useRouter } from "next/router";
+import React, { useEffect } from "react";
 
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    redirect: {
-      permanent: false,
-      destination: "/earn/farms",
-    },
-  };
-};
+export default function EARN() {
+  const router = useRouter();
 
-export default async function index() {
-  return <div>index</div>;
+  useEffect(() => {
+    router.push("/earn/farms");
+  }, []);
+
+  return <div>EARN</div>;
 }
