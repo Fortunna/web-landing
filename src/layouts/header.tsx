@@ -1,8 +1,24 @@
 import Button from "@/components/button";
 import Typography from "@/components/typography";
-import React from "react";
+import React, { useState } from "react";
 
 export default function Header() {
+  const [account, setAccount] = useState("");
+
+  const handleConnect = async () => {
+    try {
+      let _window: any = window;
+      let provider = _window.ethereum;
+      if (provider) {
+        if (typeof provider !== "undefined") {
+          const response: string[] = await provider.request({
+            method: "eth_requestAccounts",
+          });
+          setAccount(response[0]);
+        }
+      }
+    } catch (error) {}
+  };
   return (
     <header className="flex flex-row px-8 py-4 justify-between">
       <div className="flex align-center">
@@ -80,7 +96,18 @@ export default function Header() {
             />
           </svg>
         </div>
-        <Button className="font-dm-sans-bold" rounded label="Connect Wallet" />
+        <Button
+          onClick={handleConnect}
+          className="font-dm-sans-bold"
+          rounded
+          label={
+            account
+              ? account.slice(0, 4) +
+                "..." +
+                account.slice(account.length - 4, account.length)
+              : "Connect wallet"
+          }
+        />
       </div>
     </header>
   );
