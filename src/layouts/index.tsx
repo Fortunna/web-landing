@@ -56,8 +56,9 @@ export default function DashboardLayout({ children }: componentProps) {
       <div>
         <Header />
         <div className="overflow-y-auto h-screen pb-[64px]">
-          <div className="mb-5"></div>
+          <div className="mb-[20px]"></div>
           {children}
+          <div className="mb-[50px]"></div>
         </div>
       </div>
     </div>

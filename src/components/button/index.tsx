@@ -3,12 +3,12 @@ import React from "react";
 
 type componentProps = {
   outline?: boolean;
-  theme?: "white" | "secondary";
+  theme?: "white" | "secondary" | "dark";
   label: string;
   rightComponent?: React.JSX.Element;
   rounded?: boolean;
   className?: string;
-  size?: "default" | "small";
+  size?: "default" | "small" | "big";
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 export default function Button({
@@ -32,11 +32,13 @@ export default function Button({
     "bg-secondary-gradient text-white border-[1px]  border-black":
       theme == "secondary" && !outline,
     "border-[#AC6AFF] text-white border-[3px]": theme == "secondary" && outline,
+    "border-neutrals-6 bg-#212531 text-white border-[1px]": theme == "dark",
   });
 
   const sizeStyles = classNames({
     "px-[16px] py-[11px]    text-[14px]": size == "default",
     "px-[15px] py-[10px] text-[12px]": size == "small",
+    "px-[16px] h-[54px] text-caption-3": size == "big",
   });
   return (
     <button
