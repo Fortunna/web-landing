@@ -3,9 +3,13 @@ import Card from "@/components/card";
 import FormGroup from "@/components/form/form-group";
 import Radio from "@/components/radio";
 import Typography from "@/components/typography";
-import React from "react";
+import React, { MouseEventHandler } from "react";
 
-export default function PoolParameters() {
+type componentProps = {
+  onNext: MouseEventHandler<HTMLButtonElement>;
+  onPrevious: MouseEventHandler<HTMLButtonElement>;
+};
+export default function PoolParameters({ onNext, onPrevious }: componentProps) {
   return (
     <div>
       <Card>
@@ -121,12 +125,19 @@ export default function PoolParameters() {
             </div>
           </div>
           <div className="flex mt-8 justify-center">
-            <Button theme="dark" className="px-12" size="big" label="Back" />
+            <Button
+              onClick={onPrevious}
+              theme="dark"
+              className="!px-12"
+              size="big"
+              label="Back"
+            />
             <div className="mx-4"></div>
             <Button
               theme="secondary"
-              className="px-12"
+              className="!px-12"
               size="big"
+              onClick={onNext}
               label="Next"
             />
           </div>

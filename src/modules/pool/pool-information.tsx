@@ -3,9 +3,12 @@ import Card from "@/components/card";
 import FormGroup from "@/components/form/form-group";
 import Radio from "@/components/radio";
 import Typography from "@/components/typography";
-import React from "react";
+import React, { MouseEventHandler } from "react";
 
-export default function PoolInformation() {
+type componentProps = {
+  onNext: MouseEventHandler<HTMLButtonElement>;
+};
+export default function PoolInformation({ onNext }: componentProps) {
   return (
     <div>
       <Card>
@@ -139,8 +142,9 @@ export default function PoolInformation() {
 
           <div className="flex justify-center">
             <Button
+              onClick={onNext}
               theme="secondary"
-              className="px-10"
+              className="!px-10"
               size="big"
               label="Create Pool"
               rightComponent={

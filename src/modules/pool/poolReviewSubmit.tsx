@@ -3,9 +3,18 @@ import Card from "@/components/card";
 import FormGroup from "@/components/form/form-group";
 import Radio from "@/components/radio";
 import Typography from "@/components/typography";
-import React from "react";
+import classNames from "classnames";
+import React, { MouseEventHandler } from "react";
 
-export default function CreatePoolReview() {
+type componentProps = {
+  // onNext: MouseEventHandler<HTMLButtonElement>;
+  onPrevious: MouseEventHandler<HTMLButtonElement>;
+};
+
+export default function CreatePoolReview({
+  // onNext,
+  onPrevious,
+}: componentProps) {
   const data = [
     {
       name: "Pool Name",
@@ -162,8 +171,42 @@ export default function CreatePoolReview() {
     },
   ];
 
+  const DetailsPreview = ({
+    name,
+    value,
+    sub = false,
+  }: {
+    name: string;
+    sub?: boolean;
+    value: null | string;
+  }) => {
+    const positionStyles = classNames({
+      "ps-[50px]": sub,
+    });
+    return (
+      <>
+        <div className={`flex py-[15px] justify-between ${positionStyles}`}>
+          <Typography
+            className="!font-aeonik-pro !text-light-white"
+            variant="body2"
+            label={name}
+          />
+          {value ? (
+            <Typography
+              variant="body2"
+              className="!font-aeonik-pro-bold !text-light-4"
+              label={value}
+            />
+          ) : null}
+        </div>
+        <div className={positionStyles}>
+          <Line />
+        </div>
+      </>
+    );
+  };
   const Line = () => {
-    return <div className="h-1 bg-harsh"></div>;
+    return <div className="h-[1px] bg-harsh"></div>;
   };
   return (
     <div>
@@ -171,26 +214,26 @@ export default function CreatePoolReview() {
         <>
           {data.map((_data, index) => {
             return (
-              <div className="py-[8px]" key={index}>
-                <div className="flex justify-between">
-                  <Typography
-                    className="!font-aeonik-pro !text-light-white"
-                    variant="body2"
-                    label={_data?.name}
-                  />
-                  {_data?.value ? (
-                    <Typography
-                      variant="body2"
-                      className="!font-aeonik-pro-bold !text-light-4"
-                      label={_data?.value}
-                    />
-                  ) : null}
-                </div>
-                <Line />
+              <div className="" key={index}>
+                <DetailsPreview
+                  value={_data?.value || ""}
+                  name={_data?.name || ""}
+                />
+                {_data?.sub?.map((_sub, index) => {
+                  return (
+                    <div key={index}>
+                      <DetailsPreview
+                        sub={true}
+                        value={_sub?.value || ""}
+                        name={_sub?.name || ""}
+                      />
+                    </div>
+                  );
+                })}
               </div>
             );
           })}
-          <div className="text-center mt-8 ">
+          <div className="text-center mt-[48px] ">
             <div>
               <Typography
                 variant="body3"
@@ -199,13 +242,20 @@ export default function CreatePoolReview() {
               />
             </div>
             <div className="flex justify-center">
-              <Button theme="dark" className="px-12" size="big" label="Back" />
+              <Button
+                onClick={onPrevious}
+                theme="dark"
+                className="!px-12"
+                size="big"
+                label="Back"
+              />
               <div className="mx-4"></div>
               <Button
                 theme="secondary"
-                className="px-12"
+                className="!px-12"
+                // onClick={onNext}
                 size="big"
-                label="Next"
+                label="Submit"
               />
             </div>
           </div>
