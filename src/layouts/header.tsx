@@ -20,7 +20,7 @@ export default function Header() {
     } catch (error) {}
   };
   return (
-    <header className="flex flex-row px-8 py-4 justify-between">
+    <header className="flex flex-row lg:px-8 md:px-5 px-3 py-4 justify-between">
       <div className="flex align-center">
         <Typography
           use="div"
@@ -34,7 +34,7 @@ export default function Header() {
           label="$0.96"
         />
 
-        <div className="bg-deep-secondary px-[10px] rounded-2xl py-[5px] flex items-center justify-center">
+        <div className="bg-deep-secondary md:flex hidden px-[10px] rounded-2xl py-[5px]  items-center justify-center">
           <svg
             width={24}
             height={24}
@@ -76,9 +76,9 @@ export default function Header() {
           />
         </div>
       </div>
-      <div className="flex items-center">
-        <div className="flex items-center mr-10">
-          <Typography variant="body2" label="EN/USD" />
+      <div className="flex items-center ">
+        <div className="flex items-center mr-10 md:block hidden">
+          <Typography variant="body2" className="" label="EN/USD" />
 
           <svg
             width={6}

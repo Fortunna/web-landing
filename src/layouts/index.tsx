@@ -49,8 +49,8 @@ export default function DashboardLayout({ children }: componentProps) {
   // }
 
   return (
-    <div className="grid lg:grid-cols-[18%_auto] gap-0 bg-theme-bg bg-cover   h-screen w-screen overflow-hidden">
-      <div className="">
+    <div className="grid md:grid-cols-[18%_auto] gap-0 bg-theme-bg bg-cover   h-screen w-screen overflow-hidden">
+      <div className="hidden md:block">
         <Sidebar />
       </div>
       <div>

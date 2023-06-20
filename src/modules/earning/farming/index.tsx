@@ -9,7 +9,7 @@ const AccountBalance = () => {
   return (
     <div>
       <div>
-        <div className="flex justify-end">
+        <div className="flex md:mt-0 mt-5 justify-end">
           <div>
             <div>
               <Typography
@@ -92,7 +92,7 @@ export default function FramingModule() {
         {headers.map((data, index) => {
           return (
             <Button
-              className="mr-4"
+              className="mr-4 md:mt-0 mt-4"
               size="small"
               outline
               rounded

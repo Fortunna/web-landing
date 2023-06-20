@@ -181,11 +181,13 @@ export default function CreatePoolReview({
     value: null | string;
   }) => {
     const positionStyles = classNames({
-      "ps-[50px]": sub,
+      "lg:ps-[50px] md:ps-[35px] ps-[20px]": sub,
     });
     return (
       <>
-        <div className={`flex py-[15px] justify-between ${positionStyles}`}>
+        <div
+          className={`flex flex-wrap py-[15px] justify-between ${positionStyles}`}
+        >
           <Typography
             className="!font-aeonik-pro !text-light-white"
             variant="body2"

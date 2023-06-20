@@ -36,7 +36,7 @@ export default function CreatePoolReward({
             label="Rewards Token"
           />
 
-          <div className="grid grid-cols-2 gap-24">
+          <div className="md:grid grid-cols-2 gap-24">
             <div>
               <Typography
                 variant="semi-heading"

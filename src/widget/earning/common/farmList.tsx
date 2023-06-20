@@ -16,9 +16,9 @@ export default function FarmList({}: any) {
   return (
     <div
       style={{ backgroundColor: "rgba(27, 28, 32, 0.6)" }}
-      className="lg:p-[32px]"
+      className="lg:p-[32px] p-[20px]"
     >
-      <div className="flex flex-row justify-between">
+      <div className="lg:flex lg:flex-row justify-between">
         <div className="w-[70%]">
           <div className="flex flex-row items-center">
             <Image
@@ -31,7 +31,7 @@ export default function FarmList({}: any) {
             <Typography variant="subtitle" label="stkBNB/BNB" />
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-10 mt-[32px] ">
+          <div className="lg:grid lg:grid-cols-2 gap-10 mt-[32px] ">
             <div>
               {" "}
               <Typography
@@ -50,7 +50,7 @@ export default function FarmList({}: any) {
                 <Typography variant="heading" label="Pancakeswap V2" />
               </div>
             </div>
-            <div>
+            <div className="md:my-0 my-4">
               <Typography
                 variant="body3"
                 className="!font-poppins-light text-light-2"
@@ -64,7 +64,7 @@ export default function FarmList({}: any) {
           </div>
         </div>
         <div className="flex flex-col-reverse">
-          <div>
+          <div className="md:block flex ">
             <Button
               theme="secondary"
               label="Swap"
@@ -98,12 +98,12 @@ export default function FarmList({}: any) {
                   </defs>
                 </svg>
               }
-              className="!font-poppins-light w-[170px]"
+              className="!font-poppins-light md:mr-0 mr-3 md:w-[170px]"
             />
             <div className="mt-3"></div>
             <Button
               theme="secondary"
-              className="!font-poppins-light w-[170px]"
+              className="!font-poppins-light md:w-[170px]"
               outline
               rightComponent={
                 <svg

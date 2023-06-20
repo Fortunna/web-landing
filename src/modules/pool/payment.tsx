@@ -17,7 +17,7 @@ export default function CreatePoolPayment({
     <div>
       <Card>
         <>
-          <div className="grid grid-cols-2 gap-24">
+          <div className="md:grid grid-cols-2 gap-24">
             <div>
               <div className="">
                 <Typography

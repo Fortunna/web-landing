@@ -14,7 +14,7 @@ export default function PoolParameters({ onNext, onPrevious }: componentProps) {
     <div>
       <Card>
         <>
-          <div className="grid grid-cols-2 gap-24">
+          <div className="md:grid grid-cols-2 gap-24">
             <FormGroup
               containerClassName="w-full mb-4"
               inputClassName="w-full"
@@ -30,7 +30,7 @@ export default function PoolParameters({ onNext, onPrevious }: componentProps) {
               inputPlaceholder="2022-05-01T16:43(UTC)"
             />
           </div>
-          <div className="grid grid-cols-2 gap-24">
+          <div className="md:grid grid-cols-2 gap-24">
             <FormGroup
               containerClassName="w-full mb-4"
               inputClassName="w-full"
@@ -61,7 +61,7 @@ export default function PoolParameters({ onNext, onPrevious }: componentProps) {
               label="You can enable/disable early withdrawal"
             />
           </div>
-          <div className="grid grid-cols-2 gap-24">
+          <div className="md:grid grid-cols-2 gap-24">
             <div>
               <FormGroup
                 containerClassName="w-full  mb-4"
@@ -81,7 +81,7 @@ export default function PoolParameters({ onNext, onPrevious }: componentProps) {
               />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-24">
+          <div className="md:grid grid-cols-2 gap-24">
             <div>
               <FormGroup
                 containerClassName="w-full  mb-4"

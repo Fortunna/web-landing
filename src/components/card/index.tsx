@@ -12,5 +12,9 @@ export default function Card({
   const bgStyles = classNames({
     "bg-transparent-color": theme == "transparent",
   });
-  return <div className={`${bgStyles} p-[24px]`}>{children}</div>;
+  return (
+    <div className={`${bgStyles} lg:p-[24px] md:p-[20px] relative p-[16px]`}>
+      {children}
+    </div>
+  );
 }

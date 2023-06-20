@@ -37,7 +37,7 @@ export default function PoolInformation({ onNext }: componentProps) {
             className="!text-neutrals-5 my-7 !font-aeonik-pro-bold"
             label={"Token Pair Information"}
           />
-          <div className="grid grid-cols-2 gap-24">
+          <div className="md:grid grid-cols-2 gap-24">
             <div>
               <Typography
                 variant="semi-heading"
