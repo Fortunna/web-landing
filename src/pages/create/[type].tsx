@@ -42,7 +42,7 @@ export default function Create() {
         <PageWrapper>
           <>
             <Typography
-              label="Create Pool"
+              label="Create Farm"
               variant="title"
               className="mb-[20px]"
             />

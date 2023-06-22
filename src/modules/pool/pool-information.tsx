@@ -146,7 +146,7 @@ export default function PoolInformation({ onNext }: componentProps) {
               theme="secondary"
               className="!px-10"
               size="big"
-              label="Create Pool"
+              label="Create Farm"
               rightComponent={
                 <svg
                   className="ms-1"
