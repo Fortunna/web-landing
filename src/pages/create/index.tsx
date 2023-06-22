@@ -5,7 +5,7 @@ export default function EARN() {
   const router = useRouter();
 
   useEffect(() => {
-    router.push("/create/pool");
+    router.push("/create/farm");
   }, []);
 
   return <div>EARN</div>;
