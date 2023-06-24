@@ -49,6 +49,27 @@
     font-family: "SF Pro Text Bold";
     src: url(/font/SF-Pro-Text/SF-Pro-Text-Bold.otf);
   }
+  @font-face {
+    font-family: "Inter";
+    src: url(/font/Inter/static/Inter-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: "Inter Light";
+    src: url(/font/Inter/static/Inter-Light.ttf);
+  }
+  @font-face {
+    font-family: "IBM Plex Mono";
+    src: url(/font/IBM-Plex-Mono/IBMPlexMono-Regular.ttf);
+  }
+  @font-face {
+    font-family: "IBM Plex Mono Semi Bold";
+    src: url(/font/IBM-Plex-Mono/IBMPlexMono-SemiBold.ttf);
+  }
+  @font-face {
+    font-family: "Noto Sans";
+    src: url(/font/Noto_Sans/NotoSans-Regular.ttf);
+  }
 
   html,
   body {
@@ -112,4 +133,10 @@
 
 .transition {
   // transition: all 0.3s ease-in-out !important;
+}
+
+.allocation-chart {
+  .highcharts-container {
+    height: 250px !important;
+  }
 }

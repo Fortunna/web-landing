@@ -6,6 +6,7 @@ type componentProps = {
   theme?: "white" | "secondary" | "dark";
   label: string;
   rightComponent?: React.JSX.Element;
+  leftComponent?: React.JSX.Element;
   rounded?: boolean;
   className?: string;
   size?: "default" | "small" | "big";
@@ -16,6 +17,7 @@ export default function Button({
   label,
   className,
   rightComponent,
+  leftComponent,
   rounded = false,
   size = "default",
   onClick,
@@ -54,6 +56,7 @@ export default function Button({
       ${classRoundedStyles}
     `}
     >
+      {leftComponent}
       {label}
       {rightComponent}
     </button>

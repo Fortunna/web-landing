@@ -5,6 +5,7 @@ import { createElement } from "react";
 type ComponentProps = {
   use?: "h1" | "h2" | "h3" | "p" | "a" | "span" | "div";
   variant?:
+    | "big-title"
     | "title"
     | "subtitle"
     | "semi-heading"
@@ -36,6 +37,7 @@ export default function Typography({
     "text-caption-3 text-white font-poppins ": variant == "body3",
     "text-lg text-white font-poppins-semi-bold": variant == "heading",
     "text-heading text-white !font-dm-sans-bold": variant == "title",
+    "!text-[50px] font-aeonik-pro font-bold text-white": variant == "big-title",
     "text-sub-heading  text-white font-poppins-semi-bold ":
       variant == "subtitle",
     "text-semi-heading  text-white font-aeonik-pro-bold":
