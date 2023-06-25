@@ -49,16 +49,20 @@ export function AnimateWhileInView({
 
 export const RenderWhenInView = ({
   children,
+  className,
+  triggerOnce = true,
 }: {
   children: React.ReactNode;
+  className?: string;
+  triggerOnce?: boolean;
 }) => {
   const [ref, inView] = useInView({
-    triggerOnce: true, // Only trigger once when the item comes into view
+    triggerOnce: triggerOnce, // Only trigger once when the item comes into view
     threshold: 0, // Define the visibility threshold
   });
 
   return (
-    <div className="inline-block" ref={ref}>
+    <div className={`inline-block ${className}`} ref={ref}>
       {inView ? children : null}
     </div>
   );

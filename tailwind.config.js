@@ -21,6 +21,7 @@ module.exports = {
         "transparent-1": "rgba(217, 217, 217, 0.1)",
         "transparent-2": "rgba(202, 198, 221, 0.10)",
         "transparent-3": "rgba(255, 255, 255, 0.10)",
+        "transparent-error": "rgba(255, 59, 48, 0.10)",
         "transparent-secondary": "rgba(70, 25, 78, 0.80)",
         "light-2": "#ECECEC",
         "light-3": "#E6E8EC",
@@ -40,6 +41,8 @@ module.exports = {
         "neutrals-6": "#343745",
         "neutrals-7": "#202E49",
         blue: "#9099FC",
+        success: "#41AD73",
+        danger: "#FF3B30",
       },
       fontFamily: {
         sans: ["Aeonik Pro", ...defaultTheme.fontFamily.sans],

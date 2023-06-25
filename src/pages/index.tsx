@@ -8,6 +8,7 @@ import { useAuth } from "@/contexts/auth";
 import DashboardLayout from "@/layouts";
 import BalanceWidgets from "@/modules/home/balanceWidgets";
 import ProviderRate from "@/modules/home/price";
+import ProvidersPrice from "@/modules/home/providersPrice";
 import Statistics from "@/modules/home/statistics";
 import { getToken } from "@/utils/auth";
 import { useRouter } from "next/router";
@@ -26,15 +27,16 @@ export default function HomePage() {
   return (
     <DashboardLayout>
       <PageWrapper>
-        <div className="grid grid-cols-[30%_auto] gap-4   ">
+        <div className="grid grid-cols-[30%_auto] gap-4">
           <div className="">
             <BalanceWidgets />
           </div>
           <div>
             <Chart />
+
             <Statistics />
 
-            <ProviderRate />
+            <ProvidersPrice />
           </div>
         </div>
       </PageWrapper>

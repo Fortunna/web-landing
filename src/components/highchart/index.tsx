@@ -40,7 +40,7 @@ const options = {
 const SplineChart = () => {
   return (
     <div>
-      <HighchartsReact highcharts={Highcharts} options={options} />
+      {/* <HighchartsReact highcharts={Highcharts} options={options} /> */}
     </div>
   );
 };

@@ -23,7 +23,7 @@ export default function Statistics() {
   ];
 
   return (
-    <Card className="!rounded-[16px]">
+    <Card className="!rounded-[16px] mt-6 mb-4">
       <div>
         <Typography
           variant="semi-heading"
