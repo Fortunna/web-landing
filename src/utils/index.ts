@@ -1,18 +1,19 @@
 
 
 const formatDate = (dateString: string | Date | null) => {
-    const date = new Date(dateString ?? Date.now()); // Assuming the current date is being used
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const date = new Date();
 
-    const options = {
-        day: 'numeric',
-        month: 'short',
-        year: '2-digit',
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true
-    };
+    const day = date.getDate();
+    const month = months[date.getMonth()];
+    const year = date.getFullYear().toString().slice(-2);
+    let hour = date.getHours();
+    const minute = date.getMinutes();
+    const ampm = hour >= 12 ? 'PM' : 'AM';
 
-    const formattedDate = date.toLocaleString('en-US', options);
+    hour = hour % 12 || 12; // Convert hour to 12-hour format
+
+    const formattedDate = `${day} ${month} '${year}, ${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')} ${ampm}`;
 
     return formattedDate
 }
