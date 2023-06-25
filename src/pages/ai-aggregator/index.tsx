@@ -5,6 +5,7 @@ import Allocation from "@/modules/aggregator/allocation";
 import Balance from "@/modules/aggregator/balance";
 import AggregatorBanner from "@/modules/aggregator/banner";
 import Summary from "@/modules/aggregator/summary";
+import AllocationTransaction from "@/modules/aggregator/transactions";
 import React from "react";
 
 export default function Aggregator() {
@@ -21,6 +22,9 @@ export default function Aggregator() {
         <>
           <div className="mt-[32px]"></div>
           <Allocation />
+          <div className=" overflow-hidden">
+            <AllocationTransaction />
+          </div>
         </>
       </PageWrapper>
     </DashboardLayout>

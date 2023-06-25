@@ -27,12 +27,12 @@ export default function HomePage() {
   return (
     <DashboardLayout>
       <PageWrapper>
-        <div className="grid grid-cols-[30%_auto] gap-4">
-          <div className="">
+        <div className="lg:grid grid-cols-[30%_auto] gap-4">
+          <div className="md:mb-0 mb-6">
             <BalanceWidgets />
           </div>
           <div>
-            <Chart />
+            {/* <Chart /> */}
 
             <Statistics />
 

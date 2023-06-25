@@ -9,7 +9,7 @@ type componentProps = {
   onNext: MouseEventHandler<HTMLButtonElement>;
   onPrevious: MouseEventHandler<HTMLButtonElement>;
 };
-export default function PoolParameters({ onNext, onPrevious }: componentProps) {
+export default function FarmParameters({ onNext, onPrevious }: componentProps) {
   return (
     <div>
       <Card>

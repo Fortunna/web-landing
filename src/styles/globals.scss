@@ -138,6 +138,12 @@
 .allocation-chart {
   .highcharts-container {
     height: 250px !important;
+    width: 250px !important;
+  }
+}
+.balance-chart {
+  .highcharts-container {
+    height: 200px !important;
   }
 }
 
@@ -146,5 +152,26 @@ html {
   font-size: 14px;
 }
 
-.table-wrapper {
+.table-wrapper.stripe {
+  thead {
+    tr {
+      th {
+        background-color: transparent !important;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        border-bottom-width: 0px !important;
+        background-color: transparent !important;
+        height: 51px !important;
+      }
+      &:nth-child(even) {
+        td {
+          background-color: #25252f !important;
+        }
+      }
+    }
+  }
 }

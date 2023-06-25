@@ -156,10 +156,10 @@ export const Osmosis = () => {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <rect y="0.75" width={18} height={18} rx={4} fill="url(#pattern0)" />
+      <rect y="0.75" width={18} height={18} rx={4} fill="url(#pattern1)" />
       <defs>
         <pattern
-          id="pattern0"
+          id="pattern1"
           patternContentUnits="objectBoundingBox"
           width={1}
           height={1}
@@ -187,10 +187,10 @@ export const Cosmos = () => {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <rect y="0.25" width={18} height={18} rx={4} fill="url(#pattern0)" />
+      <rect y="0.25" width={18} height={18} rx={4} fill="url(#pattern2)" />
       <defs>
         <pattern
-          id="pattern0"
+          id="pattern2"
           patternContentUnits="objectBoundingBox"
           width={1}
           height={1}
@@ -218,10 +218,10 @@ export const BnB = () => {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <rect y="0.75" width={18} height={18} rx={4} fill="url(#pattern0)" />
+      <rect y="0.75" width={18} height={18} rx={4} fill="url(#pattern3)" />
       <defs>
         <pattern
-          id="pattern0"
+          id="pattern3"
           patternContentUnits="objectBoundingBox"
           width={1}
           height={1}
@@ -249,10 +249,10 @@ export const Avalanche = () => {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <rect y="0.25" width={18} height={18} rx={4} fill="url(#pattern0)" />
+      <rect y="0.25" width={18} height={18} rx={4} fill="url(#pattern4)" />
       <defs>
         <pattern
-          id="pattern0"
+          id="pattern4"
           patternContentUnits="objectBoundingBox"
           width={1}
           height={1}
@@ -280,10 +280,10 @@ export const Others = () => {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <rect y="0.75" width={18} height={18} rx={4} fill="url(#pattern0)" />
+      <rect y="0.75" width={18} height={18} rx={4} fill="url(#pattern5)" />
       <defs>
         <pattern
-          id="pattern0"
+          id="pattern5"
           patternContentUnits="objectBoundingBox"
           width={1}
           height={1}
@@ -297,6 +297,40 @@ export const Others = () => {
           xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN88R8AAtUB6S/lfiQAAAAASUVORK5CYII="
         />
       </defs>
+    </svg>
+  );
+};
+
+export const FilterIcon = () => {
+  return (
+    <svg
+      width={20}
+      height={21}
+      viewBox="0 0 20 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8.33333 15.73H11.6667V14.0633H8.33333V15.73ZM2.5 5.72998V7.39665H17.5V5.72998H2.5ZM5 11.5633H15V9.89665H5V11.5633Z"
+        fill="#C9CFD4"
+      />
+    </svg>
+  );
+};
+
+export const ArrowDown = () => {
+  return (
+    <svg
+      width={24}
+      height={25}
+      viewBox="0 0 24 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.41 9.00977L12 13.5898L16.59 9.00977L18 10.4198L12 16.4198L6 10.4198L7.41 9.00977Z"
+        fill="white"
+      />
     </svg>
   );
 };

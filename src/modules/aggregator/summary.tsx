@@ -21,10 +21,10 @@ export default function Summary() {
 
   return (
     <div>
-      <div className="flex justify-around py-[56px] overflow-hidden relative rounded-[8px] ">
+      <div className="md:flex md:justify-around md:text-start text-center  py-[56px] overflow-hidden relative rounded-[8px] ">
         {data?.map((_stac, index) => {
           return (
-            <div key={index}>
+            <div className={`md:mt-0 ${index ? "mt-9" : ""}`} key={index}>
               <AnimateFadeIn animationPosition="leftToRight" delay={index / 4}>
                 <>
                   <Typography

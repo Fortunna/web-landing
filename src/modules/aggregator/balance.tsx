@@ -31,10 +31,10 @@ export default function Balance() {
       </div>
 
       <Card>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="md:grid md:grid-cols-3 gap-4">
           {data?.map((_b, index) => {
             return (
-              <div key={index}>
+              <div className="md:mt-0 mt-7" key={index}>
                 <Typography
                   variant="body2"
                   className="!font-inter mb-2"

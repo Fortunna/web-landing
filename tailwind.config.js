@@ -42,7 +42,9 @@ module.exports = {
         "neutrals-7": "#202E49",
         blue: "#9099FC",
         success: "#41AD73",
+        "success-2": "#00E3B4",
         danger: "#FF3B30",
+        "danger-2": "#FF7F7B",
       },
       fontFamily: {
         sans: ["Aeonik Pro", ...defaultTheme.fontFamily.sans],

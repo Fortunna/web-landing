@@ -8,7 +8,7 @@ import React, { MouseEventHandler } from "react";
 type componentProps = {
   onNext: MouseEventHandler<HTMLButtonElement>;
 };
-export default function PoolInformation({ onNext }: componentProps) {
+export default function FarmlInformation({ onNext }: componentProps) {
   return (
     <div>
       <Card>

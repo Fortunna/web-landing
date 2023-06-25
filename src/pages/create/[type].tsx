@@ -3,11 +3,11 @@ import PageWrapper from "@/components/pageWrapper";
 import Stepper from "@/components/stepper";
 import Typography from "@/components/typography";
 import DashboardLayout from "@/layouts";
-import CreatePoolPayment from "@/modules/pool/payment";
-import PoolInformation from "@/modules/pool/pool-information";
-import PoolParameters from "@/modules/pool/pool-parameters";
-import CreatePoolReview from "@/modules/pool/poolReviewSubmit";
-import CreatePoolReward from "@/modules/pool/reward";
+import CreateFarmPayment from "@/modules/farm/payment";
+import FarmlInformation from "@/modules/farm/farm-information";
+import FarmParameters from "@/modules/farm/farm-parameters";
+import CreateFarmReview from "@/modules/farm/farmReviewSubmit";
+import CreateFarmReward from "@/modules/farm/reward";
 import { headers } from "next/dist/client/components/headers";
 import React, { useState } from "react";
 
@@ -47,12 +47,12 @@ export default function Create() {
               className="mb-[20px]"
             />
             <Stepper current={isActiveSteeper} headers={steeperHeader}>
-              <PoolInformation
+              <FarmlInformation
                 onNext={() => {
                   setActiveSteeper(steeperHeader[1].key);
                 }}
               />
-              <PoolParameters
+              <FarmParameters
                 onNext={() => {
                   setActiveSteeper(steeperHeader[2].key);
                 }}
@@ -60,7 +60,7 @@ export default function Create() {
                   setActiveSteeper(steeperHeader[0].key);
                 }}
               />
-              <CreatePoolReward
+              <CreateFarmReward
                 onNext={() => {
                   setActiveSteeper(steeperHeader[3].key);
                 }}
@@ -68,7 +68,7 @@ export default function Create() {
                   setActiveSteeper(steeperHeader[1].key);
                 }}
               />
-              <CreatePoolPayment
+              <CreateFarmPayment
                 onNext={() => {
                   setActiveSteeper(steeperHeader[4].key);
                 }}
@@ -76,7 +76,7 @@ export default function Create() {
                   setActiveSteeper(steeperHeader[2].key);
                 }}
               />
-              <CreatePoolReview
+              <CreateFarmReview
                 onPrevious={() => {
                   setActiveSteeper(steeperHeader[3].key);
                 }}

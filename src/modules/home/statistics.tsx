@@ -23,7 +23,7 @@ export default function Statistics() {
   ];
 
   return (
-    <Card className="!rounded-[16px] mt-6 mb-4">
+    <Card className="!rounded-[16px] mb-4">
       <div>
         <Typography
           variant="semi-heading"
@@ -31,10 +31,10 @@ export default function Statistics() {
           label="Statistics"
         />
 
-        <div className="bg-transparent-secondary flex justify-around py-6 rounded-[8px] text-center">
+        <div className="bg-transparent-secondary md:flex lg:justify-around md:py-6 py-9 rounded-[8px] text-center">
           {data?.map((_stac, index) => {
             return (
-              <div key={index}>
+              <div key={index} className={`md:mt-0 ${index ? "mt-14" : ""}`}>
                 <Typography
                   className="!text-[32px] !font-aeonik-pro !text-[#EFF3FB] !font-bold"
                   label={_stac?.value}

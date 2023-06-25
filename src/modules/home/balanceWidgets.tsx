@@ -8,11 +8,11 @@ export default function BalanceWidgets() {
     <div className="rounded-[16px] transparent-2 bg-transparent-2 px-[24px] py-[32px]">
       <Typography
         variant="subtitle"
-        className="!font-aeonik-pro"
+        className="!font-aeonik-pro !text-[21px]"
         label="My Balance"
       />
       <Typography
-        className="mt-[20px] mb-[30px] overflow-hidden relative"
+        className="mt-[18px] mb-[28px] overflow-hidden relative !text-[48px]"
         variant="big-title"
         label="$1724.99"
       />

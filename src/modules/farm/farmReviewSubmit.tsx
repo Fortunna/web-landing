@@ -11,7 +11,7 @@ type componentProps = {
   onPrevious: MouseEventHandler<HTMLButtonElement>;
 };
 
-export default function CreatePoolReview({
+export default function CreateFarmReview({
   // onNext,
   onPrevious,
 }: componentProps) {

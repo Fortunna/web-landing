@@ -53,7 +53,13 @@ const MenuItem = ({
           {data.icon}
         </div>
 
-        <Typography className="text-light-white" label={data.name} use="span" />
+        <Typography
+          className={`text-light-white ${
+            active && type == "submenu" ? "border-b-[1px] border-b-white" : ""
+          }`}
+          label={data.name}
+          use="span"
+        />
       </Link>
     </li>
   );

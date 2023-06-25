@@ -53,7 +53,7 @@ export default function Allocation() {
   ];
   return (
     <Card title="Locked Asset Allocation">
-      <div className="grid grid-cols-[70%_auto_10%]">
+      <div className="md:grid md:grid-cols-[70%_auto_10%]">
         <div className="">
           <div className=" overflow-hidden relative flex items-center justify-center">
             {inView ? <AllocationChart /> : null}
@@ -68,7 +68,7 @@ export default function Allocation() {
                 className="flex py-[8px] justify-between items-center"
               >
                 <div className="flex  items-center">
-                  <div>{_data.icon}</div>
+                  <div className="mr-2">{_data.icon}</div>
                   <Typography
                     variant="body2"
                     className="!font-ibm-plex-semi-bold"

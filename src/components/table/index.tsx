@@ -10,9 +10,14 @@ import {
 type componentProps = {
   columns: any[];
   data: any[];
+  stripe?: boolean;
 };
 
-export default function Table({ columns, data: defaultData }: componentProps) {
+export default function Table({
+  columns,
+  data: defaultData,
+  stripe,
+}: componentProps) {
   const [data, setData] = React.useState(() => [...defaultData]);
 
   const table = useReactTable({
@@ -22,7 +27,12 @@ export default function Table({ columns, data: defaultData }: componentProps) {
   });
 
   return (
-    <div className="table-wrapper">
+    <div
+      style={{ maxWidth: "90vw" }}
+      className={`table-wrapper min-w-full  relative !overflow-x-auto ${
+        stripe ? "stripe" : ""
+      }`}
+    >
       <table className="w-full">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (

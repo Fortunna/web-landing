@@ -2,45 +2,83 @@ import React from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
+// Retrieved from https://www.ssb.no/jord-skog-jakt-og-fiskeri/jakt
 const options = {
   chart: {
-    type: "spline",
+    type: "areaspline",
   },
   title: {
-    text: null,
+    text: "Moose and deer hunting in Norway, 2000 - 2021",
+    align: "left",
+  },
+  subtitle: {
+    text: 'Source: <a href="https://www.ssb.no/jord-skog-jakt-og-fiskeri/jakt" target="_blank">SSB</a>',
+    align: "left",
+  },
+  legend: {
+    layout: "vertical",
+    align: "left",
+    verticalAlign: "top",
+    x: 120,
+    y: 70,
+    floating: true,
+    borderWidth: 1,
+    backgroundColor: "transparent",
+  },
+  xAxis: {
+    plotBands: [
+      {
+        // Highlight the two last years
+        from: 2019,
+        to: 2020,
+        color: "rgba(68, 170, 213, .2)",
+      },
+    ],
+  },
+  yAxis: {
+    title: {
+      text: "Quantity",
+    },
+  },
+  tooltip: {
+    shared: true,
+    headerFormat: "<b>Hunting season starting autumn {point.x}</b><br>",
+  },
+  credits: {
+    enabled: false,
+  },
+  plotOptions: {
+    series: {
+      pointStart: 2000,
+    },
+    areaspline: {
+      fillOpacity: 0.5,
+    },
   },
   series: [
     {
-      name: "Data",
+      name: "Moose",
       data: [
-        9, 8, 7, 9, 8, 7, 9, 8, 9, 8, 7, 9, 8, 7, 9, 8, 7, 9, 8, 7, 9, 8, 7, 7,
-
-        9, 8, 7,
-
-        9, 8, 7,
-
-        9, 8, 7,
+        38000, 37300, 37892, 38564, 36770, 36026, 34978, 35657, 35620, 35971,
+        36409, 36435, 34643, 34956, 33199, 31136, 30835, 31611, 30666, 30319,
+        31766,
       ],
-      color: {
-        linearGradient: {
-          x1: 0,
-          x2: 0,
-          y1: 0,
-          y2: 1,
-        },
-        stops: [
-          [0, "rgba(255, 0, 0, 1)"],
-          [1, "rgba(0, 255, 0, 1)"],
-        ],
-      },
+    },
+    {
+      name: "Deer",
+      data: [
+        22534, 23599, 24533, 25195, 25896, 27635, 29173, 32646, 35686, 37709,
+        39143, 36829, 35031, 36202, 35140, 33718, 37773, 42556, 43820, 46445,
+        50048,
+      ],
     },
   ],
 };
 
 const SplineChart = () => {
   return (
-    <div>
-      {/* <HighchartsReact highcharts={Highcharts} options={options} /> */}
+    <div className="balance-chart">
+      <HighchartsReact highcharts={Highcharts} options={options} />
     </div>
   );
 };
