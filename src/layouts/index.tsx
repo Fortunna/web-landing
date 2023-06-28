@@ -49,18 +49,20 @@ export default function DashboardLayout({ children }: componentProps) {
   // }
 
   return (
-    <div className="grid lg:grid-cols-[18%_auto] gap-0 bg-theme-bg bg-cover   h-screen w-screen overflow-hidden">
-      <div className="hidden lg:block">
-        <Sidebar />
-      </div>
-      <div>
-        <Header />
-        <div className="overflow-y-auto h-screen pb-[64px]">
-          <div className="mb-[20px]"></div>
-          {children}
-          <div className="mb-[50px]"></div>
+    <>
+      <div className="grid lg:grid-cols-[18%_auto] gap-0 bg-theme-bg bg-cover   h-screen w-screen overflow-hidden">
+        <div className="hidden lg:block">
+          <Sidebar />
+        </div>
+        <div>
+          <Header />
+          <div className="overflow-y-auto h-screen pb-[64px]">
+            <div className="mb-[20px]"></div>
+            {children}
+            <div className="mb-[50px]"></div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

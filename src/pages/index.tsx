@@ -27,7 +27,7 @@ export default function HomePage() {
   return (
     <DashboardLayout>
       <PageWrapper>
-        <div className="lg:grid grid-cols-[30%_auto] gap-4">
+        <div className="lg:grid grid-cols-[24%_auto] gap-4">
           <div className="md:mb-0 mb-6">
             <BalanceWidgets />
           </div>

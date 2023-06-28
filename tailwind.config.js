@@ -43,6 +43,7 @@ module.exports = {
         blue: "#9099FC",
         success: "#41AD73",
         "success-2": "#00E3B4",
+        "success-3": "#15CC35",
         danger: "#FF3B30",
         "danger-2": "#FF7F7B",
       },

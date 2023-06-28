@@ -143,7 +143,7 @@ export default function Stepper({
     return headers.findIndex((_header) => _header.key == current);
   };
   const isActive = (index: number): boolean => {
-    return (current || headers[0].key) == headers[index].key;
+    return (current || headers[0].key) == headers[index]?.key;
   };
   return (
     <div>

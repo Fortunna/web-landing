@@ -4,12 +4,15 @@ import TabComponent from "@/components/tab";
 import { useAuth } from "@/contexts/auth";
 import DashboardLayout from "@/layouts";
 import FramingModule from "@/modules/earning/farming";
+import PoolModule from "@/modules/earning/pool";
 import { getToken } from "@/utils/auth";
-import FarmList from "@/widget/earning/common/farmList";
-import React, { useEffect } from "react";
+import FarmList from "@/widget/earning/farmList/index.tsx";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 
 export default function HomePage() {
   const logs = useAuth();
+  const router = useRouter();
 
   useEffect(() => {
     getToken();
@@ -17,22 +20,31 @@ export default function HomePage() {
   const data = [
     { header: "Farms", key: "farms" },
     { header: "Pools", key: "pools" },
-    { header: "Liquidity", key: "liquidity" },
   ];
+
+  const [currentTab, setCurrentTab] = useState(data[1].key);
+
+  useEffect(() => {
+    if (router.query?.type) {
+      setCurrentTab(router.query?.type.toString());
+    }
+  }, [router]);
+
+  const handleSelect = (props: { key: string }) => {
+    router.push(`/earn/${props.key}`);
+  };
   return (
     <DashboardLayout>
       {/* <Button theme="secondary" label="jkdjdjdj" /> */}
       <PageWrapper>
-        <TabComponent current="farms" data={data}>
+        <TabComponent onSelect={handleSelect} current={currentTab} data={data}>
           <div>
             <FramingModule />
           </div>
           <div>
-            <FramingModule />
+            <PoolModule />
           </div>
-          <div>
-            <FramingModule />
-          </div>
+          <div>{/* <FramingModule /> */}</div>
         </TabComponent>
       </PageWrapper>
       <div className="mt-6"></div>

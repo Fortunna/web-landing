@@ -14,7 +14,7 @@ type componentProps = {
   children: React.ReactNode;
   data: dataType[];
   current: string;
-  onSelect?: () => any;
+  onSelect?: (props: dataType) => any;
 };
 export default function TabComponent({
   data = [],
@@ -25,8 +25,8 @@ export default function TabComponent({
   const [currentKey, setCurrentKey] = useState(current);
 
   const handleSelect = (_selectedTab: dataType) => {
-    onSelect && onSelect();
-    setCurrentKey(_selectedTab.key);
+    onSelect && onSelect(_selectedTab);
+    // setCurrentKey(_selectedTab.key);
   };
 
   useEffect(() => {
@@ -46,7 +46,7 @@ export default function TabComponent({
                 }}
                 key={index}
                 className={`mr-5 pb-1  cursor-pointer relative overflow-hidden ${
-                  current == data[index].key ? styles["current"] : ""
+                  current == data[index]?.key ? styles["current"] : ""
                 }`}
               >
                 <Typography variant="title" label={_data.header} />
@@ -57,7 +57,7 @@ export default function TabComponent({
         <ul className="flex flex-wrap -mb-px ">
           <AnimatePresence>
             {React.Children.map(children, (child, index) => {
-              if (currentKey == data[index].key) {
+              if (currentKey == data[index]?.key) {
                 return (
                   <AnimateFadeIn key={index}>
                     <>{child}</>

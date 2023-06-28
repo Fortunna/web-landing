@@ -3,6 +3,7 @@ import Button from "@/components/button";
 import PageWrapper from "@/components/pageWrapper";
 import Typography from "@/components/typography";
 import FarmList from "@/widget/earning/farmList/index.tsx";
+import PoolList from "@/widget/earning/poolList";
 import React from "react";
 
 const AccountBalance = () => {
@@ -58,7 +59,7 @@ const headers = [
   },
 ];
 
-export default function FramingModule() {
+export default function PoolModule() {
   return (
     <div>
       <div className="grid text-start  lg:grid-cols-[70%_auto]">
@@ -111,7 +112,7 @@ export default function FramingModule() {
             return (
               <AnimateWhileInView key={index}>
                 <div className="mb-[32px] overflow-hidden relative">
-                  <FarmList />
+                  <PoolList />
                 </div>
               </AnimateWhileInView>
             );

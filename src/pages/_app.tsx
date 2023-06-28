@@ -6,6 +6,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Store>
       <Component {...pageProps} />
+      <div id="modal"></div>
     </Store>
   );
 }

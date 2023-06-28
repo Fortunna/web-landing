@@ -4,12 +4,16 @@ import React from "react";
 type componentProps = {
   theme?: "default";
   id: string;
+  rounded?: boolean;
+  rightComponent?: React.ReactElement;
   placeholder?: string;
   className?: string;
   value?: string;
 };
 export default function TextInput({
   placeholder,
+  rounded,
+  rightComponent,
   id,
   className,
   value,
@@ -20,12 +24,21 @@ export default function TextInput({
       theme == "default",
   });
 
+  const roundedStyles = classNames({
+    "rounded-full": rounded,
+    rounded: !rounded,
+  });
   return (
-    <input
-      // value={value}
-      id={id}
-      placeholder={placeholder}
-      className={`${bgStyles} ${className}  px-[16px] py-[8px] text-caption-2  rounded h-[40px] border-[1px]`}
-    />
+    <div className="relative">
+      <input
+        // value={value}
+        id={id}
+        placeholder={placeholder}
+        className={`${bgStyles} ${roundedStyles} ${className}   px-[16px] py-[8px] text-caption-2   h-[40px] border-[1px]`}
+      />
+      {rightComponent ? (
+        <div className="absolute  top-0 right-0 h-full">{rightComponent}</div>
+      ) : null}
+    </div>
   );
 }
