@@ -42,7 +42,7 @@ const Assets = () => {
     </div>
   );
 };
-export default function FarmList({}: any) {
+export default function FarmList({ onOpenActionModal }: any) {
   const [selectedFarm, setSelectedFarm] = useState(null);
 
   return (
@@ -186,6 +186,7 @@ export default function FarmList({}: any) {
             <Button
               className="w-full mt-9"
               size="small"
+              onClick={onOpenActionModal}
               rounded
               theme="secondary-solid"
               label="Deposit"
@@ -203,6 +204,7 @@ export default function FarmList({}: any) {
               size="small"
               rounded
               theme="secondary-solid"
+              onClick={onOpenActionModal}
               disabled
               label="Withdraw"
             />
@@ -217,6 +219,7 @@ export default function FarmList({}: any) {
             <Button
               className="w-full mt-9"
               size="small"
+              onClick={onOpenActionModal}
               rounded
               theme="secondary-solid"
               disabled

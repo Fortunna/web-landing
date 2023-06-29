@@ -2,30 +2,36 @@ import React, { memo } from "react";
 import Card from "../card";
 import Typography from "../typography";
 import Portal from "./portal";
+import classNames from "classnames";
+import { AnimateFadeIn } from "@/animations";
 
 type ComponentProps = {
   children: React.ReactNode;
   onClose: Function;
   title?: string;
+  containerClass?: string;
   visible: boolean;
 };
 
-function Modal({ children, title, onClose, visible }: ComponentProps) {
+function Modal({
+  children,
+  title,
+  containerClass,
+  onClose,
+  visible,
+}: ComponentProps) {
   if (!visible) return null;
   return (
     <Portal selector="#modal">
       <div
-        style={
-          {
-            //   background: "rgba(0, 0, 0, 0.7)", .
-            //   backdropFilter: "blur(10px)",
-          }
-        }
-        className="h-screen w-screen overflow-y-scroll bg-transparent-deep pt-[8%] flex fixed z-10 top-0  justify-center"
+        style={{
+          background: "rgba(225, 225, 225, 0.2)",
+          backdropFilter: "blur(3px)",
+        }}
+        className="h-screen w-screen overflow-y-scroll pt-[8%] flex fixed z-10 top-0  justify-center"
       >
-        <div className="w-2/6">
-          {" "}
-          <div className="flex justify-end">
+        <div className="w-[40%]">
+          <div className="flex justify-end mb-5 cursor-pointer">
             <svg
               width={28}
               height={28}
@@ -40,10 +46,11 @@ function Modal({ children, title, onClose, visible }: ComponentProps) {
               />
             </svg>
           </div>
-          <div className="mt-5"></div>
-          {title && <Typography variant="subtitle" label={title} />}
-          <>{children}</>
-          <div style={{ marginBottom: "50px" }}></div>
+          <AnimateFadeIn>
+            <div className={`bg-[#17181B]  ${containerClass}`}>
+              <>{children}</>
+            </div>
+          </AnimateFadeIn>
         </div>
       </div>
     </Portal>

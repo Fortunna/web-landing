@@ -1,9 +1,11 @@
 import { AnimateWhileInView } from "@/animations";
 import Button from "@/components/button";
+import Modal from "@/components/modal";
 import PageWrapper from "@/components/pageWrapper";
 import Typography from "@/components/typography";
 import FarmList from "@/widget/earning/farmList/index.tsx";
-import React from "react";
+import React, { useState } from "react";
+import ActionModal from "./actionModal";
 
 const AccountBalance = () => {
   return (
@@ -59,6 +61,8 @@ const headers = [
 ];
 
 export default function FramingModule() {
+  const [openActionModal, setOpenActionModal] = useState(false);
+
   return (
     <div>
       <div className="grid text-start  lg:grid-cols-[70%_auto]">
@@ -111,11 +115,16 @@ export default function FramingModule() {
             return (
               <AnimateWhileInView key={index}>
                 <div className="mb-[32px] overflow-hidden relative">
-                  <FarmList />
+                  <FarmList
+                    onOpenActionModal={() => setOpenActionModal(true)}
+                  />
                 </div>
               </AnimateWhileInView>
             );
           })}
+          {openActionModal ? (
+            <ActionModal onClose={() => setOpenActionModal(false)} />
+          ) : null}
         </>
       </PageWrapper>
     </div>
