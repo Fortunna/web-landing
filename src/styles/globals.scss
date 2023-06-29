@@ -147,6 +147,11 @@
   }
 }
 
+.pool-list-chart {
+  .highcharts-container {
+    height: 220px !important;
+  }
+}
 html {
   font-family: sans-serif;
   font-size: 14px;
