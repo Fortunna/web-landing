@@ -170,8 +170,10 @@ export default function FarmList({}: any) {
           </div>
         </div>
       </div>
-      <div className="lg:grid lg:grid-cols-[20%_auto] lg:gap-24 mt-[60px]">
-        <div>{/* <ActivityChart /> */}</div>
+      <div className="lg:grid lg:grid-cols-[30%_auto] lg:gap-16 mt-[60px]">
+        <div>
+          <ActivityChart />
+        </div>
         <div className="lg:grid lg:grid-cols-3 lg:gap-14">
           <div>
             <Typography
