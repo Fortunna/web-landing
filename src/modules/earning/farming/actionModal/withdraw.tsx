@@ -14,6 +14,7 @@ export default function Withdraw() {
               <div className="flex items-center mb-7 overflow-hidden relative">
                 <Dai />
                 <TextInput
+                  id="withdraw-2"
                   value="30.43"
                   className="rounded-full mx-3 text-white focus:outline-none !border-[#AC6AFF]"
                 />
@@ -27,6 +28,7 @@ export default function Withdraw() {
                 <Usdc />
                 <TextInput
                   value="30.43"
+                  id="withdraw-3"
                   className="rounded-full mx-3 text-white focus:outline-none !border-[#AC6AFF]"
                 />
                 <Typography
@@ -38,6 +40,7 @@ export default function Withdraw() {
               <div className="flex items-center">
                 <Usdt />
                 <TextInput
+                  id="withdraw"
                   value="30.43"
                   className="rounded-full mx-3 text-white focus:outline-none !border-[#AC6AFF]"
                 />

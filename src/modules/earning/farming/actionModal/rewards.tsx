@@ -16,6 +16,7 @@ export default function Rewards() {
               <div className="flex items-center mb-7 overflow-hidden relative">
                 <Dai />
                 <TextInput
+                  id="rewards"
                   value="30.43"
                   className="rounded-full mx-3 text-white focus:outline-none !border-[#AC6AFF]"
                 />
@@ -28,6 +29,7 @@ export default function Rewards() {
               <div className="flex items-center mb-7 overflow-hidden relative">
                 <Usdc />
                 <TextInput
+                  id="item2"
                   value="30.43"
                   className="rounded-full mx-3 text-white focus:outline-none !border-[#AC6AFF]"
                 />
@@ -40,6 +42,7 @@ export default function Rewards() {
               <div className="flex items-center">
                 <Usdt />
                 <TextInput
+                  id="item3"
                   value="30.43"
                   className="rounded-full mx-3 text-white focus:outline-none !border-[#AC6AFF]"
                 />

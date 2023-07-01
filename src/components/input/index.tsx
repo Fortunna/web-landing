@@ -6,7 +6,7 @@ type componentProps = {
   id: string;
   rounded?: boolean;
   rightComponent?: React.ReactElement;
-  type: HTMLInputTypeAttribute;
+  type?: HTMLInputTypeAttribute;
   placeholder?: string;
   className?: string;
   value?: string;
