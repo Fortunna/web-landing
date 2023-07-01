@@ -1,58 +1,14 @@
+import Button from "@/components/button";
 import { Dai, Usdc, Usdt } from "@/components/icons";
 import TextInput from "@/components/input";
+import Select from "@/components/select";
 import Slider from "@/components/slider";
 import Typography from "@/components/typography";
 import React from "react";
 
 export default function Deposit() {
-  const data = [
-    {
-      value: "1000 DAI",
-      icon: <Dai />,
-    },
-    {
-      value: "21 USDC",
-      icon: <Usdc />,
-    },
-    {
-      value: "29 USDT",
-      icon: <Usdt />,
-    },
-  ];
   return (
     <div className="">
-      <div className="grid grid-cols-[30%_auto] mt-6">
-        <Typography
-          label="Deposit"
-          className="!font-aeonik-pro"
-          variant="subtitle"
-        />
-
-        <div>
-          <div>
-            <Typography
-              variant="body2"
-              className="!font-inter !text-white"
-              label="Wallet Balance"
-            />
-            <div className="flex mt-3">
-              {data.map((_d, index) => {
-                return (
-                  <div key={index} className="flex  mr-3 items-center">
-                    {_d.icon}
-
-                    <Typography
-                      variant="body3"
-                      className="!text-secondary ms-2 "
-                      label={_d.value}
-                    />
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="grid grid-cols-[30%_auto] mt-[40px]">
         <div>
           <Typography
@@ -143,6 +99,37 @@ export default function Deposit() {
             <Slider className="" />
           </div>
         </div>
+      </div>
+
+      <div className="w-[80%] mt-[35px] mb-[28px] mx-auto">
+        <div className="flex items-center mb-[28px]">
+          <div className="mr-9">
+            <Typography
+              label="Lockup Period"
+              variant="body2"
+              className="!font-inter"
+            />
+          </div>
+          <div className="inline-block">
+            <TextInput
+              id="lock-period"
+              className="!rounded-full !font-[14px] !text-bold !font-inter text-[#DE1EFD]"
+              // type="number"
+            />
+          </div>
+
+          {/* <Select
+            id="lock-period"
+            className="whitespace-nowrap px-3 !font-inter font-bold !text-[#DE1EFD] !rounded-full"
+            options={[{ title: "No Lock" }]}
+          /> */}
+        </div>
+        <Button
+          className="w-full"
+          label="Deposit"
+          rounded
+          theme="secondary-solid"
+        />
       </div>
     </div>
   );

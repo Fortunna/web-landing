@@ -1,11 +1,12 @@
 import classNames from "classnames";
-import React from "react";
+import React, { HTMLInputTypeAttribute } from "react";
 
 type componentProps = {
   theme?: "default";
   id: string;
   rounded?: boolean;
   rightComponent?: React.ReactElement;
+  type: HTMLInputTypeAttribute;
   placeholder?: string;
   className?: string;
   value?: string;
@@ -14,6 +15,7 @@ export default function TextInput({
   placeholder,
   rounded,
   rightComponent,
+  type,
   id,
   className,
   value,
@@ -31,7 +33,8 @@ export default function TextInput({
   return (
     <div className="relative">
       <input
-        // value={value}
+        value={value ?? ""}
+        type={type}
         id={id}
         placeholder={placeholder}
         className={`${bgStyles} ${roundedStyles} ${className}   px-[16px] py-[8px] text-caption-2   h-[40px] border-[1px]`}
