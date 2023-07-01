@@ -85,7 +85,13 @@ const BottomMenuItem = ({
     </li>
   );
 };
-export default function Sidebar() {
+export default function Sidebar({
+  mobile,
+  onClose,
+}: {
+  mobile?: boolean;
+  onClose?: () => void;
+}) {
   const [asPath, setAsPath] = useState("/");
   const router = useRouter();
 
@@ -114,8 +120,27 @@ export default function Sidebar() {
   return (
     <div className="bg-background overflow-y-auto pb-10 sidebar flex flex-col justify-between h-screen">
       <div>
-        <div className="p-5">
+        <div className="p-5 flex justify-between items-center">
           <AppLogo />
+          {mobile ? (
+            <svg
+              onClick={onClose}
+              xmlns="http://www.w3.org/2000/svg"
+              className="icon icon-tabler icon-tabler-x w-[30px] h-auto"
+              width={44}
+              height={44}
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="#e5e7ed"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M18 6l-12 12" />
+              <path d="M6 6l12 12" />
+            </svg>
+          ) : null}
         </div>
         <div className="">
           <div className="mt-5"></div>

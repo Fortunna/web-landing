@@ -1,10 +1,11 @@
 import { useAuth } from "@/contexts/auth";
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import PageLoading from "./loading";
 import { getUserSession } from "@/utils/auth";
 import { AuthActionTypes } from "@/reducers/auth";
 import Header from "./header";
 import Sidebar from "./sidebar";
+import MobileMenu from "./mobileMenu";
 
 type componentProps = {
   children: React.ReactNode;
@@ -36,17 +37,7 @@ export default function DashboardLayout({ children }: componentProps) {
     }
   }, [authDispatch]);
 
-  // useEffect(() => {
-  //   handleGetSession();
-  // }, [handleGetSession]);
-
-  // if (isLoading) {
-  //   return <PageLoading />;
-  // }
-
-  // if (!isLoading && !isLoggedIn) {
-  //   location.href = "/auth/login";
-  // }
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
   return (
     <>
@@ -55,7 +46,11 @@ export default function DashboardLayout({ children }: componentProps) {
           <Sidebar />
         </div>
         <div>
-          <Header />
+          <Header
+            onOpenMobileMenu={() => {
+              setOpenMobileMenu(true);
+            }}
+          />
           <div className="overflow-y-auto h-screen pb-[64px]">
             <div className="mb-[20px]"></div>
             {children}
@@ -63,6 +58,9 @@ export default function DashboardLayout({ children }: componentProps) {
           </div>
         </div>
       </div>
+      {openMobileMenu ? (
+        <MobileMenu onClose={() => setOpenMobileMenu(false)} />
+      ) : null}
     </>
   );
 }

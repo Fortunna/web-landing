@@ -51,6 +51,8 @@ module.exports = {
         sans: ["Aeonik Pro", ...defaultTheme.fontFamily.sans],
         "aeonik-pro": "Aeonik Pro",
         "aeonik-pro-bold": "Aeonik Pro Bold",
+        "aeonik-fono": "Aeonik Fono",
+        "aeonik-fono-bold": "Aeonik Fono Bold",
         poppins: "Poppins",
         "poppins-semi-bold": "Poppins Semi Bold",
         "poppins-light": "Poppins Light",

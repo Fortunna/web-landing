@@ -31,10 +31,13 @@ export default function Statistics() {
           label="Statistics"
         />
 
-        <div className="bg-transparent-secondary md:flex lg:justify-around md:py-6 py-9 rounded-[8px] text-center">
+        <div className="bg-transparent-secondary md:flex lg:justify-around md:py-6 py-9 rounded-[8px] grid grid-cols-2 text-center">
           {data?.map((_stac, index) => {
             return (
-              <div key={index} className={`md:mt-0 ${index ? "mt-14" : ""}`}>
+              <div
+                key={index}
+                className={`md:mt-0 ${index < 1 ? "mb-10" : ""} `}
+              >
                 <Typography
                   className="!text-[32px] !font-aeonik-pro !text-[#EFF3FB] !font-bold"
                   label={_stac?.value}

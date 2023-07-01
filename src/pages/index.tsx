@@ -32,8 +32,8 @@ export default function HomePage() {
             <BalanceWidgets />
           </div>
           <div>
-            {/* <Chart /> */}
-
+            <Chart />
+            <div className="mb-4"></div>
             <Statistics />
 
             <ProvidersPrice />

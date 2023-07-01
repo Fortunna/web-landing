@@ -42,7 +42,8 @@ export default function Button({
   });
 
   const sizeStyles = classNames({
-    "px-[16px] py-[11px]    text-[14px]": size == "default",
+    "md:px-[16px] md:py-[11px]  py-[8px] px-[12px]   md:text-[14px] text-[12px]":
+      size == "default",
     "px-[15px] py-[10px] text-[12px]": size == "small",
     "px-[16px] h-[54px] text-caption-3": size == "big",
   });

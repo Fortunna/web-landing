@@ -28,9 +28,9 @@ function Modal({
           background: "rgba(225, 225, 225, 0.2)",
           backdropFilter: "blur(3px)",
         }}
-        className="h-screen w-screen overflow-y-scroll pt-[8%] flex fixed z-10 top-0   justify-center"
+        className="h-screen w-screen !overflow-y-scroll pt-[8%] flex fixed z-10 top-0   justify-center "
       >
-        <div className="w-[40%]">
+        <div className="lg:w-[40%] md:w-[60%] w-[90%]  !mb-32 relative overflow-hidden">
           <div className="flex justify-end mb-5 cursor-pointer">
             <svg
               width={28}
@@ -47,7 +47,7 @@ function Modal({
             </svg>
           </div>
           <AnimateFadeIn>
-            <div className={`bg-[#17181B]  mb-16 ${containerClass}`}>
+            <div className={`bg-[#17181B]  ${containerClass}`}>
               <>{children}</>
             </div>
           </AnimateFadeIn>

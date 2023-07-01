@@ -129,7 +129,7 @@ export default function ProvidersPrice() {
           </RenderWhenInView>
         ) : (
           <RenderWhenInView triggerOnce={false} className="flex items-center">
-            <span className="text-white font-bold">{info.getValue()} </span>
+            <span className="text-white font-bold ">{info.getValue()} </span>
             <AnimateFadeIn>
               <>
                 <Badge className="ms-2" label="Best" />
@@ -141,7 +141,11 @@ export default function ProvidersPrice() {
     columnHelper.accessor((row) => row.price, {
       id: "PRICE (ETH/DAI)",
       cell: (info) => (
-        <span className={info.row.original?.lossValue ? "" : "text-white"}>
+        <span
+          className={`whitespace-nowrap ${
+            info.row.original?.lossValue ? "" : "text-white"
+          }}`}
+        >
           {info.getValue()}
         </span>
       ),
@@ -150,7 +154,11 @@ export default function ProvidersPrice() {
     columnHelper.accessor("return", {
       header: () => "YOU GET",
       cell: (info) => (
-        <span className={info.row.original?.lossValue ? "" : "text-white"}>
+        <span
+          className={`whitespace-nowrap ${
+            info.row.original?.lossValue ? "" : "text-white"
+          }`}
+        >
           {info.renderValue()}
         </span>
       ),
@@ -158,7 +166,11 @@ export default function ProvidersPrice() {
     columnHelper.accessor("fees", {
       header: () => "FEES",
       cell: (info) => (
-        <span className={info.row.original?.lossValue ? "" : "text-white"}>
+        <span
+          className={`${
+            info.row.original?.lossValue ? "" : "text-white"
+          } whitespace-nowrap`}
+        >
           {info.renderValue()}
         </span>
       ),

@@ -12,6 +12,16 @@
     src: url(/font/AeonikPro/AeonikProTRIAL-Bold.otf);
   }
   @font-face {
+    font-family: "Aeonik Fono";
+    src: url(/font/AeonikFono/AeonikFono-Regular.otf);
+  }
+
+  @font-face {
+    font-family: "Aeonik Fono Bold";
+    src: url(/font/AeonikFono/AeonikFono-Medium.otf);
+  }
+
+  @font-face {
     font-family: "Poppins";
     src: url(/font/Poppins/Poppins-Regular.ttf);
   }
@@ -139,6 +149,12 @@
   .highcharts-container {
     height: 250px !important;
     width: 250px !important;
+  }
+}
+
+.home-chart {
+  .highcharts-container {
+    height: 400px !important ;
   }
 }
 .balance-chart {

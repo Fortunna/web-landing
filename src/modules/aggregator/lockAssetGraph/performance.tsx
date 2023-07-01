@@ -39,7 +39,7 @@ export default function Performance() {
     },
     yAxis: {
       title: {
-        text: "Values",
+        text: null,
       },
       labels: {
         style: {
@@ -95,7 +95,7 @@ export default function Performance() {
                   />
 
                   <Typography
-                    className="!font-inter text-center !text-[#6A6A6A]"
+                    className="!font-inter text-center !text-[#6A6A6A] !text-[8px]"
                     variant="body1"
                     label="Custom"
                   />

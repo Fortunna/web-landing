@@ -7,7 +7,7 @@ export default function LockAssetGraph() {
   return (
     <div>
       <Card title="Locked Asset Allocation (Breakdown)">
-        <div className="grid grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 md:gap-16 gap-8">
           <TokenActivity />
 
           <div>

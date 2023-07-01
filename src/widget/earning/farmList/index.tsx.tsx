@@ -67,8 +67,8 @@ export default function FarmList({ onOpenActionModal }: any) {
             <Typography variant="subtitle" label="Curve 3Pool " />
           </div>
 
-          <div className="lg:grid lg:grid-cols-4 gap-10 mt-[32px] ">
-            <div>
+          <div className="grid lg:grid-cols-4  grid-cols-2  gap-10 mt-[32px] ">
+            <div className="md:mb-0">
               {" "}
               <Typography
                 variant="body3"
@@ -84,7 +84,7 @@ export default function FarmList({ onOpenActionModal }: any) {
                 />
               </div>
             </div>
-            <div className="md:my-0 my-4">
+            <div className="md:mb-0">
               <Typography
                 variant="body3"
                 className="!font-poppins-light text-light-2"
@@ -104,7 +104,7 @@ export default function FarmList({ onOpenActionModal }: any) {
                 />
               </div>
             </div>
-            <div>
+            <div className="md:mb-0">
               <Typography
                 variant="body3"
                 className="!font-poppins-light text-light-2"
@@ -130,7 +130,7 @@ export default function FarmList({ onOpenActionModal }: any) {
             </div>
           </div>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center md:mt-0 mt-10">
           <div className="md:block flex ">
             <Button
               theme="secondary"
@@ -170,12 +170,12 @@ export default function FarmList({ onOpenActionModal }: any) {
           </div>
         </div>
       </div>
-      <div className="lg:grid lg:grid-cols-[30%_auto] lg:gap-16 mt-[60px]">
-        <div>
+      <div className="lg:grid lg:grid-cols-[30%_auto] lg:gap-16 md:mt-[60px] mt-[40px]">
+        <div className=" md:mb-0 mb-10">
           <ActivityChart />
         </div>
-        <div className="lg:grid lg:grid-cols-3 lg:gap-14">
-          <div>
+        <div className="grid lg:grid-cols-3 lg:gap-14">
+          <div className="md:mb-0 mb-8 relative overflow-hidden">
             <Typography
               className="!font-inter mb-2"
               variant="body1"
@@ -192,7 +192,7 @@ export default function FarmList({ onOpenActionModal }: any) {
               label="Deposit"
             />
           </div>
-          <div>
+          <div className="relative overflow-hidden">
             <Typography
               className="!font-inter mb-2"
               variant="body1"
@@ -209,7 +209,7 @@ export default function FarmList({ onOpenActionModal }: any) {
               label="Withdraw"
             />
           </div>
-          <div className="lg:my-0 my-10">
+          <div className="lg:my-0 my-8">
             <Typography
               className="!font-inter mb-2"
               variant="body1"

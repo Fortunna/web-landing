@@ -79,7 +79,7 @@ export default function ActionModal({ onClose }: componentProps) {
             })}
           </div>
 
-          <div className="grid grid-cols-[30%_auto] mt-6">
+          <div className="grid md:grid-cols-[30%_auto] mt-6">
             <Typography
               label={currentData.title}
               className="!font-aeonik-pro"
