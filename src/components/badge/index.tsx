@@ -2,24 +2,30 @@ import classNames from "classnames";
 import React from "react";
 
 type componentProps = {
-  theme?: "success" | "errorLight";
+  theme?: "common";
   label: string;
   className?: string;
+  leftComponent?: React.ReactElement;
 };
 export default function Badge({
-  theme = "success",
+  theme = "common",
   label,
+  leftComponent,
   className,
 }: componentProps) {
   const themeStyles = classNames({
-    "bg-success text-[#F7F9FD] ": theme == "success",
-    "bg-transparent-error text-danger ": theme == "errorLight",
+    "bg-badge-common ": theme == "common",
+  });
+
+  const textStyles = classNames({
+    "bg-badge-color  text-transparent bg-clip-text text-[#F7F9FD] ":
+      theme == "common",
   });
   return (
-    <span
-      className={`font-inter px-3 py-[1px]  rounded-full text-caption-0.5 inline-block ${className} ${themeStyles} `}
-    >
-      {label}
-    </span>
+    <div className={`px-4 py-[4px] inline-block rounded-full ${themeStyles}`}>
+      <div className="flex items-center">
+        {leftComponent} <div className={`${textStyles}`}>{label}</div>
+      </div>
+    </div>
   );
 }

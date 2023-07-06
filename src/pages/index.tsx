@@ -1,45 +1,22 @@
-import Button from "@/components/button";
-import Chart from "@/components/highchart";
-import { ArrowRightIcon, InfoIcon, RefreshIcon } from "@/components/icons";
-import PageWrapper from "@/components/pageWrapper";
-import TabComponent from "@/components/tab";
-import Typography from "@/components/typography";
-import { useAuth } from "@/contexts/auth";
-import DashboardLayout from "@/layouts";
-import BalanceWidgets from "@/modules/home/balanceWidgets";
-import ProviderRate from "@/modules/home/price";
-import ProvidersPrice from "@/modules/home/providersPrice";
-import Statistics from "@/modules/home/statistics";
-import { getToken } from "@/utils/auth";
-import { useRouter } from "next/router";
-import React, { useEffect } from "react";
+import Layout from "@/layouts";
+import BridgingTheGapSection from "@/widget/home/bridgingTheGap";
+import BuildingWithEaseSection from "@/widget/home/buildingWithEase";
+import CommunityOwnedSection from "@/widget/home/communityOwnedSection";
+import PartnerSection from "@/widget/home/partner";
+import TokenomicsSection from "@/widget/home/tokenomics";
+import WhyFortuna from "@/widget/home/why-fortuna";
+import React from "react";
 
-export default function HomePage() {
-  const logs = useAuth();
-  const router = useRouter();
-
-  useEffect(() => {
-    // router.push("/earn/farms");
-  }, []);
-  useEffect(() => {
-    // getToken();
-  }, []);
+export default function index() {
   return (
-    <DashboardLayout>
-      <PageWrapper>
-        <div className="lg:grid grid-cols-[24%_auto] gap-4">
-          <div className="md:mb-0 mb-6">
-            <BalanceWidgets />
-          </div>
-          <div>
-            <Chart />
-            <div className="mb-4"></div>
-            <Statistics />
+    <Layout>
+      <WhyFortuna />
+      <BuildingWithEaseSection />
+      <BridgingTheGapSection />
+      <CommunityOwnedSection />
+      <TokenomicsSection />
 
-            <ProvidersPrice />
-          </div>
-        </div>
-      </PageWrapper>
-    </DashboardLayout>
+      <PartnerSection />
+    </Layout>
   );
 }

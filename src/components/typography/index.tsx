@@ -31,16 +31,17 @@ export default function Typography({
   ...props
 }: ComponentProps) {
   const classes = classNames({
-    "text-caption-1 text-light-4 font-poppins-bold ": variant == "body1",
-    "text-blue text-caption-0.5 font-aeonik-pro ": variant == "body0.5",
-    "text-caption-2 text-white font-dm-sans ": variant == "body2",
-    "text-caption-3 text-white font-poppins ": variant == "body3",
-    "text-lg text-white font-poppins-semi-bold": variant == "heading",
-    "text-heading text-white !font-dm-sans-bold": variant == "title",
-    "!text-[50px] font-aeonik-pro font-bold text-white": variant == "big-title",
-    "text-sub-heading  text-white font-poppins-semi-bold ":
+    // "text-caption-1 text-light-4 font-poppins-bold ": variant == "body1",
+    // "text-blue text-caption-0.5 font-aeonik-pro ": variant == "body0.5",
+    "text-caption-2 text-harsh font-inter ": variant == "body2",
+    "text-caption-3 text-light-harsh font-inter ": variant == "body3",
+    "text-lg text-light-harsh  font-inter-light leading-[25px]":
+      variant == "heading",
+    "text-heading text-white !font-aeonik-pro !font-bold leading-[70px]":
+      variant == "title",
+    "text-sub-title-heading  text-[#fdfdfd] !font-aeonik-pro !font-bold leading-[60px]  ":
       variant == "subtitle",
-    "text-semi-heading  text-white font-aeonik-pro-bold":
+    "text-semi-heading  text-white font-aeonik-fono font-bold":
       variant == "semi-heading",
   });
 

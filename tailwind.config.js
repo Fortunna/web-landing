@@ -13,39 +13,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#120F1D",
-        secondary: "#DE1EFD",
-        "light-white": "#777E90",
-        "transparent-color": "rgba(27, 28, 32, 0.6)",
-        "transparent-deep": "rgba(35, 38, 47, 0.78)",
-        "transparent-1": "rgba(217, 217, 217, 0.1)",
-        "transparent-2": "rgba(202, 198, 221, 0.10)",
-        "transparent-3": "rgba(255, 255, 255, 0.10)",
-        "transparent-error": "rgba(255, 59, 48, 0.10)",
-        "transparent-secondary": "rgba(70, 25, 78, 0.80)",
-        "light-2": "#ECECEC",
-        "light-3": "#E6E8EC",
-        "light-4": "#FCFCFD",
-        harsh: "#353945",
-        "light-harsh": "#777E91",
-        dark: "#141416",
-        "dark-2": "#2F3941",
-        "dark-3": "#212531",
-        "dark-4": "#01001D",
-        "light-secondary": "#8076fe",
-        "deep-secondary": "#1C182D",
-        "gray-600": "#68737D",
-        "gray-300": "#D8DCDE",
-        "gray-400": "#B7BECB",
-        "neutrals-5": "#B1B5C4",
-        "neutrals-6": "#343745",
-        "neutrals-7": "#202E49",
-        blue: "#9099FC",
-        success: "#41AD73",
-        "success-2": "#00E3B4",
-        "success-3": "#15CC35",
-        danger: "#FF3B30",
-        "danger-2": "#FF7F7B",
+        "text-cool": "#b2b2b2",
+        "light-harsh": "rgba(239, 237, 253, 0.70)",
+        harsh: "#A9A9A9",
+        transparent: "rgba(255, 255, 255, 0.08)",
+        "transparent-1": "gba(29, 28, 32, 0.79)",
       },
       fontFamily: {
         sans: ["Aeonik Pro", ...defaultTheme.fontFamily.sans],
@@ -69,7 +41,8 @@ module.exports = {
         "inter-light": "Inter Light",
       },
       fontSize: {
-        heading: "30px",
+        heading: "60px",
+        "sub-title-heading": "50px",
         "sub-heading": "23px",
         "semi-heading": "20px",
         lg: "17px",
@@ -79,11 +52,14 @@ module.exports = {
         "caption-3": "15px",
       },
       backgroundImage: {
-        "theme-bg": "url('/theme-bg.png')",
-        // "transparent-color": "rgba(27, 28, 32, 0.6)",
-        "secondary-gradient":
-          "linear-gradient(98.88deg, #8C01FA 31%, #EB08A4 102.28%)",
+        "badge-common":
+          "linear-gradient(90deg, rgba(229, 156, 255, 0.24) 0.01%, rgba(186, 156, 255, 0.24) 50.01%, rgba(156, 178, 255, 0.24) 100%)",
+        "badge-color":
+          " linear-gradient(0deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%), linear-gradient(90deg, #E59CFF 0.01%, #BA9CFF 50.01%, #9CB2FF 100%)",
+        "button-gradient":
+          "linear-gradient(152deg, #8C01FA 32.29%, #EB08A4 100%)",
       },
+
       lineHeight: {
         "leading-24": "24px",
       },
