@@ -33,6 +33,7 @@ export default function Button({
   const themeStyles = classNames({
     "bg-white text-dark": theme == "white" && !outline,
     "bg-button-gradient text-white": theme == "secondary" && !outline,
+    "bg-black text-white": theme == "dark" && !outline,
   });
 
   const sizeStyles = classNames({
@@ -43,11 +44,19 @@ export default function Button({
   const disabledStyles = classNames({
     "opacity-[0.6]": disabled,
   });
+
+  const wrapperStyles = classNames({
+    "p-[1px] bg-button-gradient": theme == "dark" && !outline,
+  });
+
   return (
-    <button
-      disabled={disabled}
-      onClick={onClick}
-      className={`
+    <div
+      className={`${wrapperStyles} ${classRoundedStyles} overflow-hidden  inline-block`}
+    >
+      <button
+        disabled={disabled}
+        onClick={onClick}
+        className={`
       
       flex items-center justify-center
     
@@ -59,10 +68,11 @@ export default function Button({
       ${disabledStyles}
       ${classRoundedStyles}
     `}
-    >
-      {leftComponent}
-      {label}
-      {rightComponent}
-    </button>
+      >
+        {leftComponent}
+        {label}
+        {rightComponent}
+      </button>
+    </div>
   );
 }

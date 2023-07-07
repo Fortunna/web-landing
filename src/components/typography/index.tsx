@@ -8,6 +8,7 @@ type ComponentProps = {
     | "big-title"
     | "title"
     | "subtitle"
+    | "semi-subtitle"
     | "semi-heading"
     | "heading"
     | "body0.5"
@@ -41,6 +42,8 @@ export default function Typography({
       variant == "title",
     "text-sub-title-heading  text-[#fdfdfd] !font-aeonik-pro !font-bold leading-[60px]  ":
       variant == "subtitle",
+    "text-[38px]  text-[#fff] !font-aeonik-pro !font-bold leading-[60px]":
+      variant == "semi-subtitle",
     "text-semi-heading  text-white font-aeonik-fono font-bold":
       variant == "semi-heading",
   });

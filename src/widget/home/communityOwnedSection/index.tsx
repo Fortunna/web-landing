@@ -41,7 +41,7 @@ export default function CommunityOwnedSection() {
     icon: React.ReactElement;
   }) => {
     return (
-      <div className="text-center mt-[78px]">
+      <div className="text-center  ">
         <div className="mx-auto in inline-block">{icon}</div>
         <Typography
           className="!text-[40px] !font-aeonik-fono text-[#F4F0FF]"
@@ -53,29 +53,35 @@ export default function CommunityOwnedSection() {
     );
   };
   return (
-    <div className="bg-black text-center pt-[167px] ">
-      <div>
-        <Typography variant="subtitle">
-          <>
-            A Community Owned Defi
-            <div className="text-[#dadada]"> Platform</div>
-          </>
-        </Typography>
+    <div className="bg-black text-center  bg-black bg-star bg-[100%_100%]   bg-fixed  ">
+      <div className="bg-defi bg-no-repeat !pt-[167px] bg-[85%_20px]  bg-[length:400px_400px]">
+        <div>
+          <Typography variant="subtitle">
+            <>
+              A Community Owned Defi
+              <div className="text-[#dadada]"> Platform</div>
+            </>
+          </Typography>
 
-        <PageWrapper>
-          <div className="grid grid-cols-2">
-            {values?.map((_value, index) => {
-              return (
-                <Value
-                  label={_value.label}
-                  value={_value.value}
-                  icon={<Image alt="asset" src={_value.img} />}
-                  key={index}
-                />
-              );
-            })}
-          </div>
-        </PageWrapper>
+          <PageWrapper>
+            <div className="grid grid-cols-2 mt-[78px] bg-lazy-background-image bg-contain bg-center">
+              {values?.map((_value, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={`${index > 1 ? "mt-[78px]" : ""}`}
+                  >
+                    <Value
+                      label={_value.label}
+                      value={_value.value}
+                      icon={<Image alt="asset" src={_value.img} />}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </PageWrapper>
+        </div>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import Ball from "./icons/ball";
 
 export default function BuildingWithEaseSection() {
   return (
-    <div className="bg-black">
+    <div className="bg-black bg-star-tiny-building-with-ease bg-[100%_100%] bg-fixed">
       <PageWrapper>
         <div className="grid grid-cols-[30%_auto] gap-32 mb-[30px]">
           <div className="flex items-center w-[80%]">

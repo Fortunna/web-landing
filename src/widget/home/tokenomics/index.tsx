@@ -4,16 +4,18 @@ import React from "react";
 import DoughnutChart from "./chart";
 import fortuna from "../../../../public/fortuna.png";
 import Image from "next/image";
+import SectionTopHeader from "@/widget/common/sectionTopHeader";
 
 export default function TokenomicsSection() {
   return (
-    <div className="bg-black pt-[198px]">
+    <div className="bg-black pt-[198px] bg-[url(/blue-bg.png)] bg-left-bottom bg-no-repeat">
       <PageWrapper>
         <div className="grid grid-cols-[50%_auto] gap-24">
           <div>
+            <SectionTopHeader label="The Tokenomics" />
+
             <Typography
-              variant="subtitle"
-              className=" !text-[35px]"
+              variant="semi-subtitle"
               label="The financial infrastructure"
             />
 

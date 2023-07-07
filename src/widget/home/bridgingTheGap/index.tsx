@@ -277,40 +277,52 @@ const Value = ({
 };
 export default function BridgingTheGapSection() {
   return (
-    <div className="bg-black pt-[98px] text-center">
-      <div className="w-1/2 mx-auto">
-        <Badge theme="common" label="About" />
-        <div className="mb-4"></div>
-        <Typography variant="subtitle">
-          <>
-            {" "}
-            Bridging the gap in DeFI for{" "}
-            <div className="text-[#dadada]"> Projects and Users </div>
-          </>
-        </Typography>
+    <div className="bg-black bg-star bg-[100%_100%]  bg-fixed ">
+      <div
+        style={
+          {
+            // backgroundSize: "100%",
+            // backgroundPosition: "left -1000px",
+          }
+        }
+        className=" bg-shade bg-contain  text-center bg-no-repeat
+         py-[98px]
+      "
+      >
+        <div className="w-1/2 mx-auto">
+          <Badge theme="common" label="About" />
+          <div className="mb-4"></div>
+          <Typography variant="subtitle">
+            <>
+              {" "}
+              Bridging the gap in DeFI for{" "}
+              <div className="text-[#dadada]"> Projects and Users </div>
+            </>
+          </Typography>
 
-        <div className="my-4 w-[68%] mx-auto">
-          <Typography
-            variant="body3"
-            label="Fortuna is a next-generation decentralized finance (DeFi) ecosystem that simplifies participation in staking and staking-pad creation, Yield farming and Yield Farming creation, lending/borrowing and governance activities and creation."
-          />
+          <div className="my-4 w-[68%] mx-auto">
+            <Typography
+              variant="body3"
+              label="Fortuna is a next-generation decentralized finance (DeFi) ecosystem that simplifies participation in staking and staking-pad creation, Yield farming and Yield Farming creation, lending/borrowing and governance activities and creation."
+            />
+          </div>
         </div>
+
+        <PageWrapper>
+          <div className="grid grid-cols-4 gap-20 mt-[68px]">
+            {our_values.map((_value, index) => {
+              return (
+                <Value
+                  title={_value.title}
+                  summary={_value.summary}
+                  icon={_value.icon}
+                  key={index}
+                />
+              );
+            })}
+          </div>
+        </PageWrapper>
       </div>
-
-      <PageWrapper>
-        <div className="grid grid-cols-4 gap-14 mt-[68px]">
-          {our_values.map((_value, index) => {
-            return (
-              <Value
-                title={_value.title}
-                summary={_value.summary}
-                icon={_value.icon}
-                key={index}
-              />
-            );
-          })}
-        </div>
-      </PageWrapper>
     </div>
   );
 }
