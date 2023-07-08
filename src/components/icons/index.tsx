@@ -115,6 +115,7 @@ export const Read = ({ fill = "white" }: { fill?: string }) => {
   return (
     <svg
       width="{24}"
+      className="w-[24px]"
       height="{24}"
       viewBox="0 0 24 24"
       fill="none"

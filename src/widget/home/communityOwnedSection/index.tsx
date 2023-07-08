@@ -6,6 +6,7 @@ import coin from "../../../../public/coin.png";
 import gold from "../../../../public/gold.png";
 import chart from "../../../../public/chart.png";
 import PageWrapper from "@/components/pageWrapper";
+import defi from "../../../../public/defi.png";
 
 export default function CommunityOwnedSection() {
   const values = [
@@ -44,22 +45,36 @@ export default function CommunityOwnedSection() {
       <div className="text-center  ">
         <div className="mx-auto in inline-block">{icon}</div>
         <Typography
-          className="!text-[40px] !font-aeonik-fono text-[#F4F0FF]"
+          className="md:!text-[40px] text-[21px] !font-aeonik-fono text-[#F4F0FF]"
           label={value}
         />
 
-        <Typography variant="body3" label={label} />
+        <Typography
+          className="md:!text-[16px] text-[8px]"
+          variant="body3"
+          label={label}
+        />
       </div>
     );
   };
   return (
     <div className="bg-black text-center  bg-black bg-star bg-[100%_100%]   bg-fixed  ">
-      <div className="bg-defi bg-no-repeat !pt-[167px] bg-[85%_20px]  bg-[length:400px_400px]">
+      <Image
+        style={{ width: "40%", float: "right" }}
+        className="mb-[30px] md:hidden block"
+        src={defi}
+        alt="Defi"
+      />
+      <div className="overflow-hidden"></div>
+      <div className="md:bg-defi bg-no-repeat !pt-[167px] bg-[85%_20px]  bg-[length:400px_400px]">
         <div>
-          <Typography variant="subtitle">
+          <Typography
+            className="md:text-start !text-center overflow-hidden !w-full"
+            variant="subtitle"
+          >
             <>
               A Community Owned Defi
-              <div className="text-[#dadada]"> Platform</div>
+              <div className="text-[#dadada] md:block inline"> Platform</div>
             </>
           </Typography>
 

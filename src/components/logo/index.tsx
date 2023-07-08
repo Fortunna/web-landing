@@ -6,6 +6,7 @@ export default function AppLogo({ ...props }) {
       width={127}
       height={32}
       viewBox="0 0 127 32"
+      className="md:w-[127px] h-auto w-[100px]"
       fill="none"
       {...props}
       xmlns="http://www.w3.org/2000/svg"

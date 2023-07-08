@@ -7,7 +7,7 @@ type componentProps = {
 export default function PageWrapper({ children, className }: componentProps) {
   return (
     <div
-      className={`lg:px-[8%] md:px-5 px-3 max-w-full overflow-hidden ${className}`}
+      className={`lg:px-[8%] md:px-5 px-4 max-w-full w-full overflow-hidden ${className}`}
     >
       {children}
     </div>

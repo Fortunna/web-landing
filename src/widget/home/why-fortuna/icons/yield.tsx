@@ -6,7 +6,7 @@ export default function Yield() {
       <svg
         width="388"
         height="352"
-        className="mx-auto inline-block"
+        className="mx-auto inline-block max-w-full h-auto"
         viewBox="0 0 388 352"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

@@ -36,11 +36,11 @@ export default function Typography({
     // "text-blue text-caption-0.5 font-aeonik-pro ": variant == "body0.5",
     "text-caption-2 text-harsh font-inter ": variant == "body2",
     "text-caption-3 text-light-harsh font-inter ": variant == "body3",
-    "text-lg text-light-harsh  font-inter-light leading-[25px]":
+    "md:text-lg text-[14px] text-light-harsh  font-inter-light leading-[25px]":
       variant == "heading",
-    "text-heading text-white !font-aeonik-pro !font-bold leading-[70px]":
+    "md:text-heading text-[36px] text-white !font-aeonik-pro !font-bold md:leading-[70px] leading-[48px]":
       variant == "title",
-    "text-sub-title-heading  text-[#fdfdfd] !font-aeonik-pro !font-bold leading-[60px]  ":
+    "md:text-sub-title-heading text-[34px] text-[#fdfdfd] !font-aeonik-pro !font-bold md:leading-[60px] md:leading-[40px]   ":
       variant == "subtitle",
     "text-[38px]  text-[#fff] !font-aeonik-pro !font-bold leading-[60px]":
       variant == "semi-subtitle",

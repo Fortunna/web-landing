@@ -10,11 +10,12 @@ export default function TokenomicsSection() {
   return (
     <div className="bg-black pt-[198px] bg-[url(/blue-bg.png)] bg-left-bottom bg-no-repeat">
       <PageWrapper>
-        <div className="grid grid-cols-[50%_auto] gap-24">
+        <div className="md:grid md:grid-cols-[50%_auto] gap-24">
           <div>
             <SectionTopHeader label="The Tokenomics" />
 
             <Typography
+              className="md:text-[38px] text-[24px]"
               variant="semi-subtitle"
               label="The financial infrastructure"
             />
@@ -28,7 +29,7 @@ export default function TokenomicsSection() {
 
             <DoughnutChart />
           </div>
-          <div>
+          <div className="md:block hidden">
             <Image src={fortuna} alt="fortuna" />
           </div>
         </div>

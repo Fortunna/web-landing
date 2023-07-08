@@ -29,16 +29,16 @@ export default function Companies() {
       />
 
       <PageWrapper>
-        <div className="flex flex-wrap justify-center">
+        <div className="md:flex md:flex-wrap justify-center">
           {companies.map((company, index) => {
             return (
               <div
-                className="w-[25%]  mt-[50px] flex items-center justify-center"
+                className="md:w-[25%]  mt-[50px] flex items-center justify-center"
                 key={index}
               >
                 <Image
-                  style={{ width: "170px", height: "auto" }}
-                  className="mx-auto"
+                  style={{ height: "auto" }}
+                  className="mx-auto md:w-[170px] w-[200px]"
                   src={company}
                   alt="Company"
                 />

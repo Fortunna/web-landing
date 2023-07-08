@@ -7,9 +7,9 @@ import React from "react";
 export default function JonFortuna() {
   return (
     <div className="bg-black pt-[120px]">
-      <PageWrapper className="!px-[18%]">
-        <div className="px-[52px] py-[66px] rounded-[20px] bg-[url('/join-bg.png')] bg-cover">
-          <div className="grid grid-cols-[60%_auto]">
+      <PageWrapper className="md:!px-[18%]">
+        <div className="md:px-[52px] px-[34px] py-[66px] rounded-[20px] bg-[url('/join-bg.png')] bg-cover">
+          <div className="lg:grid lg:grid-cols-[60%_auto]">
             <div>
               <Typography
                 variant="title"
@@ -18,7 +18,7 @@ export default function JonFortuna() {
 community"
               />
 
-              <div className="w-[70%] mt-[30px]">
+              <div className="md:w-[70%] mt-[30px]">
                 <Typography
                   variant="body3"
                   className="!text-white !font-aeonik-pro"
@@ -27,37 +27,40 @@ community"
               </div>
             </div>
 
-            <div className="flex justify-end">
+            <div className="flex items-center md:justify-end">
               <div>
                 <div className="mt-10"></div>
-
-                <Button
-                  rounded
-                  size="big"
-                  leftComponent={
-                    <div className="mr-2">
-                      <Twitter />
-                    </div>
-                  }
-                  label="Twitter"
-                  theme="dark"
-                />
-                <div className="mt-3"></div>
-                <Button
-                  rounded
-                  size="big"
-                  theme="dark"
-                  label="Discord"
-                  leftComponent={
-                    <div className="mr-2">
-                      <Discord />
-                    </div>
-                  }
-                />
+                <div className="md:inline-block flex">
+                  <Button
+                    rounded
+                    size="big"
+                    // className="!lg:px-"
+                    //   className="md:mr-0 mr-3"
+                    leftComponent={
+                      <div className="mr-2">
+                        <Twitter />
+                      </div>
+                    }
+                    label="Twitter"
+                    theme="dark"
+                  />
+                  <div className="mt-3 md:mr-0 mr-3"></div>
+                  <Button
+                    rounded
+                    size="big"
+                    theme="dark"
+                    label="Discord"
+                    leftComponent={
+                      <div className="mr-2">
+                        <Discord />
+                      </div>
+                    }
+                  />
+                </div>
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-[60%_auto] mt-[90px]">
+          <div className="md:grid md:grid-cols-[60%_auto] mt-[90px]">
             <div>
               <Typography
                 variant="subtitle"
@@ -66,8 +69,8 @@ community"
               />
             </div>
 
-            <div className="flex items-center justify-end">
-              <div>
+            <div className="md:flex md:items-center justify-end">
+              <div className="md:mt-0 mt-10">
                 <Button
                   rounded
                   size="big"

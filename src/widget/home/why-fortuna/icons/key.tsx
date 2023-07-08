@@ -4,6 +4,10 @@ import keyRoute from "../../../../../public/fancy-key.png";
 
 export default function Key() {
   return (
-    <Image className="inline-block float-right" src={keyRoute} alt="Key" />
+    <Image
+      className="inline-block float-right max-w-full"
+      src={keyRoute}
+      alt="Key"
+    />
   );
 }

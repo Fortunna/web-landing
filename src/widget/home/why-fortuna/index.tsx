@@ -11,6 +11,11 @@ import gradient2 from "../../../../public/border-gradient-2.png";
 import gradient3 from "../../../../public/border-gradient-3.png";
 import gradient4 from "../../../../public/border-gradient-4.png";
 import Image, { StaticImageData } from "next/image";
+import Aggregator from "./options/aggregator";
+import Secure from "./options/secure";
+import PoolCreation from "./options/pool";
+import LowTransaction from "./options/lowTransaction";
+import WhyFortunaMobile from "./mobile-view";
 
 const CardBorder = ({ img }: { img: StaticImageData }) => {
   return (
@@ -46,8 +51,8 @@ export default function WhyFortuna() {
   };
   return (
     <div className="text-center bg-black  bg-bottom bg-why-bg-1 bg-contain bg-no-repeat">
-      <div className="bg-why-bg-2 bg-[length:500px_auto] py-32 bg-no-repeat">
-        <div className="mb-16">
+      <div className="bg-why-bg-2 md:bg-[length:500px_auto] bg-[length:300px_auto]  py-32 bg-no-repeat">
+        <div className="md:mb-16 mb-5">
           <Badge
             leftComponent={
               <svg
@@ -143,85 +148,39 @@ export default function WhyFortuna() {
         </div>
         <Typography className="" variant="title">
           <>
-            Multi-chain Staking and <div></div>
+            Multi-chain Staking and <div className="md:block inline"></div>
             <span className="text-text-cool">Lending</span>
           </>
         </Typography>
 
-        <div className="w-[40%] mt-7 mx-auto">
+        <div className="md:w-[40%] md:mt-7 mt-5 mx-auto md:px-0 px-8">
           <Typography
             variant="heading"
             label="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id es"
           />
         </div>
-        <div className="mt-[140px]"></div>
+        <div className="md:mt-[140px] mt-[75px]"></div>
         <PageWrapper>
           <div>
-            <div className="grid grid-cols-2 gap-10">
+            <div className="md:grid grid-cols-2 gap-10  hidden">
               <div>
-                <div className={`${cardClass} border-2 px-[33px] py-[31px]`}>
-                  <CardBorder img={gradient2} />
-                  <div>
-                    <div className="mb-10">
-                      <CardHeader
-                        title="AI Yield Aggregator"
-                        summary="Phasellus accumsan imperdiet tempor. Cras tincidunt, arcu nec eleifend porttitor, orci est vehicula "
-                      />
-                    </div>
-
-                    <Yield />
-                  </div>
-                </div>
-                <div className={`${cardClass} mt-[22px] px-[33px] py-[31px]`}>
-                  <CardBorder img={gradient2} />
-
-                  <div className="h-1/2">
-                    <div className="flex">
-                      <CardHeader
-                        title="Secure"
-                        summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore "
-                      />
-                      <div className="w-1/2">
-                        <Key />
-                      </div>
-                    </div>
-                  </div>
+                <Aggregator />
+                <div className="mt-[23px]">
+                  <Secure />
                 </div>
               </div>
               <div className="">
                 <div>
-                  <div
-                    className={`${cardClass}  px-[33px] relative overflow-hidden py-[31px]`}
-                  >
-                    <CardBorder img={gradient3} />
-
-                    <div className="mb-4">
-                      <CardHeader
-                        title="Permissionless pool creation"
-                        summary="Duis ac augue ut lectus congue luctus. Vivamus eu lacus vestibulum, luctus ante dignissim, interdum "
-                      />
-                    </div>
-                    <div className="-mb-[197px] flex justify-center relative overflow-hidden">
-                      <Pool />
-                    </div>
-                  </div>
+                  <PoolCreation />
                 </div>
                 <div className="mt-[22px]">
-                  <div
-                    className={`${cardClass}  px-[33px] relative overflow-hidden py-[31px]`}
-                  >
-                    <CardBorder img={gradient4} />
-
-                    <div className="mb-10">
-                      <CardHeader
-                        title="Low transaction fees"
-                        summary="Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed posuere egestas nunc ut tempus. Fu"
-                      />
-                    </div>
-                    <Fee />
-                  </div>
+                  <LowTransaction />
                 </div>
               </div>
+            </div>
+
+            <div className="md:hidden block">
+              <WhyFortunaMobile />
             </div>
           </div>
         </PageWrapper>

@@ -6,6 +6,7 @@ export default function Build() {
       <svg
         width={410}
         height={410}
+        className="max-w-full"
         viewBox="0 0 410 410"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

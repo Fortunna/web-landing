@@ -6,6 +6,7 @@ import Companies from "@/widget/home/company";
 import CtaSection from "@/widget/home/ctaSection";
 import JonFortuna from "@/widget/home/joinFortuna";
 import PartnerSection from "@/widget/home/partner";
+import RoadMapSection from "@/widget/home/roadmap";
 import TokenomicsSection from "@/widget/home/tokenomics";
 import WhyFortuna from "@/widget/home/why-fortuna";
 import React from "react";
@@ -17,6 +18,7 @@ export default function index() {
       <BuildingWithEaseSection />
       <BridgingTheGapSection />
       <CommunityOwnedSection />
+      {/* <RoadMapSection /> */}
       <TokenomicsSection />
 
       <PartnerSection />
