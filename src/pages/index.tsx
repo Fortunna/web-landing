@@ -1,3 +1,4 @@
+import { AnimateFadeIn, RenderWhenInView } from "@/animations";
 import Layout from "@/layouts";
 import BridgingTheGapSection from "@/widget/home/bridgingTheGap";
 import BuildingWithEaseSection from "@/widget/home/buildingWithEase";

@@ -6,22 +6,29 @@ export function AnimateFadeIn({
   children,
   animationPosition = "bottomToTop",
   delay,
+  duration,
   ...props
 }: {
   delay?: number;
+  duration?: number;
   children: React.JSX.Element;
-  animationPosition?: "bottomToTop" | "leftToRight";
+  animationPosition?: "bottomToTop" | "leftToRight" | "rightToLeft";
 }) {
   return (
     <motion.div
       initial={{
         opacity: 0,
-        x: animationPosition == "leftToRight" ? -100 : 0,
+        x:
+          animationPosition == "leftToRight"
+            ? -100
+            : animationPosition == "rightToLeft"
+            ? 100
+            : 0,
         y: animationPosition == "bottomToTop" ? 100 : 0,
       }}
       animate={{ opacity: 1, y: 0, x: 0 }}
       exit={{ opacity: 0, y: 100 }}
-      transition={{ delay: delay }}
+      transition={{ delay: delay, duration: duration ?? 0.5 }}
       {...props}
     >
       {/* Your content here */}

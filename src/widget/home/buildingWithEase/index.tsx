@@ -4,27 +4,32 @@ import Build from "./icons/build";
 import Typography from "@/components/typography";
 import Button from "@/components/button";
 import Ball from "./icons/ball";
+import { AnimateFadeIn, RenderWhenInView } from "@/animations";
 
 export default function BuildingWithEaseSection() {
   return (
     <div className="bg-black bg-star-tiny-building-with-ease bg-[100%_100%] bg-fixed">
-      <PageWrapper>
-        <div className="md:grid grid-cols-[30%_auto] md:gap-32 mb-[30px]">
-          <div className="block md:hidden mb-8">
-            <Ball />
-          </div>
-          <div className=" items-center w-[80%] md:flex hidden">
-            <Typography
-              variant="body2"
-              className="!text-[#757185]"
-              label="With smart automation we provide a reliable solution for users seeking secure and transparent interactions with project in the defi ecosystem"
-            />
-          </div>
-          <div className="md:block hidden">
-            <Ball />
-          </div>
-        </div>
-      </PageWrapper>
+      <RenderWhenInView>
+        <AnimateFadeIn delay={0.6}>
+          <PageWrapper>
+            <div className="md:grid grid-cols-[30%_auto] md:gap-32 mb-[30px]">
+              <div className="block md:hidden mb-8">
+                <Ball />
+              </div>
+              <div className=" items-center w-[80%] md:flex hidden">
+                <Typography
+                  variant="body2"
+                  className="!text-[#757185]"
+                  label="With smart automation we provide a reliable solution for users seeking secure and transparent interactions with project in the defi ecosystem"
+                />
+              </div>
+              <div className="md:block hidden">
+                <Ball />
+              </div>
+            </div>
+          </PageWrapper>
+        </AnimateFadeIn>
+      </RenderWhenInView>
       <PageWrapper>
         <>
           <div className="md:grid md:grid-cols-[30%_auto] gap-44">
@@ -59,7 +64,11 @@ export default function BuildingWithEaseSection() {
             />
           </div>
           <div className="block md:hidden">
-            <Build />
+            <RenderWhenInView>
+              <AnimateFadeIn delay={0.6}>
+                <Build />
+              </AnimateFadeIn>
+            </RenderWhenInView>
           </div>
         </>
       </PageWrapper>

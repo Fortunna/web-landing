@@ -7,6 +7,8 @@ import gold from "../../../../public/gold.png";
 import chart from "../../../../public/chart.png";
 import PageWrapper from "@/components/pageWrapper";
 import defi from "../../../../public/defi.png";
+import { AnimateFadeIn, RenderWhenInView } from "@/animations";
+// import fortunaMobile from "../../../../public/fortuna-mobile.png";
 
 export default function CommunityOwnedSection() {
   const values = [
@@ -68,15 +70,22 @@ export default function CommunityOwnedSection() {
       <div className="overflow-hidden"></div>
       <div className="md:bg-defi bg-no-repeat !pt-[167px] bg-[85%_20px]  bg-[length:400px_400px]">
         <div>
-          <Typography
-            className="md:text-start !text-center overflow-hidden !w-full md:px-0 px-5"
-            variant="subtitle"
-          >
-            <>
-              A Community Owned Defi
-              <div className="text-[#dadada] md:block inline"> Platform</div>
-            </>
-          </Typography>
+          <RenderWhenInView>
+            <AnimateFadeIn>
+              <Typography
+                className="md:text-start !text-center overflow-hidden !w-full md:px-0 px-5"
+                variant="subtitle"
+              >
+                <>
+                  A Community Owned Defi
+                  <div className="text-[#dadada] md:block inline">
+                    {" "}
+                    Platform
+                  </div>
+                </>
+              </Typography>
+            </AnimateFadeIn>
+          </RenderWhenInView>
 
           <PageWrapper>
             <div className="grid grid-cols-2 mt-[78px] bg-no-repeat bg-lazy-background-image bg-contain bg-center">
@@ -86,11 +95,18 @@ export default function CommunityOwnedSection() {
                     key={index}
                     className={`${index > 1 ? "mt-[78px]" : ""}`}
                   >
-                    <Value
-                      label={_value.label}
-                      value={_value.value}
-                      icon={<Image alt="asset" src={_value.img} />}
-                    />
+                    <RenderWhenInView triggerOnce={false}>
+                      <AnimateFadeIn
+                        // animationPosition="leftToRight"
+                        delay={index / 3}
+                      >
+                        <Value
+                          label={_value.label}
+                          value={_value.value}
+                          icon={<Image alt="asset" src={_value.img} />}
+                        />
+                      </AnimateFadeIn>
+                    </RenderWhenInView>
                   </div>
                 );
               })}
