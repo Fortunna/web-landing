@@ -51,7 +51,7 @@ export default function WhyFortuna() {
   };
   return (
     <div className="text-center bg-black  bg-bottom bg-why-bg-1 bg-contain bg-no-repeat">
-      <div className="bg-why-bg-2 md:bg-[length:500px_auto] bg-[length:300px_auto]  py-32 bg-no-repeat">
+      <div className="bg-why-bg-2 md:bg-[length:500px_auto] bg-[length:300px_auto]  md:py-32 py-20 bg-no-repeat">
         <div className="md:mb-16 mb-5">
           <Badge
             leftComponent={

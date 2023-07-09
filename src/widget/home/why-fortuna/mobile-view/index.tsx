@@ -39,7 +39,7 @@ export default function WhyFortunaMobile() {
     );
   };
   return (
-    <PageWrapper className="!px-10%">
+    <PageWrapper className="!px-10% !px-0 mobile-why-fortuna-view">
       <>
         {/* <div className="grid grid-cols-4 gap-12"> */}
         <Carousel

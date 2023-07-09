@@ -21,7 +21,7 @@ export default function Companies() {
     company7,
   ];
   return (
-    <div className="bg-black pt-[190px]">
+    <div className="bg-black md:pt-[190px] pt-20">
       <Typography
         variant="semi-subtitle"
         className="text-center"
@@ -33,12 +33,12 @@ export default function Companies() {
           {companies.map((company, index) => {
             return (
               <div
-                className="md:w-[25%]  mt-[50px] flex items-center justify-center"
+                className="md:w-[25%]  md:mt-[50px] mt-[35px] flex items-center justify-center"
                 key={index}
               >
                 <Image
                   style={{ height: "auto" }}
-                  className="mx-auto md:w-[170px] w-[200px]"
+                  className="mx-auto md:w-[170px] w-[150px]"
                   src={company}
                   alt="Company"
                 />

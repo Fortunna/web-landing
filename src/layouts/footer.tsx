@@ -21,6 +21,11 @@ export default function Footer() {
               label="All rights reserved | Privacy | Terms"
             />
           </div>
+          <div className=" items-center justify-center mb-10 flex md:hidden">
+            <Twitter fill="rgba(239, 237, 253, 0.70)" />
+            <div className="mx-3"></div>
+            <Discord fill="rgba(239, 237, 253, 0.70)" />
+          </div>
           <div className="lg:block flex items-center justify-center">
             <AppLogo />
           </div>
@@ -28,6 +33,18 @@ export default function Footer() {
             <Twitter fill="rgba(239, 237, 253, 0.70)" />
             <div className="mx-3"></div>
             <Discord fill="rgba(239, 237, 253, 0.70)" />
+          </div>
+          <div className="block text-center my-10 md:hidden">
+            <Typography
+              variant="body2"
+              className="text-light-harsh"
+              label="Copyright 2023 Futureswap"
+            />
+            <Typography
+              variant="body2"
+              className="text-light-harsh"
+              label="All rights reserved | Privacy | Terms"
+            />
           </div>
         </div>
       </PageWrapper>

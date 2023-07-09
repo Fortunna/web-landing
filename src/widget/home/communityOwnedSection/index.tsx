@@ -69,7 +69,7 @@ export default function CommunityOwnedSection() {
       <div className="md:bg-defi bg-no-repeat !pt-[167px] bg-[85%_20px]  bg-[length:400px_400px]">
         <div>
           <Typography
-            className="md:text-start !text-center overflow-hidden !w-full"
+            className="md:text-start !text-center overflow-hidden !w-full md:px-0 px-5"
             variant="subtitle"
           >
             <>
@@ -79,7 +79,7 @@ export default function CommunityOwnedSection() {
           </Typography>
 
           <PageWrapper>
-            <div className="grid grid-cols-2 mt-[78px] bg-lazy-background-image bg-contain bg-center">
+            <div className="grid grid-cols-2 mt-[78px] bg-no-repeat bg-lazy-background-image bg-contain bg-center">
               {values?.map((_value, index) => {
                 return (
                   <div

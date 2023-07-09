@@ -2,6 +2,8 @@ import Badge from "@/components/badge";
 import PageWrapper from "@/components/pageWrapper";
 import Typography from "@/components/typography";
 import React from "react";
+import Image from "next/image";
+import divider from "../../../../public/divider.png";
 
 const our_values = [
   {
@@ -253,25 +255,37 @@ const Value = ({
   title,
   summary,
   icon,
+  index,
 }: {
   title: string;
+  index: number;
   summary: string;
   icon: React.ReactElement;
 }) => {
   return (
-    <div className="text-start md:py-0 py-7">
-      {icon}
+    <div>
+      <div className="md:block flex">
+        <div className="md:hidden h-100 w-[2px] bg-[#27282a] mr-7"></div>
+        <div className="text-start md:py-0 py-7">
+          {icon}
 
-      <Typography
-        variant="semi-heading"
-        className="!font-aeonik-pro !font-bold py-4"
-        label={title}
-      />
-      <Typography
-        variant="body2"
-        className="!text-white !font-inter-light !leading-[22px] md:w-full w-[79%]"
-        label={summary}
-      />
+          <Typography
+            variant="semi-heading"
+            className="!font-aeonik-pro !font-bold py-4"
+            label={title}
+          />
+          <Typography
+            variant="body2"
+            className="!text-white !font-inter-light !leading-[22px] md:w-full w-[79%]"
+            label={summary}
+          />
+        </div>
+      </div>
+      {index !== our_values.length - 1 ? (
+        <div className="md:hidden">
+          <Image src={divider} alt="" />
+        </div>
+      ) : null}
     </div>
   );
 };
@@ -286,7 +300,7 @@ export default function BridgingTheGapSection() {
           }
         }
         className=" bg-shade bg-contain  text-center bg-no-repeat
-         py-[98px]
+         md:py-[98px] pt-[98px]
       "
       >
         <div className=" mx-auto md:px0 px-4">
@@ -302,20 +316,27 @@ export default function BridgingTheGapSection() {
               </div>
             </>
           </Typography>
-
+        </div>
+        <div>
           <div className="my-4 md:w-[40%] mx-auto">
             <Typography
               variant="body3"
               label="Fortuna is a next-generation decentralized finance (DeFi) ecosystem that simplifies participation in staking and staking-pad creation, Yield farming and Yield Farming creation, lending/borrowing and governance activities and creation."
             />
           </div>
+          <div className=" bg-[url(/semi-cricle-shade.png)]  bg-cover bg-[center_-35px] ">
+            <div className="!text-caption-1 inline-block bg-no-repeat !font-inter border-[1px] !border-[#2a282f] md:mt-4 mt-6 py-3 mb-5 px-7 !text-[#F4F0FF] rounded-[8px]">
+              See our Values
+            </div>
+          </div>
         </div>
 
         <PageWrapper>
-          <div className="md:grid md:grid-cols-4 gap-20 mt-[68px]">
+          <div className="md:grid md:grid-cols-4 gap-20 md:bg-[url(/semi-circle.png)] bg-[center_-62px] pt-[68px]">
             {our_values.map((_value, index) => {
               return (
                 <Value
+                  index={index}
                   title={_value.title}
                   summary={_value.summary}
                   icon={_value.icon}

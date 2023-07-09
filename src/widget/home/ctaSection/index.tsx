@@ -4,7 +4,7 @@ import React from "react";
 
 export default function CtaSection() {
   return (
-    <div className="pt-[200px] bg-black">
+    <div className="md:pt-[200px] pt-20 bg-black">
       <div className="md:w-[60%] text-center mx-auto">
         <Typography
           variant="title"
@@ -14,7 +14,7 @@ permissionless DeFi today"
         />
 
         <Button rounded theme="dark" size="big" label="Launch App" />
-        <div className="mt-[211px] overflow-hidden relative"></div>
+        <div className="md:mt-[211px] pt-20 overflow-hidden relative"></div>
       </div>
     </div>
   );

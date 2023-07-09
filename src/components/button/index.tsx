@@ -6,6 +6,7 @@ type componentProps = {
   theme?: "white" | "secondary" | "secondary-solid" | "dark";
   label: string;
   rightComponent?: React.JSX.Element;
+  wrapperClass?: string;
   leftComponent?: React.JSX.Element;
   rounded?: boolean;
   className?: string;
@@ -19,6 +20,7 @@ export default function Button({
   className,
   disabled,
   rightComponent,
+  wrapperClass,
   leftComponent,
   rounded = false,
   size = "default",
@@ -38,7 +40,7 @@ export default function Button({
 
   const sizeStyles = classNames({
     "  py-[8px] px-[12px]   md:text-[14px] text-[12px]": size == "default",
-    "  md:py-[16px] py-[10px] px-[60px] px-[30px] md:text-[16px] text-[12px]":
+    "  md:py-[16px] py-[8px] px-[60px] px-[30px] md:text-[15px] text-[12px]":
       size == "big",
   });
 
@@ -52,7 +54,7 @@ export default function Button({
 
   return (
     <div
-      className={`${wrapperStyles} ${classRoundedStyles} overflow-hidden  inline-block`}
+      className={`${wrapperStyles} ${wrapperClass} ${classRoundedStyles} overflow-hidden  inline-block`}
     >
       <button
         disabled={disabled}

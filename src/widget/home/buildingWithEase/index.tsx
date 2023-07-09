@@ -35,7 +35,7 @@ export default function BuildingWithEaseSection() {
               <Typography variant="subtitle">
                 <>
                   Building an easy to use{" "}
-                  <div className="text-[#dadada]">
+                  <div className="text-[#dadada] md:block inline">
                     {" "}
                     defi staking platform for
                   </div>

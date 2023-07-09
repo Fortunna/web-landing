@@ -6,9 +6,9 @@ import React from "react";
 
 export default function JonFortuna() {
   return (
-    <div className="bg-black pt-[120px]">
+    <div className="bg-black md:pt-[120px] pt-20">
       <PageWrapper className="md:!px-[18%]">
-        <div className="md:px-[52px] px-[34px] py-[66px] rounded-[20px] bg-[url('/join-bg.png')] bg-cover">
+        <div className="md:px-[52px] px-[20px] overflow-hidden md:py-[66px] py-[40px] rounded-[20px] bg-[url('/join-bg.png')] bg-cover">
           <div className="lg:grid lg:grid-cols-[60%_auto]">
             <div>
               <Typography
@@ -30,37 +30,44 @@ community"
             <div className="flex items-center md:justify-end">
               <div>
                 <div className="mt-10"></div>
-                <div className="md:inline-block flex">
-                  <Button
-                    rounded
-                    size="big"
-                    // className="!lg:px-"
-                    //   className="md:mr-0 mr-3"
-                    leftComponent={
-                      <div className="mr-2">
-                        <Twitter />
-                      </div>
-                    }
-                    label="Twitter"
-                    theme="dark"
-                  />
+                <div className="md:inline-block ">
+                  <div>
+                    <Button
+                      rounded
+                      size="big"
+                      // wrapperClass="!w-[60%]"
+                      // className="!w-full"
+                      // className="!lg:px-"
+                      //   className="md:mr-0 mr-3"
+                      leftComponent={
+                        <div className="mr-2">
+                          <Twitter />
+                        </div>
+                      }
+                      label="Twitter"
+                      theme="dark"
+                    />
+                  </div>
+
                   <div className="mt-3 md:mr-0 mr-3"></div>
-                  <Button
-                    rounded
-                    size="big"
-                    theme="dark"
-                    label="Discord"
-                    leftComponent={
-                      <div className="mr-2">
-                        <Discord />
-                      </div>
-                    }
-                  />
+                  <div>
+                    <Button
+                      rounded
+                      size="big"
+                      theme="dark"
+                      label="Discord"
+                      leftComponent={
+                        <div className="mr-2">
+                          <Discord />
+                        </div>
+                      }
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="md:grid md:grid-cols-[60%_auto] mt-[90px]">
+          <div className="md:grid md:grid-cols-[60%_auto] md:mt-[90px] mt-16">
             <div>
               <Typography
                 variant="subtitle"

@@ -38,11 +38,11 @@ export default function Typography({
     "text-caption-3 text-light-harsh font-inter ": variant == "body3",
     "md:text-lg text-[14px] text-light-harsh  font-inter-light leading-[25px]":
       variant == "heading",
-    "md:text-heading text-[36px] text-white !font-aeonik-pro !font-bold md:leading-[70px] leading-[48px]":
+    "md:text-heading text-[36px] text-white !font-aeonik-pro !font-bold md:leading-[70px] leading-[42px]":
       variant == "title",
-    "md:text-sub-title-heading text-[34px] text-[#fdfdfd] !font-aeonik-pro !font-bold md:leading-[60px] md:leading-[40px]   ":
+    "md:text-sub-title-heading text-[30px] text-[#fdfdfd] !font-aeonik-pro !font-bold md:leading-[60px] leading-[37px]   ":
       variant == "subtitle",
-    "text-[38px]  text-[#fff] !font-aeonik-pro !font-bold leading-[60px]":
+    "md:text-[38px] text-[30px]  text-[#fff] !font-aeonik-pro !font-bold leading-[60px]":
       variant == "semi-subtitle",
     "text-semi-heading  text-white font-aeonik-fono font-bold":
       variant == "semi-heading",

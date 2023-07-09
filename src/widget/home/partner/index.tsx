@@ -1,9 +1,9 @@
 import React, { MouseEventHandler, useState } from "react";
 import Image from "next/image";
-import team1 from "../../../../public/team-1.png";
-import team2 from "../../../../public/team-2.png";
-import team3 from "../../../../public/team-3.png";
-import team4 from "../../../../public/team-4.png";
+import team1 from "../../../../public/team.png";
+import team2 from "../../../../public/team.png";
+import team3 from "../../../../public/team.png";
+import team4 from "../../../../public/team.png";
 import Typography from "@/components/typography";
 import PageWrapper from "@/components/pageWrapper";
 import SectionTopHeader from "@/widget/common/sectionTopHeader";
@@ -62,15 +62,15 @@ export default function PartnerSection() {
       <div>
         <div>{image}</div>
 
-        <Typography className="!font-[25px] text-white" label={name} />
+        <Typography className="!text-[23px] text-white mt-6" label={name} />
         <Typography
-          variant="heading"
-          className="!text-[#DE1EFD] py-[8px]"
+          variant="body3"
+          className="!text-[#DE1EFD] py-[8px] !text-[16px]"
           label={role}
         />
         <Typography
-          variant="body3"
-          className="!font-inter-light"
+          variant="heading"
+          className="!font-inter-light !text-[16px]"
           label={description}
         />
       </div>
@@ -114,11 +114,11 @@ export default function PartnerSection() {
     );
   };
   return (
-    <div className="bg-black pt-[120px]">
+    <div className="bg-black md:pt-[120px] pt-20">
       <PageWrapper className="!px-10%">
         <>
           {" "}
-          <div className="text-center flex justify-center">
+          <div className="text-center flex justify-center mb-12">
             <div>
               <div className="flex justify-center">
                 <SectionTopHeader label="The Team/Partner" />
@@ -151,12 +151,18 @@ export default function PartnerSection() {
           >
             {partners.map((partner, index) => {
               return (
-                <div key={index} className="relative pb-24">
+                <div key={index} className="relative pb-24 pr-7">
                   <Partner
                     name={partner.name}
                     description={partner.description}
                     role={partner.role}
-                    image={<Image alt={partner.name} src={partner.img} />}
+                    image={
+                      <Image
+                        alt={partner.name}
+                        style={{ width: "100px", height: "auto" }}
+                        src={partner.img}
+                      />
+                    }
                   />
                 </div>
               );

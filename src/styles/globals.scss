@@ -255,17 +255,8 @@ input[type="range"]::-ms-thumb {
   cursor: pointer;
 }
 
-// .custom-dot-list-style {
-//   position: relative;
-//   overflow: hidden;
-//   li {
-//     width: 8px;
-//     border-radius: 100%;
-//     margin: 0 10px !important;
-//     height: 8px;
-//     background-color: #676767;
-//     &.react-multi-carousel-dot--active {
-//       background-color: #fff !important;
-//     }
-//   }
-// }
+.mobile-why-fortuna-view {
+  .react-multi-carousel-dot-list {
+    justify-content: flex-start;
+  }
+}

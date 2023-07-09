@@ -7,17 +7,19 @@ import Pool from "../icons/pool";
 export default function PoolCreation() {
   return (
     <div>
-      <div className={`${cardClass}  relative overflow-hidden `}>
-        <CardBorder img={gradient3} />
+      <div className={`${cardClass}  relative `}>
+        <div className="overflow-hidden ">
+          <CardBorder img={gradient3} />
 
-        <div className="mb-4">
-          <CardHeader
-            title="Permissionless pool creation"
-            summary="Duis ac augue ut lectus congue luctus. Vivamus eu lacus vestibulum, luctus ante dignissim, interdum "
-          />
-        </div>
-        <div className="-mb-[197px] flex justify-center relative overflow-hidden md:mt-0 mt-10">
-          <Pool />
+          <div className="mb-4">
+            <CardHeader
+              title="Permissionless pool creation"
+              summary="Duis ac augue ut lectus congue luctus. Vivamus eu lacus vestibulum, luctus ante dignissim, interdum "
+            />
+          </div>
+          <div className="-mb-[197px] flex justify-center relative overflow-hidden md:mt-0 mt-10">
+            <Pool />
+          </div>
         </div>
       </div>
     </div>
