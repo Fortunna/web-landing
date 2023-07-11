@@ -33,4 +33,4 @@ export const CardHeader = ({
 };
 
 export const cardClass =
-  "rounded-[24px] border-2 bg-transparent-1 border-transparent relative px-5 md:px-[33px] py-[31px]";
+  "rounded-[24px] border-2 bg-transparent-1 border-transparent relative ";

@@ -8,7 +8,7 @@ export default function PoolCreation() {
   return (
     <div>
       <div className={`${cardClass}  relative `}>
-        <div className="overflow-hidden ">
+        <div className=" px-5 md:px-[33px] py-[31px] overflow-hidden">
           <CardBorder img={gradient3} />
 
           <div className="mb-4">

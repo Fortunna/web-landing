@@ -186,7 +186,7 @@ export default function WhyFortuna() {
                   </RenderWhenInView>
                 </div>
               </div>
-              <div className="overflow-hidden">
+              <div className="">
                 <div>
                   <RenderWhenInView>
                     <AnimateFadeIn delay={0.6} animationPosition="rightToLeft">

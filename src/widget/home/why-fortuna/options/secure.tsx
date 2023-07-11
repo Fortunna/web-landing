@@ -7,16 +7,18 @@ export default function Secure() {
   return (
     <div>
       <div className={`${cardClass}`}>
-        <CardBorder img={gradient2} />
+        <div className=" px-5 md:px-[33px] py-[31px] overflow-hidden">
+          <CardBorder img={gradient2} />
 
-        <div className="relative overflow-hidden">
-          <div className="md:flex">
-            <CardHeader
-              title="Secure"
-              summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore "
-            />
-            <div className="md:w-1/2 relative overflow-hidden md:mt-0 mt-10">
-              <Key />
+          <div className="relative overflow-hidden">
+            <div className="md:flex">
+              <CardHeader
+                title="Secure"
+                summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore "
+              />
+              <div className="md:w-1/2 relative overflow-hidden md:mt-0 mt-10">
+                <Key />
+              </div>
             </div>
           </div>
         </div>

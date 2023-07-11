@@ -9,7 +9,7 @@ export default function Footer() {
     <div className=" bg-black py-10">
       <PageWrapper>
         <div className="md:flex md:justify-between items-center">
-          <div className="md:block hidden">
+          <div className="md:block hidden min-w-[30%]">
             <Typography
               variant="body2"
               className="text-light-harsh"
@@ -26,10 +26,10 @@ export default function Footer() {
             <div className="mx-3"></div>
             <Discord fill="rgba(239, 237, 253, 0.70)" />
           </div>
-          <div className="lg:block flex items-center justify-center">
+          <div className="lg:block  flex items-center justify-center">
             <AppLogo />
           </div>
-          <div className=" items-center md:flex hidden">
+          <div className=" items-center md:flex justify-end hidden min-w-[30%]">
             <Twitter fill="rgba(239, 237, 253, 0.70)" />
             <div className="mx-3"></div>
             <Discord fill="rgba(239, 237, 253, 0.70)" />
