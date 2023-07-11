@@ -14,27 +14,7 @@ export function AnimateFadeIn({
   children: React.JSX.Element;
   animationPosition?: "bottomToTop" | "leftToRight" | "rightToLeft";
 }) {
-  return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        x:
-          animationPosition == "leftToRight"
-            ? 0
-            : animationPosition == "rightToLeft"
-            ? 0
-            : 0,
-        y: animationPosition == "bottomToTop" ? 0 : 0,
-      }}
-      animate={{ opacity: 1, y: 0, x: 0 }}
-      exit={{ opacity: 0, y: 0 }}
-      // transition={{ delay: dela }}
-      {...props}
-    >
-      {/* Your content here */}
-      {children}
-    </motion.div>
-  );
+  return <div>{children}</div>;
 }
 
 export function AnimateWhileInView({
