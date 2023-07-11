@@ -5,7 +5,7 @@ import React from "react";
 
 export default function CtaSection() {
   return (
-    <div className="md:pt-[200px] pt-20 bg-black">
+    <div className="md:pt-[120px] pt-20 bg-black">
       <div className="md:w-[60%] text-center mx-auto">
         <RenderWhenInView>
           <AnimateFadeIn>
@@ -18,7 +18,7 @@ permissionless DeFi today"
               />
 
               <Button rounded theme="dark" size="big" label="Launch App" />
-              <div className="md:mt-[211px] pt-20 overflow-hidden relative"></div>
+              <div className="md:mt-[100px] pt-20 overflow-hidden relative"></div>
             </>
           </AnimateFadeIn>
         </RenderWhenInView>

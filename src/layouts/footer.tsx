@@ -13,7 +13,7 @@ export default function Footer() {
             <Typography
               variant="body2"
               className="text-light-harsh"
-              label="Copyright 2023 Futureswap"
+              label="Copyright 2023 Fortuna DeFi"
             />
             <Typography
               variant="body2"
@@ -38,7 +38,7 @@ export default function Footer() {
             <Typography
               variant="body2"
               className="text-light-harsh"
-              label="Copyright 2023 Futureswap"
+              label="Copyright 2023 Fortuna DeFi"
             />
             <Typography
               variant="body2"

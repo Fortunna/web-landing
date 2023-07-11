@@ -20,15 +20,15 @@ export function AnimateFadeIn({
         opacity: 0,
         x:
           animationPosition == "leftToRight"
-            ? -100
+            ? 0
             : animationPosition == "rightToLeft"
-            ? 100
+            ? 0
             : 0,
-        y: animationPosition == "bottomToTop" ? 100 : 0,
+        y: animationPosition == "bottomToTop" ? 0 : 0,
       }}
       animate={{ opacity: 1, y: 0, x: 0 }}
-      exit={{ opacity: 0, y: 100 }}
-      transition={{ delay: delay, duration: duration ?? 0.5 }}
+      exit={{ opacity: 0, y: 0 }}
+      // transition={{ delay: dela }}
       {...props}
     >
       {/* Your content here */}
