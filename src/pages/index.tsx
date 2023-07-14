@@ -19,7 +19,7 @@ export default function index() {
       <BuildingWithEaseSection />
       <BridgingTheGapSection />
       <CommunityOwnedSection />
-      {/* <RoadMapSection /> */}
+      <RoadMapSection />
       <TokenomicsSection />
 
       <PartnerSection />

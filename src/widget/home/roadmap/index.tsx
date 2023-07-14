@@ -1,12 +1,5 @@
 import React, { MouseEventHandler, useState } from "react";
-import Image from "next/image";
-import team1 from "../../../../public/team-1.png";
-import team2 from "../../../../public/team-2.png";
-import team3 from "../../../../public/team-3.png";
-import team4 from "../../../../public/team-4.png";
 import Typography from "@/components/typography";
-import PageWrapper from "@/components/pageWrapper";
-import SectionTopHeader from "@/widget/common/sectionTopHeader";
 import Carousel from "react-multi-carousel";
 import { roadmap } from "./data";
 import Badge from "@/components/badge";
@@ -17,6 +10,7 @@ const TopConnector = () => {
       width="201"
       height="72"
       viewBox="0 0 201 72"
+      style={{ width: "100% - 28px" }}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -46,6 +40,7 @@ const BottomConnector = () => {
     <svg
       width={201}
       height={73}
+      style={{ width: "100% - 28px" }}
       viewBox="0 0 201 73"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +76,7 @@ const BottomConnector = () => {
     </svg>
   );
 };
-const Pointer = () => {
+const Pointer = ({ primary }: { primary: boolean }) => {
   return (
     <svg
       width="28"
@@ -97,7 +92,7 @@ const Pointer = () => {
           width="16"
           height="16"
           rx="8"
-          fill="#00031B"
+          fill={"#00031B"}
           shape-rendering="crispEdges"
         />
         <rect x="10" y="10" width="8" height="8" rx="4" fill="#EE4492" />
@@ -155,10 +150,39 @@ const Pointer = () => {
 
 const RoadMapDisplay = ({ label }: { label: string }) => {
   return (
-    <div className="h-[200px] absolute top-[400px]">
+    <div className="w-[80%] ">
+      <svg
+        width={22}
+        className="mb-4"
+        height={22}
+        viewBox="0 0 22 22"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
+          stroke="url(#paint0_linear_772_53544)"
+          strokeWidth={2}
+          strokeDasharray="2 4"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_772_53544"
+            x1={22}
+            y1="7.774"
+            x2="-0.776"
+            y2="7.779"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#414FA2" />
+            <stop offset={1} stopColor="#EE4492" />
+          </linearGradient>
+        </defs>
+      </svg>
+
       <Typography
-        variant="body3"
-        className="!text-[rgba(255, 255, 255, 0.60) ]"
+        variant="body2"
+        className="!text-[rgba(255, 255, 255, 0.60) ] !text-[10px]"
         label={label}
       />
     </div>
@@ -212,7 +236,7 @@ export default function RoadmapSection() {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
+      items: 2,
     },
   };
 
@@ -233,7 +257,7 @@ export default function RoadmapSection() {
     );
   };
   return (
-    <div className="bg-black pt-[120px]">
+    <div className="bg-black pt-[120px] ps-5">
       <>
         {" "}
         <div className="text-center flex justify-center">
@@ -272,26 +296,34 @@ export default function RoadmapSection() {
         >
           {roadmap.map((_road_map, index) => {
             return (
-              <div
-                key={index}
-                className="relative pb-24 pt-[100px] flex items-center justify-end"
-              >
-                <RoadMapDisplay label={_road_map.title} />
-                <TopConnector />
-                {/* {index % 2 == 0 ? (
+              <div key={index} className="relative pt-32 pb-72 mt-[100px] ">
+                <div className="absolute -top-[30px]">
+                  <RoadMapDisplay label={_road_map.title} />
+                </div>
+
+                {index % 2 == 0 ? (
                   <div className="relative">
-                    <RoadMapDisplay label={_road_map.title} />
-                    <div className="absolute left-[-10px] top-[30px] ">
+                    <div className="absolute  md:left-[8%]  left-[1%] -top-[66px] ">
                       <TopConnector />
                     </div>
                   </div>
-                ) : (
-                  <div className="absolute left-[-10px] bottom-[20px] ">
-                    <BottomConnector />
-                  </div>
-                )} */}
+                ) : null}
 
-                <Pointer />
+                <Pointer primary={index % 2 == 0 ? true : false} />
+
+                <div className="relative">
+                  <div className="absolute top-[100px]">
+                    <RoadMapDisplay label={_road_map.title} />
+                  </div>
+
+                  {index % 2 !== 0 ? (
+                    <div className="relative">
+                      <div className="absolute left-[8%] top-[-6px] ">
+                        <BottomConnector />
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
               </div>
             );
           })}
