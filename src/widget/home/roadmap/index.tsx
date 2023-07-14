@@ -268,6 +268,7 @@ export default function RoadmapSection() {
 
             <Typography
               variant="semi-subtitle"
+              className="md:!text-[30px] !text-[25px]"
               label="See whats waiting for you..."
             />
           </div>
