@@ -13,8 +13,8 @@ export default function PoolCreation() {
 
           <div className="mb-4">
             <CardHeader
-              title="Permissionless pool creation"
-              summary="Duis ac augue ut lectus congue luctus. Vivamus eu lacus vestibulum, luctus ante dignissim, interdum "
+              title="Popular Pools"
+              summary="Discover all the trending farms and pools imported directly on our platform."
             />
           </div>
           <div className="-mb-[197px] flex justify-center relative overflow-hidden md:mt-0 mt-10">

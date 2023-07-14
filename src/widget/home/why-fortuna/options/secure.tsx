@@ -13,8 +13,8 @@ export default function Secure() {
           <div className="relative overflow-hidden">
             <div className="md:flex">
               <CardHeader
-                title="Secure"
-                summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore "
+                title="Secure - ZERO Risk "
+                summary="All the smart contracts are thoroughly audited and all the funds locked are covered by insurance. "
               />
               <div className="md:w-1/2 relative overflow-hidden md:mt-0 mt-10">
                 <Key />

@@ -13,7 +13,7 @@ export default function Aggregator() {
             <div className="md:mb-10 ">
               <CardHeader
                 title="AI Yield Aggregator"
-                summary="Phasellus accumsan imperdiet tempor. Cras tincidunt, arcu nec eleifend porttitor, orci est vehicula "
+                summary="Our 'Oracle' - A fully automated yield aggregator that maximizes your yields passively ."
               />
             </div>
 

@@ -14,7 +14,7 @@ export default function LowTransaction() {
           <div className="mb-10">
             <CardHeader
               title="Low transaction fees"
-              summary="Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed posuere egestas nunc ut tempus. Fu"
+              summary="Unbeatable transaction fees for our investors ."
             />
           </div>
           <Fee />
