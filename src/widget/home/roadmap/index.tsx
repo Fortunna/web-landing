@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useState } from "react";
+import React, { MouseEventHandler, useEffect, useRef, useState } from "react";
 import Typography from "@/components/typography";
 import Carousel from "react-multi-carousel";
 import { roadmap } from "./data";
@@ -7,10 +7,10 @@ import Badge from "@/components/badge";
 const TopConnector = () => {
   return (
     <svg
-      width="201"
-      height="72"
-      viewBox="0 0 201 72"
+      width={201}
+      height={73}
       className="connectors"
+      viewBox="0 0 201 73"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -77,6 +77,77 @@ const BottomConnector = () => {
   );
 };
 const Pointer = ({ primary }: { primary: boolean }) => {
+  if (primary) {
+    return (
+      <svg
+        width={34}
+        height={34}
+        viewBox="0 0 34 34"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g filter="url(#filter0_d_774_68792)">
+          <rect
+            x={6}
+            y={6}
+            width={22}
+            height={22}
+            rx={11}
+            fill="#00031B"
+            shapeRendering="crispEdges"
+          />
+          <rect x={13} y={13} width={8} height={8} rx={4} fill="#414FA2" />
+          <rect
+            x="7.5"
+            y="7.5"
+            width={19}
+            height={19}
+            rx="9.5"
+            stroke="#414FA2"
+            strokeWidth={3}
+            shapeRendering="crispEdges"
+          />
+        </g>
+        <defs>
+          <filter
+            id="filter0_d_774_68792"
+            x={0}
+            y={0}
+            width={34}
+            height={34}
+            filterUnits="userSpaceOnUse"
+            colorInterpolationFilters="sRGB"
+          >
+            <feFlood floodOpacity={0} result="BackgroundImageFix" />
+            <feColorMatrix
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha"
+            />
+            <feOffset />
+            <feGaussianBlur stdDeviation={3} />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix
+              type="matrix"
+              values="0 0 0 0 0.0313726 0 0 0 0 0.223529 0 0 0 0 0.905882 0 0 0 1 0"
+            />
+            <feBlend
+              mode="normal"
+              in2="BackgroundImageFix"
+              result="effect1_dropShadow_774_68792"
+            />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="effect1_dropShadow_774_68792"
+              result="shape"
+            />
+          </filter>
+        </defs>
+      </svg>
+    );
+  }
   return (
     <svg
       width="28"
@@ -148,9 +219,9 @@ const Pointer = ({ primary }: { primary: boolean }) => {
   );
 };
 
-const RoadMapDisplay = ({ label }: { label: string }) => {
+const RoadMapDisplay = ({ label }: { label: string[] }) => {
   return (
-    <div className="w-[80%] ">
+    <div className=" ">
       <svg
         width={22}
         className="mb-4"
@@ -179,12 +250,16 @@ const RoadMapDisplay = ({ label }: { label: string }) => {
           </linearGradient>
         </defs>
       </svg>
-
-      <Typography
-        variant="body2"
-        className="!text-[rgba(255, 255, 255, 0.60) ] !text-[10px]"
-        label={label}
-      />
+      {label.map((_content, index) => {
+        return (
+          <Typography
+            key={index}
+            variant="body2"
+            className="!text-[rgba(255, 255, 255, 0.60) ] !text-[10px]"
+            label={_content}
+          />
+        );
+      })}
     </div>
   );
 };
@@ -228,7 +303,7 @@ export default function RoadmapSection() {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 7,
+      items: 4,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -256,6 +331,19 @@ export default function RoadmapSection() {
       />
     );
   };
+
+  const [top, setTop] = useState(0);
+
+  const top_connector_ref: any = useRef();
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (top_connector_ref.current) {
+        const height: any = top_connector_ref.current?.offsetHeight;
+        setTop(height);
+      }
+    }, 2000);
+  }, [top_connector_ref]);
   return (
     <div className="bg-black pt-[120px] ps-5">
       <>
@@ -284,7 +372,7 @@ export default function RoadmapSection() {
           customDot={
             <CustomDot active={activeSlide} onClick={handleDotClick} />
           }
-          autoPlay={true}
+          // autoPlay={true}
           autoPlaySpeed={3000}
           keyBoardControl={true}
           transitionDuration={500}
@@ -297,32 +385,67 @@ export default function RoadmapSection() {
         >
           {roadmap.map((_road_map, index) => {
             return (
-              <div key={index} className="relative pt-32 pb-72 mt-[100px] ">
-                <div className="absolute -top-[30px]">
-                  <RoadMapDisplay label={_road_map.title} />
-                </div>
+              <div
+                key={index}
+                className="relative pt-48 pb-72 mt-[100px] overflow-hidden "
+              >
+                <svg
+                  width="1440"
+                  className="absolute top-[40%]"
+                  height="8"
+                  viewBox="0 0 1440 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    opacity="0.1"
+                    width="4554"
+                    height="8"
+                    fill="url(#paint0_linear_774_68800)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_774_68800"
+                      x1="1.14852e-06"
+                      y1="8.00004"
+                      x2="4549.76"
+                      y2="-134.982"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0.4272" stop-color="#D84594" />
+                      <stop offset="0.4528" stop-color="#574EA0" />
+                    </linearGradient>
+                  </defs>
+                </svg>
 
                 {index % 2 == 0 ? (
-                  <div className="relative">
-                    <div className="absolute right-[-9%] -top-[45px] ">
-                      <TopConnector />
-                    </div>
+                  <div className="absolute -top-[30px]">
+                    <RoadMapDisplay label={_road_map.title} />
                   </div>
                 ) : null}
 
                 <Pointer primary={index % 2 == 0 ? true : false} />
 
                 <div className="relative">
-                  <div className="absolute top-[100px]">
-                    <RoadMapDisplay label={_road_map.title} />
-                  </div>
-
-                  {index % 2 !== 0 ? (
+                  {index % 2 == 0 ? (
                     <div className="relative">
-                      <div className="absolute left-[8%] top-[-6px] ">
-                        <BottomConnector />
+                      <div className="absolute w-full left-[4%] bottom-[-6px] ">
+                        <TopConnector />
                       </div>
                     </div>
+                  ) : null}
+                  {index % 2 !== 0 ? (
+                    <>
+                      <div className="absolute top-[100px]">
+                        <RoadMapDisplay label={_road_map.title} />
+                      </div>
+
+                      <div className="relative">
+                        <div className="absolute w-full left-[4%] top-[-6px] ">
+                          <BottomConnector />
+                        </div>
+                      </div>
+                    </>
                   ) : null}
                 </div>
               </div>

@@ -188,7 +188,7 @@ const our_values = [
         </defs>
       </svg>
     ),
-    title: "Earn and grow",
+    title: "Earn and Grow",
     summary:
       "Earn and Grow with Fortuna Finance by staking your tokens for passive income and participating in yield farming, unlocking the potential to maximize your returns in the decentralized finance space. With our user-friendly interface, you can easily stake your tokens and become a part of a vibrant ecosystem where your assets work for you, generating steady passive income",
   },

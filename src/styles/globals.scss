@@ -90,7 +90,8 @@
 }
 
 .connectors {
-  width: calc(100%) !important;
+  width: calc(100% + 20px) !important;
+  height: auto !important;
 }
 
 .sidebar {
