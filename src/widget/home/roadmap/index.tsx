@@ -10,7 +10,7 @@ const TopConnector = () => {
       width="201"
       height="72"
       viewBox="0 0 201 72"
-      style={{ width: "100% - 28px" }}
+      className="connectors"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -40,7 +40,7 @@ const BottomConnector = () => {
     <svg
       width={201}
       height={73}
-      style={{ width: "100% - 28px" }}
+      className="connectors"
       viewBox="0 0 201 73"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -303,7 +303,7 @@ export default function RoadmapSection() {
 
                 {index % 2 == 0 ? (
                   <div className="relative">
-                    <div className="absolute  md:left-[8%]  left-[1%] -top-[66px] ">
+                    <div className="absolute right-[-9%] -top-[45px] ">
                       <TopConnector />
                     </div>
                   </div>
