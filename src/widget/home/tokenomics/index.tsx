@@ -15,17 +15,17 @@ export default function TokenomicsSection() {
         <PageWrapper>
           <div className="md:grid md:grid-cols-[50%_auto] gap-24">
             <div>
-              <SectionTopHeader label="The Tokenomics" />
+              <SectionTopHeader label="The Allocation" />
 
               <Typography
                 className="md:text-[38px] !text-[24px]"
                 variant="semi-subtitle"
-                label="The financial infrastructure"
+                label="Fair and Transparent Distribution"
               />
 
               <Typography
                 variant="heading"
-                label="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id es"
+                label="Fortuna Finance revolutionizes DeFi with simplified solutions, an AI Yield Aggregator, popular pools, security, and low transaction fees, empowering users and projects  to earn and grow while shaping the future of decentralized finance."
               />
 
               <div className="md:mt-[80px] mt-14"></div>

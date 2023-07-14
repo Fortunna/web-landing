@@ -17,10 +17,10 @@ const navs = [
     title: "Governance",
     to: "/governance",
   },
-  {
-    title: "Faq",
-    to: "/faq",
-  },
+  // {
+  //   title: "Faq",
+  //   to: "/faq",
+  // },
 ];
 export default function Header() {
   const videoRef = useRef("");

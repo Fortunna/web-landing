@@ -165,7 +165,7 @@ export default function WhyFortuna() {
         <div className="md:w-[40%] md:mt-7 mt-5 mx-auto md:px-0 px-8">
           <Typography
             variant="heading"
-            label="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id es"
+            label="Fortuna Finance revolutionizes DeFi with simplified solutions, an AI Yield Aggregator, popular pools, security, and low transaction fees, empowering users and projects  to earn and grow while shaping the future of decentralized finance."
           />
         </div>
         <div className="md:mt-[140px] mt-[75px]"></div>

@@ -62,7 +62,7 @@ const our_values = [
     ),
     title: "Stakepad",
     summary:
-      "Everdome’s individual investors are blockchain and metaverse enthusiasts with a strong belief in a Web3 future. Everdome provides an investment opportunity with a long term perspective.",
+      "Stakepad is a groundbreaking feature offered by Fortuna Finance, designed to empower projects within the decentralized finance (DeFi) space. It provides a seamless and efficient solution for projects to create custom pools and farms for their tokens in just a matter of minutes, eliminating the need for complex and time-consuming processes.",
   },
   {
     icon: (
@@ -119,9 +119,9 @@ const our_values = [
         </defs>
       </svg>
     ),
-    title: "Farming",
+    title: "A.I Aggregator",
     summary:
-      "Everdome’s individual investors are blockchain and metaverse enthusiasts with a strong belief in a Web3 future. Everdome provides an investment opportunity with a long term perspective.",
+      "The A.I Aggregator offered by Fortuna Finance is a game-changer in the DeFi space, leveraging the power of artificial intelligence (AI) to optimize using advanced algorithms and machine learning capabilities, Our A.I Aggregator platform analyzes market trends, liquidity pools, and various other factors to identify the most lucrative investment opportunities.",
   },
   {
     icon: (
@@ -188,9 +188,9 @@ const our_values = [
         </defs>
       </svg>
     ),
-    title: "Lending and borrowing",
+    title: "Earn and grow",
     summary:
-      "Everdome’s individual investors are blockchain and metaverse enthusiasts with a strong belief in a Web3 future. Everdome provides an investment opportunity with a long term perspective.",
+      "Earn and Grow with Fortuna Finance by staking your tokens for passive income and participating in yield farming, unlocking the potential to maximize your returns in the decentralized finance space. With our user-friendly interface, you can easily stake your tokens and become a part of a vibrant ecosystem where your assets work for you, generating steady passive income",
   },
   {
     icon: (
@@ -248,7 +248,7 @@ const our_values = [
     ),
     title: "Governance",
     summary:
-      "Everdome’s individual investors are blockchain and metaverse enthusiasts with a strong belief in a Web3 future. Everdome provides an investment opportunity with a long term perspective.",
+      "Governance is a fundamental pillar of Fortuna Finance, empowering users to actively participate in the decentralized decision-making process. By holding governance tokens, users have the ability to propose and vote on platform upgrades, new features, and important protocol changes, allowing them to directly shape the future of the Fortuna Finance ecosystem.",
   },
 ];
 
@@ -343,7 +343,7 @@ export default function BridgingTheGapSection() {
           </div>
           <div className=" bg-[url(/semi-cricle-shade.png)]  bg-cover bg-[center_-35px] ">
             <div className="!text-caption-1 inline-block bg-no-repeat !font-inter border-[1px] !border-[#2a282f] md:mt-4 mt-6 py-3 mb-5 px-7 !text-[#F4F0FF] rounded-[8px]">
-              See our Values
+              What we offer
             </div>
           </div>
         </div>

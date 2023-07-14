@@ -13,22 +13,22 @@ import { AnimateFadeIn, RenderWhenInView } from "@/animations";
 export default function CommunityOwnedSection() {
   const values = [
     {
-      value: "$64,318,890",
+      value: "$0",
       label: "Total Value Locked",
       img: coin,
     },
     {
-      value: "$57,630,461",
+      value: "$0",
       label: "Total Locked FTN",
       img: gold,
     },
     {
-      value: "$4,508,683",
+      value: "$0",
       label: "Circulating Market Cap",
       img: cash,
     },
     {
-      value: "$21,098,191",
+      value: "$0",
       label: "Circulating Supply",
       img: chart,
     },
@@ -77,10 +77,9 @@ export default function CommunityOwnedSection() {
                 variant="subtitle"
               >
                 <>
-                  A Community Owned Defi
+                  A Transparent and Community
                   <div className="text-[#dadada] md:block inline">
-                    {" "}
-                    Platform
+                    Driving DeFi Platform
                   </div>
                 </>
               </Typography>

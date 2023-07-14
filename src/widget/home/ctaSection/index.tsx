@@ -13,8 +13,7 @@ export default function CtaSection() {
               <Typography
                 variant="title"
                 className="!bg-text-gradient    !mb-[60px]  !text-transparent !bg-clip-text !text-[#F7F9FD]"
-                label="Join the world of
-permissionless DeFi today"
+                label="Be a part of Fortuna Finance today"
               />
 
               <Button rounded theme="dark" size="big" label="Launch App" />
