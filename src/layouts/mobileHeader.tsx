@@ -20,10 +20,10 @@ export default function MobileHeader({
       title: "Governance",
       to: "/governance",
     },
-    {
-      title: "Faq",
-      to: "/faq",
-    },
+    // {
+    //   title: "Faq",
+    //   to: "/faq",
+    // },
   ];
 
   return (

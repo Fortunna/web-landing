@@ -255,7 +255,7 @@ const RoadMapDisplay = ({ label }: { label: string[] }) => {
           <Typography
             key={index}
             variant="body2"
-            className="!text-[rgba(255, 255, 255, 0.60) ] !text-[10px]"
+            className="!text-[rgba(255, 255, 255, 0.60) ] "
             label={_content}
           />
         );
@@ -372,7 +372,7 @@ export default function RoadmapSection() {
           customDot={
             <CustomDot active={activeSlide} onClick={handleDotClick} />
           }
-          // autoPlay={true}
+          autoPlay={true}
           autoPlaySpeed={3000}
           keyBoardControl={true}
           transitionDuration={500}

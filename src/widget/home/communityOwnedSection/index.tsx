@@ -77,9 +77,9 @@ export default function CommunityOwnedSection() {
                 variant="subtitle"
               >
                 <>
-                  A Transparent and Community
+                  A Transparent DeFi
                   <div className="text-[#dadada] md:block inline">
-                    Driving DeFi Platform
+                    Community
                   </div>
                 </>
               </Typography>

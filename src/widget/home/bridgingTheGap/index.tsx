@@ -320,10 +320,10 @@ export default function BridgingTheGapSection() {
               <Typography variant="subtitle">
                 <>
                   {" "}
-                  Bridging the gap in DeFI for{" "}
+                  Revolutionizing the Decentralized Finance
                   <div className="text-[#dadada] md:block inline">
                     {" "}
-                    Projects and Users{" "}
+                    World with simplicity and efficiency
                   </div>
                 </>
               </Typography>

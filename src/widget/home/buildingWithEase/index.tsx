@@ -39,18 +39,17 @@ export default function BuildingWithEaseSection() {
             <div>
               <Typography variant="subtitle">
                 <>
-                  Building an easy to use{" "}
+                  Providing solutions in
                   <div className="text-[#dadada] md:block inline">
                     {" "}
-                    defi staking platform for
+                    the DeFi World
                   </div>
-                  <div className="text-[#b3b3b3]">everyone</div>
                 </>
               </Typography>
               <div className="w-[80%] md:my-10 mt-[25px] mb-[18px]">
                 <Typography
                   variant="body3"
-                  label="With smart automation we provide a reliable solution for users seeking secure and transparent interactions with project in the defi ecosystem."
+                  label="The AI Yield Aggregator, known as Fortuna's Oracle , leverages artificial intelligence (AI) to optimize yield generation, enhance risk management, and provide a user-friendly investing experience."
                 />
               </div>
               <Button rounded size="big" theme="secondary" label="Launch App" />
