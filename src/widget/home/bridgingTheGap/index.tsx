@@ -323,7 +323,7 @@ export default function BridgingTheGapSection() {
                   Revolutionizing the Decentralized Finance
                   <div className="text-[#dadada] md:block inline">
                     {" "}
-                    World with simplicity and efficiency
+                    Space with simplicity and efficiency
                   </div>
                 </>
               </Typography>

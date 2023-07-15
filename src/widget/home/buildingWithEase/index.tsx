@@ -39,10 +39,10 @@ export default function BuildingWithEaseSection() {
             <div>
               <Typography variant="subtitle">
                 <>
-                  Providing solutions in
+                  Streamlined Staking Solutions:
                   <div className="text-[#dadada] md:block inline">
                     {" "}
-                    the DeFi World
+                    Simplifying DeFi for You
                   </div>
                 </>
               </Typography>
