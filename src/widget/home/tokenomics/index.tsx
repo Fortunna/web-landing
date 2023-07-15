@@ -40,8 +40,8 @@ export default function TokenomicsSection() {
         </PageWrapper>
         <div className="block md:hidden relative overflow-hidden max-h-[300px]">
           <Image src={fortunaMobile} alt="fortuna" />
-          <div className="absolute top-0 left-0 z-10">
-            <Image src={FM} alt="" />
+          <div className="absolute top-0 left-0 z-10 w-full">
+            <Image style={{ width: "100%", height: "auto" }} src={FM} alt="" />
           </div>
         </div>
       </div>
