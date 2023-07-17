@@ -62,7 +62,7 @@ const our_values = [
     ),
     title: "Stakepad",
     summary:
-      "Stakepad is a groundbreaking feature offered by Fortuna Finance, designed to empower projects within the decentralized finance (DeFi) space. It provides a seamless and efficient solution for projects to create custom pools and farms for their tokens in just a matter of minutes, eliminating the need for complex and time-consuming processes.",
+      "Empowering projects to create custom pools/farms for their tokens in a matter of minutes and with minimal comissions",
   },
   {
     icon: (
@@ -121,7 +121,7 @@ const our_values = [
     ),
     title: "A.I Aggregator",
     summary:
-      "The A.I Aggregator offered by Fortuna Finance is a game-changer in the DeFi space, leveraging the power of artificial intelligence (AI) to optimize using advanced algorithms and machine learning capabilities, Our A.I Aggregator platform analyzes market trends, liquidity pools, and various other factors to identify the most lucrative investment opportunities.",
+      "Maximize your yields with the power of artificial intelligence in a passive and effortless manner , with full control of the risk level ",
   },
   {
     icon: (
@@ -190,7 +190,7 @@ const our_values = [
     ),
     title: "Earn and Grow",
     summary:
-      "Earn and Grow with Fortuna Finance by staking your tokens for passive income and participating in yield farming, unlocking the potential to maximize your returns in the decentralized finance space. With our user-friendly interface, you can easily stake your tokens and become a part of a vibrant ecosystem where your assets work for you, generating steady passive income",
+      "Stake your tokens for passive income and participate in yield farming to maximize your returns.",
   },
   {
     icon: (
@@ -248,7 +248,7 @@ const our_values = [
     ),
     title: "Governance",
     summary:
-      "Governance is a fundamental pillar of Fortuna Finance, empowering users to actively participate in the decentralized decision-making process. By holding governance tokens, users have the ability to propose and vote on platform upgrades, new features, and important protocol changes, allowing them to directly shape the future of the Fortuna Finance ecosystem.",
+      "Be an active participant in our decentralized decision-making process and shape the future of our platform",
   },
 ];
 
@@ -336,7 +336,7 @@ export default function BridgingTheGapSection() {
               <AnimateFadeIn delay={0.6}>
                 <Typography
                   variant="body3"
-                  label="Fortuna is a next-generation decentralized finance (DeFi) ecosystem that simplifies participation in staking and staking-pad creation, Yield farming and Yield Farming creation, lending/borrowing and governance activities and creation."
+                  label="Fortuna Finance aims to bring value to the decentralized finance space by providing unique , affordable and almost effortless solutions for projects and users ."
                 />
               </AnimateFadeIn>
             </RenderWhenInView>
