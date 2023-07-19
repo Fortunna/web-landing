@@ -23,7 +23,7 @@ type ComponentProps = {
 };
 export default function Typography({
   className,
-  use = "p",
+  use = "div",
   variant = "body1",
   color,
   href,

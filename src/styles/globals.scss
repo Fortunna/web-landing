@@ -265,3 +265,10 @@ input[type="range"]::-ms-thumb {
     justify-content: flex-start;
   }
 }
+
+.allocation-chart {
+  .highcharts-container {
+    height: 100% !important;
+    width: 100% !important;
+  }
+}
