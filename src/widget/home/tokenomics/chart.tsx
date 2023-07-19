@@ -79,7 +79,7 @@ const DoughnutChart = () => {
           style: {
             color: "white", // Set the color of the label text
             fontSize: "12px", // Set the font size of the label text
-            width: "10px",
+            width: "50px",
           },
           distance: 20,
           formatter: function (): any {
