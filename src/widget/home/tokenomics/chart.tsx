@@ -79,7 +79,7 @@ const DoughnutChart = () => {
           style: {
             color: "white", // Set the color of the label text
             fontSize: "12px", // Set the font size of the label text
-            width: "150px",
+            width: "10px",
           },
           distance: 20,
           formatter: function (): any {
@@ -118,7 +118,7 @@ const DoughnutChart = () => {
             <Typography
               variant="body1"
               className="!text-white mt-2 opacity-[0.6]"
-              label="100,000,000 tokens"
+              label="1,000,000,000 tokens"
             />
           </div>
         </div>
