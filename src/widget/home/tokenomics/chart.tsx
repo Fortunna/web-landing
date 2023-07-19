@@ -9,17 +9,15 @@ const DoughnutChart = () => {
   const [refresh, setRefresh] = useState("");
 
   useEffect(() => {
-    if (contentRef.current) {
-      const { width }: any = document
-        .querySelector(".highcharts-series-group")
-        ?.getBoundingClientRect();
+    const { width }: any = document
+      .querySelector(".highcharts-series-group")
+      ?.getBoundingClientRect();
 
-      if (width < 10) {
-        setRefresh(new Date().getTime().toString());
-      } else {
-        const percentage = (70 / 100) * width;
-        setWidth(percentage);
-      }
+    if (width < 10) {
+      setRefresh(new Date().getTime().toString());
+    } else {
+      const percentage = (70 / 100) * width;
+      setWidth(percentage);
     }
   }, [contentRef, refresh]);
   const data = [
@@ -89,7 +87,7 @@ const DoughnutChart = () => {
           distance: 20,
           formatter: function (): any {
             let data: any = this;
-            return `<div style=display:block;color:#fff><div>${data.point.y}%</div> <br/>  <div style="font-weight: bold;opacity:0.6">${data.point.name}</div></div>`;
+            return `<div style=display:block;color:#fff><div>${data.point.y}%</div> <br/>  <div style="opacity:0.6">${data.point.name}</div></div>`;
           },
         },
       },
