@@ -24,7 +24,7 @@ export default function index() {
 
       <PartnerSection />
 
-      <Companies />
+      {/* <Companies /> */}
 
       <JonFortuna />
 
