@@ -6,17 +6,22 @@ import Typography from "@/components/typography";
 const DoughnutChart = () => {
   const contentRef = useRef(null);
   const [width, setWidth] = useState(0);
+  const [refresh, setRefresh] = useState("");
 
   useEffect(() => {
     if (contentRef.current) {
       const { width }: any = document
         .querySelector(".highcharts-series-group")
         ?.getBoundingClientRect();
-      console.log(width);
-      const percentage = (70 / 100) * width;
-      setWidth(percentage);
+
+      if (width < 10) {
+        setRefresh(new Date().getTime().toString());
+      } else {
+        const percentage = (70 / 100) * width;
+        setWidth(percentage);
+      }
     }
-  }, [contentRef]);
+  }, [contentRef, refresh]);
   const data = [
     {
       name: "Reward (Staking Yield Farming)",
@@ -103,7 +108,6 @@ const DoughnutChart = () => {
     <div className="allocation-chart relative flex items-center justify-center">
       <HighchartsReact highcharts={Highcharts} options={options} />
       <div
-        ref={contentRef}
         // style={{ transform: "translate(50% 50%)" }}
         style={{ width: width, height: width }}
         className="absolute rounded-full bg-[#0b0a14] border-[1px] border-dashed"
