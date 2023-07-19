@@ -16,7 +16,7 @@ const DoughnutChart = () => {
     if (width < 10) {
       setRefresh(new Date().getTime().toString());
     } else {
-      const percentage = (70 / 100) * width;
+      const percentage = (100 / 100) * width;
       setWidth(percentage);
     }
   }, [contentRef, refresh]);
