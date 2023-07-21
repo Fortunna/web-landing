@@ -146,7 +146,7 @@ export default function WhyFortuna() {
                     </defs>
                   </svg>
                 }
-                label="New: Our Ai Aggregator Just Landed"
+                label="News : dApp v1 just launched"
               />
             </AnimateFadeIn>
           </RenderWhenInView>
@@ -155,8 +155,7 @@ export default function WhyFortuna() {
           <AnimateFadeIn>
             <Typography className="" variant="title">
               <>
-                Multi-chain Staking and <div className="md:block inline"></div>
-                <span className="text-text-cool">Lending</span>
+                DeFi <span className="text-text-cool">Simplified</span>
               </>
             </Typography>
           </AnimateFadeIn>
@@ -165,7 +164,9 @@ export default function WhyFortuna() {
         <div className="md:w-[40%] md:mt-7 mt-5 mx-auto md:px-0 px-8">
           <Typography
             variant="heading"
-            label="Fortuna Finance revolutionizes DeFi with simplified solutions, an AI Yield Aggregator, popular pools, security, and low transaction fees, empowering users and projects  to earn and grow while shaping the future of decentralized finance."
+            label="Unlocking the potential of decentralized finance with Fortuna's intuitive platform. Harnessing the power of artificial intelligence with fully automated solutions, we empower projects and users alike."
+
+            // Fortuna Finance revolutionizes DeFi with simplified solutions, an AI Yield Aggregator, popular pools, security, and low transaction fees, empowering users and projects  to earn and grow while shaping the future of decentralized finance."
           />
         </div>
         <div className="md:mt-[140px] mt-[75px]"></div>

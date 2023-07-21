@@ -2,24 +2,26 @@ import React, { useEffect, useRef, useState } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import Typography from "@/components/typography";
+import allocation_stats from "../../../../public/allocation.svg";
+import Image from "next/image";
 
 const DoughnutChart = () => {
   const contentRef = useRef(null);
   const [width, setWidth] = useState(0);
   const [refresh, setRefresh] = useState("");
 
-  useEffect(() => {
-    const { width }: any = document
-      .querySelector(".highcharts-series-group")
-      ?.getBoundingClientRect();
+  // useEffect(() => {
+  //   const { width }: any = document
+  //     .querySelector(".highcharts-series-group")
+  //     ?.getBoundingClientRect();
 
-    if (width < 10) {
-      setRefresh(new Date().getTime().toString());
-    } else {
-      const percentage = (80 / 100) * width;
-      setWidth(percentage);
-    }
-  }, [contentRef, refresh]);
+  //   if (width < 10) {
+  //     setRefresh(new Date().getTime().toString());
+  //   } else {
+  //     const percentage = (70 / 100) * width;
+  //     setWidth(percentage);
+  //   }
+  // }, [contentRef, refresh]);
   const data = [
     {
       name: "Reward (Staking Yield Farming)",
@@ -104,7 +106,7 @@ const DoughnutChart = () => {
 
   return (
     <div className="allocation-chart relative flex items-center justify-center">
-      <HighchartsReact highcharts={Highcharts} options={options} />
+      {/* <HighchartsReact highcharts={Highcharts} options={options} />
       <div
         // style={{ transform: "translate(50% 50%)" }}
         style={{ width: width, height: width }}
@@ -123,8 +125,13 @@ const DoughnutChart = () => {
               label="1,000,000,000 tokens"
             />
           </div>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
+      <Image
+        src={allocation_stats}
+        alt="allocations"
+        style={{ width: "100%", height: "auto" }}
+      />
     </div>
   );
 };

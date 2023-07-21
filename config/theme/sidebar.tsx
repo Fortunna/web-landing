@@ -242,7 +242,7 @@ export const TOP_MENU_DATA = [
   },
   {
     name: "Governance",
-    to: "/governance",
+    to: "https://fortuna-defi.gitbook.io/fortuna-product-docs/",
     icon: (
       <svg
         width="24"

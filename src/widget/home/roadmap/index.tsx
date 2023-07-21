@@ -345,7 +345,7 @@ export default function RoadmapSection() {
     }, 2000);
   }, [top_connector_ref]);
   return (
-    <div className="bg-black pt-[120px] ps-5">
+    <div className="bg-black pt-[120px] ps-5 overflow-hidden">
       <>
         {" "}
         <div className="text-center flex justify-center">

@@ -5,6 +5,7 @@ import Typography from "@/components/typography";
 import Button from "@/components/button";
 import Ball from "./icons/ball";
 import { AnimateFadeIn, RenderWhenInView } from "@/animations";
+import Link from "next/link";
 
 export default function BuildingWithEaseSection() {
   return (
@@ -52,7 +53,15 @@ export default function BuildingWithEaseSection() {
                   label="The AI Yield Aggregator, known as Fortuna's Oracle , leverages artificial intelligence (AI) to optimize yield generation, enhance risk management, and provide a user-friendly investing experience."
                 />
               </div>
-              <Button rounded size="big" theme="secondary" label="Launch App" />
+              <Link href={"https://app.fortunafi.io/"}>
+                <Button
+                  rounded
+                  size="big"
+                  theme="secondary"
+                  label="Launch App"
+                />
+              </Link>
+              \
             </div>
           </div>
           <div className=" items-center w-[80%] mt-[80px] mb-[40px] mx-auto flex md:hidden">

@@ -3,19 +3,20 @@ import AppLogo from "@/components/logo";
 import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 import MobileHeader from "./mobileHeader";
+import Link from "next/link";
 // import video_src from "../../public/hero-video.mp4";
 const navs = [
   {
     title: "About",
-    to: "/about",
+    to: "#about",
   },
   {
     title: "Docs",
-    to: "/docs",
+    to: "https://fortuna-defi.gitbook.io/fortuna-product-docs/",
   },
   {
     title: "Governance",
-    to: "/governance",
+    to: "#",
   },
   // {
   //   title: "Faq",
@@ -24,13 +25,16 @@ const navs = [
 ];
 export default function Header() {
   const videoRef = useRef("");
-  const [isClient, setIsClient] = useState(false);
   const [isRefresh, setIsRefresh] = useState(false);
   const [showMobile, setShowMobile] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
-    setIsClient(true);
+    const id = router?.asPath?.replace("/", "");
+    if (id) {
+      const _item = document?.querySelector(id);
+      console.log(_item);
+    }
   }, []);
 
   // useEffect(() => {
@@ -39,10 +43,6 @@ export default function Header() {
   //   }
   //   // videoRef.current.play();
   // }, [videoRef, isClient, router.isReady]);
-
-  if (!isClient) {
-    return null; // Render nothing on the server
-  }
 
   return (
     <>
@@ -82,18 +82,19 @@ export default function Header() {
             <div className=" md:flex hidden">
               {navs.map((_nav, index) => {
                 return (
-                  <nav
-                    className="!text-white px-3 !font-aeonik-pro"
-                    key={index}
-                  >
-                    {_nav.title}
-                  </nav>
+                  <Link key={index} href={_nav.to}>
+                    <nav className="!text-white px-3 !font-aeonik-pro">
+                      {_nav.title}
+                    </nav>
+                  </Link>
                 );
               })}
             </div>
 
             <div className="md:flex hidden">
-              <Button label="Launch App" />
+              <Link href={"https://app.fortunafi.io/"} target="_blank">
+                <Button label="Launch App" />
+              </Link>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { AnimateFadeIn, RenderWhenInView } from "@/animations";
 import Button from "@/components/button";
 import Typography from "@/components/typography";
+import Link from "next/link";
 import React from "react";
 
 export default function CtaSection() {
@@ -16,7 +17,10 @@ export default function CtaSection() {
                 label="Be a part of Fortuna Finance today"
               />
 
-              <Button rounded theme="dark" size="big" label="Launch App" />
+              <Link href={"https://app.fortunafi.io/"}>
+                <Button rounded theme="dark" size="big" label="Launch App" />
+              </Link>
+
               <div className="md:mt-[100px] pt-20 overflow-hidden relative"></div>
             </>
           </AnimateFadeIn>

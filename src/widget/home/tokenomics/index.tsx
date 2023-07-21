@@ -5,7 +5,7 @@ import DoughnutChart from "./chart";
 import fortuna from "../../../../public/fortuna.png";
 import Image from "next/image";
 import SectionTopHeader from "@/widget/common/sectionTopHeader";
-import fortunaMobile from "../../../../public/fortuna.png";
+import fortunaMobile from "../../../../public/fortuna-mobile.png";
 import FM from "../../../../public/financial-bg-mobile.png";
 
 export default function TokenomicsSection() {
@@ -38,10 +38,10 @@ export default function TokenomicsSection() {
             </div>
           </div>
         </PageWrapper>
-        <div className="block md:hidden relative overflow-hidden max-h-[300px]">
+        <div className="block md:hidden relative overflow-hidden ">
           <Image src={fortunaMobile} alt="fortuna" />
           <div className="absolute top-0 left-0 z-10 w-full">
-            <Image style={{ width: "100%", height: "auto" }} src={FM} alt="" />
+            {/* <Image style={{ width: "100%", height: "auto" }} src={FM} alt="" /> */}
           </div>
         </div>
       </div>

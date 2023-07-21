@@ -79,7 +79,7 @@ export default function CommunityOwnedSection() {
                 <>
                   A Transparent DeFi
                   <div className="text-[#dadada] md:block inline">
-                    Community
+                    Ecosystem
                   </div>
                 </>
               </Typography>
@@ -87,7 +87,7 @@ export default function CommunityOwnedSection() {
           </RenderWhenInView>
 
           <PageWrapper>
-            <div className="grid grid-cols-2 mt-[78px] bg-no-repeat bg-lazy-background-image bg-contain bg-center">
+            <div className="bg-[length:700px_300px] grid grid-cols-2 mt-[78px] bg-no-repeat bg-lazy-background-image bg-contain bg-center bg-fixed">
               {values?.map((_value, index) => {
                 return (
                   <div

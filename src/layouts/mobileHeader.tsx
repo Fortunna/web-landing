@@ -14,11 +14,11 @@ export default function MobileHeader({
     },
     {
       title: "Docs",
-      to: "/docs",
+      to: "https://fortuna-defi.gitbook.io/fortuna-product-docs/",
     },
     {
       title: "Governance",
-      to: "/governance",
+      to: "#",
     },
     // {
     //   title: "Faq",

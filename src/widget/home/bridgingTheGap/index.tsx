@@ -308,10 +308,12 @@ export default function BridgingTheGapSection() {
          md:py-[98px] pt-[98px]
       "
       >
-        <div className=" mx-auto md:px0 px-4">
+        <div className=" mx-auto md:px0 px-4" id="about">
           <RenderWhenInView triggerOnce={false}>
             <AnimateFadeIn delay={0.6}>
-              <Badge theme="common" label="About" />
+              <div>
+                <Badge theme="common" label="About" />
+              </div>
             </AnimateFadeIn>
           </RenderWhenInView>
           <div className="mb-4"></div>
