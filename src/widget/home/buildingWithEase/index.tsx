@@ -64,13 +64,13 @@ export default function BuildingWithEaseSection() {
               \
             </div>
           </div>
-          <div className=" items-center w-[80%] mt-[80px] mb-[40px] mx-auto flex md:hidden">
-            <Typography
+          {/* <div className=" items-center w-[80%] mt-[80px] mb-[40px] mx-auto flex md:hidden"> */}
+          {/* <Typography
               variant="body2"
               className="!text-[#757185]"
               label="With smart automation we provide a reliable solution for users seeking secure and transparent interactions with project in the defi ecosystem"
-            />
-          </div>
+            /> */}
+          {/* </div> */}
           <div className="block md:hidden">
             <RenderWhenInView>
               <AnimateFadeIn delay={0.6}>

@@ -11,15 +11,15 @@
 
 export const roadmap = [
     {
-        title: ["q3 2023 - Platform Development", "Partner Integration", "Initial Token Offering"]
+        title: ["Q3 2023 - Platform Development", "Partner Integration", "Initial Token Offering"]
     },
     {
-        title: ["q4 2023 - Beta User Onboarding", "Community Building", "Enhanced Features", "Strategic Partnerships"]
+        title: ["Q4 2023 - Beta User Onboarding", "Community Building", "Enhanced Features", "Strategic Partnerships"]
     },
     {
-        title: ["q5 2023 -Mobile Application", "Cross-Chain Compatibility", "Official Launch"]
+        title: ["Q1 2024 -Mobile Application", "Cross-Chain Compatibility", "Official Launch"]
     },
     {
-        title: ["q6 2023", "Expansion of Investment Options", "Scaling and Performance Optimization"]
+        title: ["Q4 2024", "Expansion of Investment Options", "Scaling and Performance Optimization"]
     }
 ] 

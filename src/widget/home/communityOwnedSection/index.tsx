@@ -60,15 +60,15 @@ export default function CommunityOwnedSection() {
     );
   };
   return (
-    <div className="bg-black text-center  bg-black bg-star bg-[100%_100%]   bg-fixed  ">
+    <div className="bg-black text-center  bg-black bg-star bg-[100%_100%]   bg-fixed overflow-hidden  ">
       <Image
-        style={{ width: "40%", float: "right" }}
+        style={{ width: "40%", height: "auto", float: "right" }}
         className="mb-[30px] md:hidden block"
         src={defi}
         alt="Defi"
       />
       <div className="overflow-hidden"></div>
-      <div className="md:bg-defi bg-no-repeat !pt-[167px] bg-[85%_20px]  bg-[length:400px_400px]">
+      <div className="md:bg-defi bg-no-repeat !pt-[167px] bg-[85%_20px]  bg-[length:400px_400px] overflow-hidden">
         <div>
           <RenderWhenInView>
             <AnimateFadeIn>
@@ -87,12 +87,14 @@ export default function CommunityOwnedSection() {
           </RenderWhenInView>
 
           <PageWrapper>
-            <div className="bg-[length:700px_300px] grid grid-cols-2 mt-[78px] bg-no-repeat bg-lazy-background-image bg-contain bg-center bg-fixed">
+            <div className="bg-[length:700px_300px] bg-lazy-background-image grid grid-cols-2 mt-[78px] bg-no-repeat bg-center overflow-hidden">
               {values?.map((_value, index) => {
                 return (
                   <div
                     key={index}
-                    className={`${index > 1 ? "mt-[78px]" : ""}`}
+                    className={`${
+                      index > 1 ? "mt-[78px]" : ""
+                    } overflow-hidden relative`}
                   >
                     <RenderWhenInView triggerOnce={false}>
                       <AnimateFadeIn

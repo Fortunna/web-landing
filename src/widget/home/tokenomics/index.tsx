@@ -22,11 +22,11 @@ export default function TokenomicsSection() {
                 variant="semi-subtitle"
                 label="Fair and Transparent Distribution"
               />
-
+              {/* 
               <Typography
                 variant="heading"
                 label="Fortuna Finance revolutionizes DeFi with simplified solutions, an AI Yield Aggregator, popular pools, security, and low transaction fees, empowering users and projects  to earn and grow while shaping the future of decentralized finance."
-              />
+              /> */}
 
               <div className="md:mt-[80px] mt-14"></div>
               <div className="">
