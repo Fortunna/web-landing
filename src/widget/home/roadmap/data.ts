@@ -20,6 +20,6 @@ export const roadmap = [
         title: ["Q1 2024 -Mobile Application", "Cross-Chain Compatibility", "Official Launch"]
     },
     {
-        title: ["Q4 2024", "Expansion of Investment Options", "Scaling and Performance Optimization"]
+        title: ["Q2 2024", "Expansion of Investment Options", "Scaling and Performance Optimization"]
     }
 ] 
