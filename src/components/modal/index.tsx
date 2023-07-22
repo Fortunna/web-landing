@@ -46,11 +46,9 @@ function Modal({
               />
             </svg>
           </div>
-          <AnimateFadeIn>
-            <div className={`bg-[#17181B]  ${containerClass}`}>
-              <>{children}</>
-            </div>
-          </AnimateFadeIn>
+          <div className={`bg-[#17181B]  ${containerClass}`}>
+            <>{children}</>
+          </div>
         </div>
       </div>
     </Portal>

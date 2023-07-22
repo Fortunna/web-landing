@@ -68,23 +68,17 @@ export default function CommunityOwnedSection() {
         alt="Defi"
       />
       <div className="overflow-hidden"></div>
-      <div className="md:bg-defi bg-no-repeat !pt-[167px] bg-[85%_20px]  bg-[length:400px_400px] overflow-hidden">
+      <div className="md:bg-defi bg-no-repeat !pt-[167px] bg-[85%_20px] w-full  bg-[length:400px_400px] overflow-hidden">
         <div>
-          <RenderWhenInView>
-            <AnimateFadeIn>
-              <Typography
-                className="md:text-start !text-center overflow-hidden !w-full md:px-0 px-5"
-                variant="subtitle"
-              >
-                <>
-                  A Transparent DeFi
-                  <div className="text-[#dadada] md:block inline">
-                    Ecosystem
-                  </div>
-                </>
-              </Typography>
-            </AnimateFadeIn>
-          </RenderWhenInView>
+          <Typography
+            className="md:text-start !text-center overflow-hidden !w-full md:px-0 px-5"
+            variant="subtitle"
+          >
+            <>
+              A Transparent DeFi
+              <div className="text-[#dadada] md:block inline">Ecosystem</div>
+            </>
+          </Typography>
 
           <PageWrapper>
             <div className="bg-[length:700px_300px] bg-lazy-background-image grid grid-cols-2 mt-[78px] bg-no-repeat bg-center overflow-hidden">
