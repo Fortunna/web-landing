@@ -48,7 +48,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
         className=" overflow-hidden relative -bg-[url('/hero-black-hole_mask-group.png')]"
       >
         <div
-          className={`${headerStyles} z-20 absolute md:px-10 px-5 w-screen left-0`}
+          className={`${headerStyles} transition-all z-20 absolute md:px-10 px-5 w-screen left-0`}
         >
           <div
             className={` flex justify-between items-center ${
