@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 import MobileHeader from "./mobileHeader";
 import Link from "next/link";
-// import video_src from "../../public/hero-video.mp4";
+import classNames from "classnames";
 const navs = [
   {
     title: "About",
@@ -23,7 +23,7 @@ const navs = [
   //   to: "/faq",
   // },
 ];
-export default function Header() {
+export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
   const videoRef = useRef("");
   const [isRefresh, setIsRefresh] = useState(false);
   const [showMobile, setShowMobile] = useState(false);
@@ -37,28 +37,24 @@ export default function Header() {
     }
   }, []);
 
-  // useEffect(() => {
-  //   if (router.isReady) {
-  //     document.querySelector(".video")?.play();
-  //   }
-  //   // videoRef.current.play();
-  // }, [videoRef, isClient, router.isReady]);
-
+  const headerStyles = classNames({
+    "!bg-black !fixed": fixedHeader,
+  });
   return (
     <>
-      <div className=" overflow-hidden relative bg-[url('/hero-black-hole_mask-group.png')]">
-        <video
-          // ref={videoRef}
-          muted
-          loop
-          autoPlay
-          className="md:!h-screen video !w-screen object-fill"
+      <div
+        // onScroll={handleScroll}
+        id="bg-wrapper"
+        className=" overflow-hidden relative -bg-[url('/hero-black-hole_mask-group.png')]"
+      >
+        <div
+          className={`${headerStyles} z-20 absolute md:px-10 px-5 w-screen left-0`}
         >
-          <source src={"/hero-video.mp4"} type="video/webm" />
-        </video>
-
-        <div className="w-full h-full bg-[url('/hero-gradient.png')] bg-cover lg:px-[40px] px-4 absolute top-0">
-          <div className=" flex justify-between items-center md:py-[35px] py-[10px]">
+          <div
+            className={` flex justify-between items-center ${
+              fixedHeader ? "md:py-[20px] shadow-md" : "md:py-[35px]"
+            } py-[10px] `}
+          >
             <AppLogo />
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -79,25 +75,39 @@ export default function Header() {
               <path d="M4 18l16 0" />
             </svg>
 
-            <div className=" md:flex hidden">
-              {navs.map((_nav, index) => {
-                return (
-                  <Link key={index} href={_nav.to}>
-                    <nav className="!text-white px-3 !font-aeonik-pro">
-                      {_nav.title}
-                    </nav>
-                  </Link>
-                );
-              })}
-            </div>
-
             <div className="md:flex hidden">
+              <div className="md:flex mr-9 items-center">
+                {navs.map((_nav, index) => {
+                  return (
+                    <Link key={index} href={_nav.to}>
+                      <nav className="!text-white px-3 !text-[17px] !font-aeonik-pro">
+                        {_nav.title}
+                      </nav>
+                    </Link>
+                  );
+                })}
+              </div>
               <Link href={"https://app.fortunafi.io/"} target="_blank">
                 <Button label="Launch App" />
               </Link>
             </div>
           </div>
         </div>
+        <video
+          // ref={videoRef}
+          muted
+          loop
+          autoPlay
+          className="md:!h-[65vh] video !w-screen object-fill"
+        >
+          <source src={"/hero-video.mp4"} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* <div
+          className={`w-full h-full bg-[rgba(0,0,0,.3)]  bg-cover lg:px-[40px] px-4 absolute top-0 }`}
+        > */}
+        {/* </div> */}
       </div>
       {showMobile ? (
         <MobileHeader onClose={() => setShowMobile(false)} />
