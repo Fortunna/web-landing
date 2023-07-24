@@ -100,7 +100,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
           autoPlay
           className="md:!h-[65vh] video !w-screen object-fill"
         >
-          <source src={"/hero-video.mp4"} type="video/mp4" />
+          <source src={"/hero-video-play.mp4"} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
