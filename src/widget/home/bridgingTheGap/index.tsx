@@ -4,7 +4,6 @@ import Typography from "@/components/typography";
 import React from "react";
 import Image from "next/image";
 import divider from "../../../../public/divider.png";
-import { AnimateFadeIn, RenderWhenInView } from "@/animations";
 
 const our_values = [
   {
@@ -264,39 +263,35 @@ const Value = ({
   icon: React.ReactElement;
 }) => {
   return (
-    <RenderWhenInView triggerOnce={false}>
-      <AnimateFadeIn delay={index / 2}>
-        <div>
-          <div className="md:block flex">
-            <div className="md:hidden h-100 w-[2px] bg-[#27282a] mr-7"></div>
-            <div className="text-start md:py-0 py-7">
-              {icon}
+    <div>
+      <div className="md:block flex">
+        <div className="md:hidden h-100 w-[2px] bg-[#27282a] mr-7"></div>
+        <div className="text-start md:py-0 py-7">
+          {icon}
 
-              <Typography
-                variant="semi-heading"
-                className="!font-aeonik-pro !font-bold py-4"
-                label={title}
-              />
-              <Typography
-                variant="body2"
-                className="!text-white !font-inter-light !leading-[22px] md:w-full w-[79%]"
-                label={summary}
-              />
-            </div>
-          </div>
-          {index !== our_values.length - 1 ? (
-            <div className="md:hidden">
-              <Image src={divider} alt="" />
-            </div>
-          ) : null}
+          <Typography
+            variant="semi-heading"
+            className="!font-aeonik-pro !font-bold py-4"
+            label={title}
+          />
+          <Typography
+            variant="body2"
+            className="!text-white !font-inter-light !leading-[22px] md:w-full w-[79%]"
+            label={summary}
+          />
         </div>
-      </AnimateFadeIn>
-    </RenderWhenInView>
+      </div>
+      {index !== our_values.length - 1 ? (
+        <div className="md:hidden">
+          <Image src={divider} alt="" />
+        </div>
+      ) : null}
+    </div>
   );
 };
 export default function BridgingTheGapSection() {
   return (
-    <div className="bg-black bg-star bg-[100%_100%]  bg-fixed ">
+    <div className="bg-black bg-star bg-[100%_100%]  bg-fixed  overflow-hidden">
       <div
         style={
           {
@@ -309,39 +304,29 @@ export default function BridgingTheGapSection() {
       "
       >
         <div className=" mx-auto md:px0 px-4" id="about">
-          <RenderWhenInView triggerOnce={false}>
-            <AnimateFadeIn delay={0.6}>
-              <div>
-                <Badge theme="common" label="About" />
-              </div>
-            </AnimateFadeIn>
-          </RenderWhenInView>
+          <div>
+            <Badge theme="common" label="About" />
+          </div>
+
           <div className="mb-4"></div>
-          <RenderWhenInView triggerOnce={false}>
-            <AnimateFadeIn delay={0.6}>
-              <Typography variant="subtitle">
-                <>
-                  {" "}
-                  Revolutionizing the Decentralized Finance
-                  <div className="text-[#dadada] md:block inline">
-                    {" "}
-                    Space with simplicity and efficiency
-                  </div>
-                </>
-              </Typography>
-            </AnimateFadeIn>
-          </RenderWhenInView>
+
+          <Typography variant="subtitle">
+            <>
+              {" "}
+              Revolutionizing the Decentralized Finance
+              <div className="text-[#dadada] md:block inline">
+                {" "}
+                Space with simplicity and efficiency
+              </div>
+            </>
+          </Typography>
         </div>
         <div>
           <div className="my-4 md:w-[40%] mx-auto">
-            <RenderWhenInView triggerOnce={false}>
-              <AnimateFadeIn delay={0.6}>
-                <Typography
-                  variant="body3"
-                  label="Fortuna Finance aims to bring value to the decentralized finance space by providing unique , affordable and almost effortless solutions for projects and users ."
-                />
-              </AnimateFadeIn>
-            </RenderWhenInView>
+            <Typography
+              variant="body3"
+              label="Fortuna Finance aims to bring value to the decentralized finance space by providing unique , affordable and almost effortless solutions for projects and users ."
+            />
           </div>
           <div className=" bg-[url(/semi-cricle-shade.png)]  bg-cover bg-[center_-35px] ">
             <div className="!text-caption-1 inline-block bg-no-repeat !font-inter border-[1px] !border-[#2a282f] md:mt-4 mt-6 py-3 mb-5 px-7 !text-[#F4F0FF] rounded-[8px]">

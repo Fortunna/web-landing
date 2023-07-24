@@ -90,18 +90,11 @@ export default function CommunityOwnedSection() {
                       index > 1 ? "mt-[78px]" : ""
                     } overflow-hidden relative`}
                   >
-                    <RenderWhenInView triggerOnce={false}>
-                      <AnimateFadeIn
-                        // animationPosition="leftToRight"
-                        delay={index / 3}
-                      >
-                        <Value
-                          label={_value.label}
-                          value={_value.value}
-                          icon={<Image alt="asset" src={_value.img} />}
-                        />
-                      </AnimateFadeIn>
-                    </RenderWhenInView>
+                    <Value
+                      label={_value.label}
+                      value={_value.value}
+                      icon={<Image alt="asset" src={_value.img} />}
+                    />
                   </div>
                 );
               })}
