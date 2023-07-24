@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "./header";
 import Footer from "./footer";
+import Head from "next/head";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [fixedHeader, setFixedHeader] = useState(false);
@@ -25,6 +26,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   }, []);
   return (
     <div id="app-wrapper">
+      <Head>
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        {/* <link rel="icon" type="image/x-icon" href="//favicon.ico" /> */}
+      </Head>
       <Header fixedHeader={fixedHeader}></Header>
 
       {children}
