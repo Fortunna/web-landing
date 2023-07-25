@@ -72,11 +72,7 @@ export default function BuildingWithEaseSection() {
             /> */}
           {/* </div> */}
           <div className="block md:hidden">
-            <RenderWhenInView>
-              <AnimateFadeIn delay={0.6}>
-                <Build />
-              </AnimateFadeIn>
-            </RenderWhenInView>
+            <Build />
           </div>
         </>
       </PageWrapper>
