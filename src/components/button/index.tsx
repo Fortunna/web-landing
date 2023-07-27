@@ -42,6 +42,7 @@ export default function Button({
     "  py-[8px] px-[12px]   md:text-[14px] text-[12px]": size == "default",
     "  md:py-[16px] py-[8px] px-[60px] px-[30px] md:text-[15px] text-[12px]":
       size == "big",
+    "   py-[8px]  px-[10px] text-[10px]": size == "small",
   });
 
   const disabledStyles = classNames({

@@ -56,24 +56,34 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
             } py-[10px] `}
           >
             <AppLogo />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-[30px] md:hidden cursor-pointer"
-              width="44"
-              height="44"
-              onClick={() => setShowMobile(true)}
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="#e5e7ed"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M4 6l16 0" />
-              <path d="M4 12l16 0" />
-              <path d="M4 18l16 0" />
-            </svg>
+            <div className=" md:hidden flex items-center cursor-pointer">
+              <a
+                target="_blank"
+                href="https://app.fortunafi.io/"
+                className="mr-3"
+              >
+                <Button size="small" label="Launch App" />
+              </a>
+
+              <svg
+                className="w-[30px]"
+                xmlns="http://www.w3.org/2000/svg"
+                width="44"
+                height="44"
+                onClick={() => setShowMobile(true)}
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#e5e7ed"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 6l16 0" />
+                <path d="M4 12l16 0" />
+                <path d="M4 18l16 0" />
+              </svg>
+            </div>
 
             <div className="md:flex hidden">
               <div className="md:flex mr-9 items-center">
@@ -94,7 +104,8 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
           </div>
         </div>
         <video
-          // ref={videoRef}
+          // ref={videoRef}\
+          playsInline
           muted
           loop
           autoPlay
