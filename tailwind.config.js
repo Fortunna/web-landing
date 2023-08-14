@@ -52,7 +52,10 @@ module.exports = {
         "caption-3": "15px",
       },
       backgroundImage: {
-        "why-bg-1": "url(/group-39958.png)",
+        "why-bg-1": "url(/div.sc-7dd06286-1.png)",
+        "learn-1": "url(/learn-bg-1.png)",
+        "learn-2": "url(/learn-2.png)",
+        "why-bg-1": "url(/div.sc-7dd06286-1.png)",
         shade: "url(/bg-bridging.png)",
         star: "url(/star.png)",
         defi: "url(/defi.png)",

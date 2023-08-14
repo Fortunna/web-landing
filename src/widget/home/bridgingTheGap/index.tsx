@@ -337,7 +337,7 @@ export default function BridgingTheGapSection() {
 
         <PageWrapper>
           <div className="md:grid md:grid-cols-4 gap-20 md:bg-[url(/semi-circle.png)] bg-[center_-62px] pt-[68px]">
-            {our_values.map((_value, index) => {
+            {/* {our_values.map((_value, index) => {
               return (
                 <Value
                   index={index}
@@ -347,7 +347,7 @@ export default function BridgingTheGapSection() {
                   key={index}
                 />
               );
-            })}
+            })} */}
           </div>
         </PageWrapper>
       </div>

@@ -57,8 +57,8 @@ export default function WhyFortuna() {
         <link rel="preload" href="/group-39958.png" as="image" />
         <link rel="preload" href="/why-bg.png" as="image" />
       </Head>
-      <div className="text-center bg-black  bg-right-bottom bg-why-bg-1 bg-contain bg-no-repeat">
-        <div className="bg-why-bg-2 md:bg-[length:500px_auto] bg-[length:300px_auto]  pt:mt-10 md:pb-32 py-20 bg-no-repeat">
+      <div className="text-center bg-black  bg-right-bottom bg-why-bg-1 bg-[length:100%_100%] bg-no-repeat">
+        <div className=" md:bg-[length:500px_auto] bg-[length:300px_auto]  pt:mt-10 md:pb-32 py-20 bg-no-repeat">
           <div className="md:mb-6 mb-5">
             <Badge
               leftComponent={

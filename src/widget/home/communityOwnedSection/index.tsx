@@ -9,7 +9,7 @@ import PageWrapper from "@/components/pageWrapper";
 import defi from "../../../../public/defi.png";
 import { AnimateFadeIn, RenderWhenInView } from "@/animations";
 // import fortunaMobile from "../../../../public/fortuna-mobile.png";
-
+import img from "public/div.lazy-background-image.png";
 export default function CommunityOwnedSection() {
   const values = [
     {
@@ -80,16 +80,19 @@ export default function CommunityOwnedSection() {
             </>
           </Typography>
 
+          <Image
+            width={70}
+            className="mx-auto  mt-[58px]"
+            height={70}
+            src={img}
+            alt=""
+          />
+
           <PageWrapper>
-            <div className="bg-[length:700px_300px] bg-lazy-background-image grid grid-cols-2 mt-[78px] bg-no-repeat bg-center overflow-hidden">
+            <div className="bg-[length:700px_300px]  grid grid-cols-4 mt-[48px] bg-no-repeat bg-center overflow-hidden">
               {values?.map((_value, index) => {
                 return (
-                  <div
-                    key={index}
-                    className={`${
-                      index > 1 ? "mt-[78px]" : ""
-                    } overflow-hidden relative`}
-                  >
+                  <div key={index} className={` overflow-hidden relative`}>
                     <Value
                       label={_value.label}
                       value={_value.value}
