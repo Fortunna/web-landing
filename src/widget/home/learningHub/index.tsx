@@ -100,19 +100,10 @@ export default function LearningHub() {
     );
   };
   return (
-    <div className="bg-black md:pt-[120px] pt-20">
+    <div className="bg-black">
       <PageWrapper className="!px-10%">
         <>
           {" "}
-          <div className="text-center flex justify-center mb-12">
-            <div>
-              <div className="flex justify-center">
-                <SectionTopHeader label="LEARNING HUB" />
-              </div>
-
-              <Typography variant="semi-subtitle" label="Learning Hub" />
-            </div>
-          </div>
           {/* <div className="grid grid-cols-4 gap-12"> */}
           <Carousel
             swipeable={true}

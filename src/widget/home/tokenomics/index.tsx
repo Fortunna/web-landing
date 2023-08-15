@@ -298,8 +298,8 @@ const Network = ({
 export default function TokenomicsSection() {
   const [currentNetwork, setCurrentNetwork] = useState(0);
   return (
-    <div className="bg-black md:pt-[198px] pt-20 bg-[url(/blue-bg.png)] bg-left-bottom bg-no-repeat">
-      <div className="bg-round-bg bg-right-top bg-no-repeat bg-[length:150px_150px]">
+    <div className="bg-black md:pt-[198px] pt-20  bg-[url(/div.sc-7b2548cc-0.png)] bg-contain bg-bottom  bg-no-repeat">
+      <div className=" bg-right-top bg-no-repeat bg-[length:150px_150px]">
         <PageWrapper>
           <div className="md:grid md:grid-cols-[50%_auto] gap-24">
             <div>
@@ -345,6 +345,16 @@ export default function TokenomicsSection() {
           <div className="absolute top-0 left-0 z-10 w-full">
             {/* <Image style={{ width: "100%", height: "auto" }} src={FM} alt="" /> */}
           </div>
+        </div>
+      </div>
+
+      <div className="text-center flex justify-center mt-24 pb-12">
+        <div>
+          <div className="flex justify-center">
+            <SectionTopHeader label="LEARNING HUB" />
+          </div>
+
+          <Typography variant="semi-subtitle" label="Learning Hub" />
         </div>
       </div>
     </div>
