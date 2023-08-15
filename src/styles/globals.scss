@@ -63,6 +63,10 @@
     font-family: "Inter";
     src: url(/font/Inter/static/Inter-Regular.ttf);
   }
+  @font-face {
+    font-family: "Inter Bold";
+    src: url(/font/Inter/static/Inter-Bold.ttf);
+  }
 
   @font-face {
     font-family: "Inter Light";
@@ -270,5 +274,24 @@ input[type="range"]::-ms-thumb {
   .highcharts-container {
     height: 100% !important;
     width: 100% !important;
+  }
+}
+
+.network {
+  .footerIcon {
+    svg {
+      path {
+        // stroke: #3d3c43;
+      }
+    }
+  }
+  &.active {
+    .footerIcon {
+      svg {
+        path {
+          stroke: #fff !important;
+        }
+      }
+    }
   }
 }

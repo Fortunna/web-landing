@@ -54,7 +54,7 @@ export default function LearningHub() {
         />
         <Typography
           variant="heading"
-          className="!font-inter !text-[14px] !text-white leading-leading-24"
+          className="!font-inter-light !text-[14px] !text-white leading-leading-24"
           label={description}
         />
 

@@ -114,11 +114,6 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
           <source src={"/hero-video-play.mp4"} type="video/mp4" />
           Your browser does not support the video tag.
         </video> */}
-
-        {/* <div
-          className={`w-full h-full bg-[rgba(0,0,0,.3)]  bg-cover lg:px-[40px] px-4 absolute top-0 }`}
-        > */}
-        {/* </div> */}
       </div>
       {showMobile ? (
         <MobileHeader onClose={() => setShowMobile(false)} />

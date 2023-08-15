@@ -21,8 +21,9 @@ export default function index() {
       <BridgingTheGapSection />
       <CommunityOwnedSection />
       <RoadMapSection />
-      <LearningHub />
+
       <TokenomicsSection />
+      <LearningHub />
 
       <PartnerSection />
 
