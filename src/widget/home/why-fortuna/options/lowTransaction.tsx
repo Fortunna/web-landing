@@ -6,18 +6,20 @@ import Fee from "../icons/fee";
 
 export default function LowTransaction() {
   return (
-    <div className={`${cardClass}   relative`}>
-      <div className="px-5 md:px-[33px] py-[31px] overflow-hidden">
+    <div className={`${cardClass}  h-[390px] relative`}>
+      <div className="px-5 md:px-[33px] py-[31px] ">
         <div className=" overflow-hidden">
           <CardBorder img={gradient4} />
 
           <div className="mb-10">
             <CardHeader
-              title="Low transaction fees"
-              summary="Unbeatable transaction fees for our investors ."
+              title="Stakepad"
+              summary="We empower Project Owners with an intuitive platform to create Staking Pools, Generate Rewards, and Cultivate Liquidity Farms"
             />
           </div>
-          <Fee />
+          <div className="absolute right-10 bottom-7">
+            <Fee />
+          </div>
         </div>
       </div>
     </div>
