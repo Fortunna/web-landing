@@ -5,6 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 import MobileHeader from "./mobileHeader";
 import Link from "next/link";
 import classNames from "classnames";
+import Typography from "@/components/typography";
 const navs = [
   {
     title: "About",
@@ -45,7 +46,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
       <div
         // onScroll={handleScroll}
         id="bg-wrapper"
-        className=" overflow-hidden relative -bg-[url('/hero-black-hole_mask-group.png')]"
+        className=" overflow-hidden h-[80vh] relative bg-[url('/section-header.png')] bg-cover bg-center bg-no-repeat"
       >
         <div
           className={`${headerStyles} transition-all z-20 absolute md:px-10 px-5 w-screen left-0`}
@@ -103,7 +104,23 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
             </div>
           </div>
         </div>
-        <video
+
+        <div className="flex items-center mt-[20%]">
+          <div className="w-1/2 ps-[8%]">
+            <Typography
+              variant="semi-heading"
+              className="!font-aeonik-pro !text-[15px]"
+              label="FORTUNA FINANCE"
+            />
+            <Typography
+              variant="subtitle"
+              className="!font-aeonik-pro !text-[40px] mt-4 !leading-[50px]"
+              label="The future of DeFi made easy with decentralized innovative tools and services"
+            />
+          </div>
+        </div>
+
+        {/* <video
           // ref={videoRef}\
           playsInline
           muted
@@ -113,7 +130,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
         >
           <source src={"/hero-video-play.mp4"} type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
 
         {/* <div
           className={`w-full h-full bg-[rgba(0,0,0,.3)]  bg-cover lg:px-[40px] px-4 absolute top-0 }`}

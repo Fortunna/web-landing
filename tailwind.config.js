@@ -15,9 +15,11 @@ module.exports = {
       colors: {
         "text-cool": "#b2b2b2",
         "light-harsh": "rgba(239, 237, 253, 0.70)",
+        "light-2": "rgba(255, 255, 255, 0.50)",
         harsh: "#A9A9A9",
         transparent: "rgba(255, 255, 255, 0.08)",
         "transparent-1": "rgba(29, 28, 32, 0.79)",
+        "card-transparent": "rgba(9, 6, 23, 0.53)",
       },
       fontFamily: {
         sans: ["Aeonik Pro", ...defaultTheme.fontFamily.sans],
@@ -38,6 +40,7 @@ module.exports = {
         "ibm-plex-semi-bold": "IBM Plex Mono Semi Bold",
         "noto-sans": "Noto Sans",
         inter: "Inter",
+        "inter-bold": "Inter Bold",
         "inter-light": "Inter Light",
       },
       fontSize: {
@@ -52,7 +55,11 @@ module.exports = {
         "caption-3": "15px",
       },
       backgroundImage: {
-        "why-bg-1": "url(/group-39958.png)",
+        "why-bg-1": "url(/div.sc-7dd06286-1.png)",
+        "learn-1": "url(/learn-bg-1.png)",
+        "learn-2": "url(/learn-2.png)",
+        "round-bg": "url(/round-bg.png)",
+        "why-bg-1": "url(/div.sc-7dd06286-1.png)",
         shade: "url(/bg-bridging.png)",
         star: "url(/star.png)",
         defi: "url(/defi.png)",

@@ -4,6 +4,9 @@ import Typography from "@/components/typography";
 import React from "react";
 import Image from "next/image";
 import divider from "../../../../public/divider.png";
+import Launchpad from "./launchpad";
+import Aggregator from "./aggregator";
+import EarnGrow from "./earn-grow";
 
 const our_values = [
   {
@@ -336,8 +339,8 @@ export default function BridgingTheGapSection() {
         </div>
 
         <PageWrapper>
-          <div className="md:grid md:grid-cols-4 gap-20 md:bg-[url(/semi-circle.png)] bg-[center_-62px] pt-[68px]">
-            {our_values.map((_value, index) => {
+          {/* <div className="md:grid md:grid-cols-4 gap-20 md:bg-[url(/semi-circle.png)] bg-[center_-62px] pt-[68px]"> */}
+          {/* {our_values.map((_value, index) => {
               return (
                 <Value
                   index={index}
@@ -347,7 +350,17 @@ export default function BridgingTheGapSection() {
                   key={index}
                 />
               );
-            })}
+            })} */}
+          {/* </div> */}
+          <div className="grid grid-cols-[40%_auto] gap-10">
+            <div>
+              <Launchpad />
+            </div>
+            <div>
+              <Aggregator />
+              <div className="mt-20"></div>
+              <EarnGrow />
+            </div>
           </div>
         </PageWrapper>
       </div>
