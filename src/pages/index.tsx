@@ -25,7 +25,7 @@ export default function index() {
       <TokenomicsSection />
       <LearningHub />
 
-      <PartnerSection />
+      {/* <PartnerSection /> */}
 
       {/* <Companies /> */}
 

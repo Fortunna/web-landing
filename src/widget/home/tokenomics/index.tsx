@@ -311,7 +311,7 @@ export default function TokenomicsSection() {
                 label="Supported Networks"
               />
 
-              <div className="grid grid-cols-2 mt-4">
+              <div className="md:grid grid-cols-2 mt-4">
                 {data.map((_d, index) => {
                   return (
                     <div
