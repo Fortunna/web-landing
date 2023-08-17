@@ -5,7 +5,7 @@ import Images from "next/image";
 
 export default function Aggregator() {
   return (
-    <div className="bg-[#171717] text-start bg-right-bottom bg-no-repeat p-8">
+    <div className="bg-[#171717] text-start bg-right-bottom bg-no-repeat p-8 rounded-[20px]">
       <Typography
         variant="body0.5"
         className="!font-inter !text-light-2"
