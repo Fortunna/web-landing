@@ -46,7 +46,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
       <div
         // onScroll={handleScroll}
         id="bg-wrapper"
-        className=" overflow-hidden md:h-[62vh] !h-[30vh]  relative bg-[url('/section-header.png')] bg-cover bg-center bg-no-repeat"
+        className=" overflow-hidden md:!h-[62vh] !h-[30vh]  relative bg-[url('/section-header.png')] bg-cover bg-center bg-no-repeat"
       >
         <div
           className={`${headerStyles} transition-all z-20 absolute md:px-10 px-5 w-screen left-0`}
@@ -114,7 +114,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
             />
             <Typography
               variant="subtitle"
-              className="!font-aeonik-pro !md:text-[40px]  !text-[18px] md:mt-4 mt-2 md:!leading-[50px] !leading-normal"
+              className="!font-aeonik-pro md:!text-[40px]  !text-[18px] md:mt-4 mt-2 md:!leading-[50px] !leading-normal"
               label="The future of DeFi made easy with decentralized innovative tools and services"
             />
           </div>
