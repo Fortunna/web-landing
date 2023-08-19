@@ -23,7 +23,7 @@ export default function Aggregator() {
       {/* <div className="mt-20"></div> */}
       <div className="md:grid md:grid-cols-[30%_auto] min-h-[230px] md:bg-[url(/brain.png)] bg-no-repeat  bg-[length:500px_auto] bg-[right_-30px]">
         <div>
-          <div className="w-[120%] my-[-30px]">
+          <div className="w-[120%] md:hidden my-[-30px]">
             <Images src={brain} alt="" />
           </div>
           <div className="md:mt-16 ">
