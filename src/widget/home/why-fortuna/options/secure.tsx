@@ -1,7 +1,7 @@
 import React from "react";
 import { CardBorder, CardHeader, cardClass } from ".";
 import Key from "../icons/key";
-import gradient2 from "../../../../../public/border-gradient-2.png";
+import gradient2 from "../../../../../public/border-gradient-5.png";
 
 export default function Secure() {
   return (

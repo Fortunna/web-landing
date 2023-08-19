@@ -26,7 +26,7 @@ export const CardHeader = ({
       <Typography variant="semi-heading" label={title} />
       <div className="mt-[8px]"></div>
       <div className="md:w-[60%]">
-        <Typography variant="body2" label={summary} />
+        <Typography variant="body3" label={summary} />
       </div>
     </div>
   );

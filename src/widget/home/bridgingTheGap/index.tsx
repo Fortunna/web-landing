@@ -331,7 +331,7 @@ export default function BridgingTheGapSection() {
               label="Fortuna Finance aims to bring value to the decentralized finance space by providing unique , affordable and almost effortless solutions for projects and users ."
             />
           </div>
-          <div className=" bg-[url(/semi-cricle-shade.png)]  bg-cover bg-[center_-35px] ">
+          <div className=" bg-[url(/semi-cricle-kkk-shade.png)] mb-6  bg-cover bg-[center_-35px] ">
             <div className="!text-caption-1 inline-block bg-no-repeat !font-inter border-[1px] !border-[#2a282f] md:mt-4 mt-6 py-3 mb-5 px-7 !text-[#F4F0FF] rounded-[8px]">
               What we offer
             </div>
@@ -352,13 +352,13 @@ export default function BridgingTheGapSection() {
               );
             })} */}
           {/* </div> */}
-          <div className="grid grid-cols-[40%_auto] gap-10">
-            <div>
+          <div className="md:grid md:grid-cols-[40%_auto] md:gap-10">
+            <div className="md:mb-0 mb-6">
               <Launchpad />
             </div>
             <div>
               <Aggregator />
-              <div className="mt-20"></div>
+              <div className="md:mt-20 mt-6"></div>
               <EarnGrow />
             </div>
           </div>

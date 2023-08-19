@@ -260,7 +260,7 @@ const Network = ({
   });
   return (
     <div
-      className={`bg-card-transparent network ${
+      className={`md:bg-card-transparent bg-[#090617] md:mb-0 mb-7 network ${
         active ? "active" : ""
       } p-10 rounded-lg hover:bg-[#1A1A32] transition-all ${bgStyles} hover:scale-95`}
     >
@@ -337,11 +337,11 @@ export default function TokenomicsSection() {
           </div>
         </PageWrapper>
         <div className="block md:hidden relative overflow-hidden ">
-          <Image
+          {/* <Image
             style={{ width: "100%", height: "auto" }}
             src={fortunaMobile}
             alt="fortuna"
-          />
+          /> */}
           <div className="absolute top-0 left-0 z-10 w-full">
             {/* <Image style={{ width: "100%", height: "auto" }} src={FM} alt="" /> */}
           </div>

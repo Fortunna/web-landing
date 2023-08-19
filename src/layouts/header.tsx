@@ -46,7 +46,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
       <div
         // onScroll={handleScroll}
         id="bg-wrapper"
-        className=" overflow-hidden h-[80vh] relative bg-[url('/section-header.png')] bg-cover bg-center bg-no-repeat"
+        className=" overflow-hidden md:h-[62vh] !h-[30vh]  relative bg-[url('/section-header.png')] bg-cover bg-center bg-no-repeat"
       >
         <div
           className={`${headerStyles} transition-all z-20 absolute md:px-10 px-5 w-screen left-0`}
@@ -91,7 +91,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
                 {navs.map((_nav, index) => {
                   return (
                     <Link key={index} href={_nav.to}>
-                      <nav className="!text-white px-3 !text-[17px] !font-aeonik-pro">
+                      <nav className="!text-white px-3 !text-[19px] !font-aeonik-pro">
                         {_nav.title}
                       </nav>
                     </Link>
@@ -99,22 +99,22 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
                 })}
               </div>
               <Link href={"https://app.fortunafi.io/"} target="_blank">
-                <Button label="Launch App" />
+                <Button size="default" label="Launch App" />
               </Link>
             </div>
           </div>
         </div>
 
-        <div className="flex items-center mt-[20%]">
-          <div className="w-1/2 ps-[8%]">
+        <div className="flex items-center md:mt-[15%] mt-[30%]">
+          <div className="md:w-1/2 ps-[8%]">
             <Typography
               variant="semi-heading"
-              className="!font-aeonik-pro !text-[15px]"
+              className="!font-aeonik-pro md:!text-[15px] !text-[9px]"
               label="FORTUNA FINANCE"
             />
             <Typography
               variant="subtitle"
-              className="!font-aeonik-pro !text-[40px] mt-4 !leading-[50px]"
+              className="!font-aeonik-pro !md:text-[40px]  !text-[18px] md:mt-4 mt-2 md:!leading-[50px] !leading-normal"
               label="The future of DeFi made easy with decentralized innovative tools and services"
             />
           </div>

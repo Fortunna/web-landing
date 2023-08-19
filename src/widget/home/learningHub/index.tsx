@@ -43,18 +43,18 @@ export default function LearningHub() {
   }) => {
     return (
       <div
-        className={`${image} px-[48px] pb-[48px] rounded-[8px] overflow-hidden pt-[150px]`}
+        className={`${image} bg-center bg-[length:100%_100%] md:px-[48px] px-8 pb-[48px] rounded-[8px] overflow-hidden md:pt-[150px] pt-32`}
       >
         {/* <div className="!mt-[150px]"></div> */}
 
         <Typography
           variant="body3"
-          className="!text-[24px] py-[8px] !font-aeonik-pro !text-white "
+          className="md:!text-[24px] !text-[21px] py-[8px] !leading-normal !font-aeonik-pro !text-white "
           label={title}
         />
         <Typography
           variant="heading"
-          className="!font-inter-light !text-[14px] !text-white leading-leading-24"
+          className="!font-inter-light !text-[14px] !text-white leading-6"
           label={description}
         />
 

@@ -3,10 +3,17 @@ import React from "react";
 import brain from "../../../../public/brain.png";
 import Images from "next/image";
 import earn from "../../../../public/Graphic-Transactions.png";
+import Link from "next/link";
 
 export default function EarnGrow() {
+  const hoverStyles =
+    "hover:bg-[#311e41] hover:scale-95 hover:shadow-md shadow-white transition-all ";
   return (
-    <div className="bg-[#171717] text-start bg-right-bottom bg-no-repeat p-8 rounded-[20px]">
+    <Link
+      href={"https://app.fortunafi.io/earn/farms"}
+      target="_blank"
+      className={`bg-[#171717] text-start block bg-right-bottom bg-no-repeat p-8 cursor-pointer rounded-[20px] ${hoverStyles}`}
+    >
       <Typography
         variant="body0.5"
         className="!font-inter !text-light-2"
@@ -18,7 +25,7 @@ export default function EarnGrow() {
         <div className="relative">
           <div className="mt-16">
             <Typography
-              className="!font-inter-bold font-bold text-white !text-[35px] !leading-[40px]"
+              className="!font-inter-bold font-bold text-white md:!text-[35px] !text-[28px] !leading-[33px] md:!leading-[40px]"
               variant="semi-subtitle"
               label="Earn and Grow"
             />
@@ -55,6 +62,6 @@ export default function EarnGrow() {
       </div>
 
       {/* <div className="mt-44"></div> */}
-    </div>
+    </Link>
   );
 }
