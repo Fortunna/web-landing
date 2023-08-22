@@ -7,7 +7,7 @@ import React from "react";
 export default function CtaSection() {
   return (
     <div className="py-20 bg-black">
-      <div className="  bg-black bg-[url(/basket.png)] flex items-center justify-center bg-center py-44    md:bg-contain bg-[length:200%_auto] bg-no-repeat">
+      <div className="  bg-black bg-[url(/basket.png)] flex items-center justify-center bg-center py-44    md:bg-cover bg-[length:200%_auto] bg-no-repeat">
         <div className="md:w-[60%] text-center mx-auto">
           <div>
             <Typography

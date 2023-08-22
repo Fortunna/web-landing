@@ -50,17 +50,19 @@ export default function BuildingWithEaseSection() {
               <div>
                 <Typography variant="subtitle">
                   <>
-                    Streamlined Staking Solutions:
+                    Building an easy-to-use DeFi
                     <div className="text-[#dadada] md:block inline">
                       {" "}
-                      Simplifying DeFi for You
+                      staking platform for everyone:
                     </div>
                   </>
                 </Typography>
                 <div className="w-[80%] md:my-10 mt-[25px] mb-[18px]">
                   <Typography
                     variant="body3"
-                    label="The AI Yield Aggregator, known as Fortuna's Oracle , leverages artificial intelligence (AI) to optimize yield generation, enhance risk management, and provide a user-friendly investing experience."
+                    label="At our core we provide a user-friendly platform for accessing staking pools and liquidity
+providers for DeFi projects. Stake your assets for instant passive income streams. No deposit or withdrawal fees. You have
+full control over your funds"
                   />
                 </div>
                 <Link href={"https://app.fortunafi.io/"}>

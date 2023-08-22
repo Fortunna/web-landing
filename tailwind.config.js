@@ -48,7 +48,7 @@ module.exports = {
         "sub-title-heading": "50px",
         "sub-heading": "23px",
         "semi-heading": "20px",
-        lg: "17px",
+        lg: "20px",
         "caption-0.5": "10px",
         "caption-1": "12px",
         "caption-2": "13px",
