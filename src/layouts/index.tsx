@@ -29,6 +29,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Head>
         <link rel="icon" type="image/png" href="/favicon.png" />
         {/* <link rel="icon" type="image/x-icon" href="//favicon.ico" /> */}
+        <title>Fortuna Fi - Multi chain staking platform</title>
       </Head>
       <Header fixedHeader={fixedHeader}></Header>
 

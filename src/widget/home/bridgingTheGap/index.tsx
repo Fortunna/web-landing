@@ -4,6 +4,9 @@ import Typography from "@/components/typography";
 import React from "react";
 import Image from "next/image";
 import divider from "../../../../public/divider.png";
+import Launchpad from "./launchpad";
+import Aggregator from "./aggregator";
+import EarnGrow from "./earn-grow";
 
 const our_values = [
   {
@@ -313,10 +316,10 @@ export default function BridgingTheGapSection() {
           <Typography variant="subtitle">
             <>
               {" "}
-              Revolutionizing the Decentralized Finance
+              Bridging the gap in DeFi for
               <div className="text-[#dadada] md:block inline">
                 {" "}
-                Space with simplicity and efficiency
+                Projects and Users:
               </div>
             </>
           </Typography>
@@ -325,10 +328,13 @@ export default function BridgingTheGapSection() {
           <div className="my-4 md:w-[40%] mx-auto">
             <Typography
               variant="body3"
-              label="Fortuna Finance aims to bring value to the decentralized finance space by providing unique , affordable and almost effortless solutions for projects and users ."
+              className="!tw-text-[20px]"
+              label="Fortuna Fi offers a platform where users can access popular pools across multi-chain protocols.
+Our StakePad provides project owners with a streamlined system to connect with liquidity
+providers, saving both cost at very affordable rates, time, and resources."
             />
           </div>
-          <div className=" bg-[url(/semi-cricle-shade.png)]  bg-cover bg-[center_-35px] ">
+          <div className=" bg-[url(/semi-cricle-kkk-shade.png)] mb-6  bg-cover bg-[center_-35px] ">
             <div className="!text-caption-1 inline-block bg-no-repeat !font-inter border-[1px] !border-[#2a282f] md:mt-4 mt-6 py-3 mb-5 px-7 !text-[#F4F0FF] rounded-[8px]">
               What we offer
             </div>
@@ -336,8 +342,8 @@ export default function BridgingTheGapSection() {
         </div>
 
         <PageWrapper>
-          <div className="md:grid md:grid-cols-4 gap-20 md:bg-[url(/semi-circle.png)] bg-[center_-62px] pt-[68px]">
-            {our_values.map((_value, index) => {
+          {/* <div className="md:grid md:grid-cols-4 gap-20 md:bg-[url(/semi-circle.png)] bg-[center_-62px] pt-[68px]"> */}
+          {/* {our_values.map((_value, index) => {
               return (
                 <Value
                   index={index}
@@ -347,7 +353,17 @@ export default function BridgingTheGapSection() {
                   key={index}
                 />
               );
-            })}
+            })} */}
+          {/* </div> */}
+          <div className="md:grid md:grid-cols-[40%_auto] md:gap-10">
+            <div className="md:mb-0 mb-6">
+              <Launchpad />
+            </div>
+            <div>
+              <Aggregator />
+              <div className="md:mt-20 mt-6"></div>
+              <EarnGrow />
+            </div>
           </div>
         </PageWrapper>
       </div>

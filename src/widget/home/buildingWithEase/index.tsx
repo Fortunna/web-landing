@@ -18,28 +18,29 @@ export default function BuildingWithEaseSection() {
           as="image"
         />
       </Head>
-      <div className="bg-black bg-star-tiny-building-with-ease bg-[100%_100%] bg-fixed">
-        <PageWrapper>
-          <div className="md:grid grid-cols-[30%_auto] md:gap-32 mb-[30px]">
-            <div className="block md:hidden mb-8">
-              <Ball />
-            </div>
-            <div className=" items-center  hidden">
-              <div></div>
-              {/* <Typography
+      <div className="bg-black bg-star-tiny-building-with-ease bg-[100%_80%] -bg-fixed">
+        <div className="bg-[url(/stars.svsg.png)] bg-no-repeat bg-right-top">
+          <PageWrapper>
+            <div className="md:grid grid-cols-[30%_auto] md:gap-32 mb-[30px]">
+              <div className="block md:hidden mb-8">
+                <Ball />
+              </div>
+              <div className=" items-center  hidden">
+                <div></div>
+                {/* <Typography
                   variant="body2"
                   className="!text-[#757185]"
                   label="With smart automation we provide a reliable solution for users seeking secure and transparent interactions with project in the defi ecosystem"
                 /> */}
-            </div>
-            <div className="md:block w-full hidden">
-              <div className="mx-auto ">
-                <Ball />
+              </div>
+              <div className="md:block w-full hidden">
+                <div className="mx-auto ">
+                  <Ball />
+                </div>
               </div>
             </div>
-          </div>
-        </PageWrapper>
-
+          </PageWrapper>
+        </div>
         <PageWrapper>
           <>
             <div className="md:grid md:grid-cols-[30%_auto] gap-44">
@@ -49,17 +50,19 @@ export default function BuildingWithEaseSection() {
               <div>
                 <Typography variant="subtitle">
                   <>
-                    Streamlined Staking Solutions:
+                    Building an easy-to-use DeFi
                     <div className="text-[#dadada] md:block inline">
                       {" "}
-                      Simplifying DeFi for You
+                      staking platform for everyone:
                     </div>
                   </>
                 </Typography>
                 <div className="w-[80%] md:my-10 mt-[25px] mb-[18px]">
                   <Typography
                     variant="body3"
-                    label="The AI Yield Aggregator, known as Fortuna's Oracle , leverages artificial intelligence (AI) to optimize yield generation, enhance risk management, and provide a user-friendly investing experience."
+                    label="At our core we provide a user-friendly platform for accessing staking pools and liquidity
+providers for DeFi projects. Stake your assets for instant passive income streams. No deposit or withdrawal fees. You have
+full control over your funds"
                   />
                 </div>
                 <Link href={"https://app.fortunafi.io/"}>
@@ -80,7 +83,7 @@ export default function BuildingWithEaseSection() {
               label="With smart automation we provide a reliable solution for users seeking secure and transparent interactions with project in the defi ecosystem"
             /> */}
             {/* </div> */}
-            <div className="block md:hidden">
+            <div className="block md:hidden md:mt-0 mt-10">
               <Build />
             </div>
           </>

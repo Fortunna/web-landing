@@ -8,16 +8,16 @@ export default function SectionTopHeader({ label }: { label: string }) {
         <Typography
           variant="semi-heading"
           label="[ "
-          className=" !text-[#89f8e7] md:!text-[19px] text-[13px] "
+          className=" !text-[#89f8e7]  text-[13px] "
         />
         <Typography
           // variant="semi-heading"
-          className=" md:!text-[19px] text-[13px] !font-inter-light   !bg-button-gradient  mx-3  !text-transparent !bg-clip-text "
+          className="  text-[13px] !font-inter-light   !bg-button-gradient  mx-3  !text-transparent !bg-clip-text "
           label={label}
         />
         <Typography
           variant="semi-heading"
-          className=" !text-[#9099fc] md:!text-[19px] text-[13px] "
+          className=" !text-[#9099fc]  text-[13px] "
           label={"]"}
         />
       </div>

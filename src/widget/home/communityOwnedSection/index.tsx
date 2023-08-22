@@ -9,7 +9,7 @@ import PageWrapper from "@/components/pageWrapper";
 import defi from "../../../../public/defi.png";
 import { AnimateFadeIn, RenderWhenInView } from "@/animations";
 // import fortunaMobile from "../../../../public/fortuna-mobile.png";
-
+import img from "public/div.lazy-background-image.png";
 export default function CommunityOwnedSection() {
   const values = [
     {
@@ -60,15 +60,15 @@ export default function CommunityOwnedSection() {
     );
   };
   return (
-    <div className="bg-black text-center  bg-black bg-star bg-[100%_100%]   bg-fixed overflow-hidden  ">
-      <Image
+    <div className="bg-black text-center  md:mp-0 pt-8 bg-star bg-[100%_100%]   bg-fixed overflow-hidden  ">
+      {/* <Image
         style={{ width: "40%", height: "auto", float: "right" }}
         className="mb-[30px] md:hidden block"
         src={defi}
         alt="Defi"
-      />
+      /> */}
       <div className="overflow-hidden"></div>
-      <div className="md:bg-defi bg-no-repeat !pt-[167px] bg-[85%_20px] w-full  bg-[length:400px_400px] overflow-hidden">
+      <div className="bg-defi bg-no-repeat !pt-[167px] bg-[85%_20px] w-full  md:bg-[length:400px_400px]  bg-[length:200px_200px] overflow-hidden">
         <div>
           <Typography
             className="md:text-start !text-center overflow-hidden !w-full md:px-0 px-5"
@@ -80,20 +80,34 @@ export default function CommunityOwnedSection() {
             </>
           </Typography>
 
+          <Image
+            width={70}
+            className="mx-auto md:block hidden mt-[58px]"
+            height={70}
+            src={img}
+            alt=""
+          />
+
           <PageWrapper>
-            <div className="bg-[length:700px_300px] bg-lazy-background-image grid grid-cols-2 mt-[78px] bg-no-repeat bg-center overflow-hidden">
+            <div className="bg-[length:700px_300px]  grid md:grid-cols-4 grid-cols-2 mt-[48px] bg-no-repeat bg-center overflow-hidden">
               {values?.map((_value, index) => {
                 return (
                   <div
                     key={index}
-                    className={`${
-                      index > 1 ? "mt-[78px]" : ""
-                    } overflow-hidden relative`}
+                    className={` overflow-hidden relative ${
+                      index > 1 ? "md:mt-0 mt-12" : ""
+                    }`}
                   >
                     <Value
                       label={_value.label}
                       value={_value.value}
-                      icon={<Image alt="asset" src={_value.img} />}
+                      icon={
+                        <Image
+                          alt="asset"
+                          className="md:w-10 w-8"
+                          src={_value.img}
+                        />
+                      }
                     />
                   </div>
                 );

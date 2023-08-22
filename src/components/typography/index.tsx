@@ -35,8 +35,9 @@ export default function Typography({
     // "text-caption-1 text-light-4 font-poppins-bold ": variant == "body1",
     // "text-blue text-caption-0.5 font-aeonik-pro ": variant == "body0.5",
     "text-caption-2 text-harsh font-inter ": variant == "body2",
-    "text-caption-3 text-light-harsh font-inter ": variant == "body3",
-    "md:text-lg text-[14px] text-light-harsh  font-inter-light leading-[25px]":
+    "text-caption-3 text-light-harsh font-inter !leading-7 ":
+      variant == "body3",
+    "md:text-lg text-[14px] text-light-harsh  font-inter-light !leading-[25px]":
       variant == "heading",
     "md:text-heading text-[36px] text-white !font-aeonik-pro !font-bold md:leading-[70px] leading-[42px]":
       variant == "title",

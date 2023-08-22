@@ -6,6 +6,7 @@ import CommunityOwnedSection from "@/widget/home/communityOwnedSection";
 import Companies from "@/widget/home/company";
 import CtaSection from "@/widget/home/ctaSection";
 import JonFortuna from "@/widget/home/joinFortuna";
+import LearningHub from "@/widget/home/learningHub";
 import PartnerSection from "@/widget/home/partner";
 import RoadMapSection from "@/widget/home/roadmap";
 import TokenomicsSection from "@/widget/home/tokenomics";
@@ -20,9 +21,11 @@ export default function index() {
       <BridgingTheGapSection />
       <CommunityOwnedSection />
       <RoadMapSection />
-      <TokenomicsSection />
 
-      <PartnerSection />
+      <TokenomicsSection />
+      <LearningHub />
+
+      {/* <PartnerSection /> */}
 
       {/* <Companies /> */}
 
