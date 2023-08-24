@@ -41,12 +41,13 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
   const headerStyles = classNames({
     "!bg-black !fixed": fixedHeader,
   });
+
   return (
     <>
       <div
         // onScroll={handleScroll}
         id="bg-wrapper"
-        className=" overflow-hidden md:!h-[62vh] !h-[30vh]  relative bg-[url('/section-header.png')] bg-cover bg-center bg-no-repeat"
+        className=" overflow-hidden md:!h-[62vh] !h-[45vh]  relative bg-[url('/section-header.png')] bg-cover bg-center bg-no-repeat"
       >
         <div
           className={`${headerStyles} transition-all z-20 absolute md:px-10 px-5 w-screen left-0`}
