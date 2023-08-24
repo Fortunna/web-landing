@@ -64,9 +64,10 @@ export default function WhyFortunaMobile() {
           itemClass="carousel-item-padding-40-px"
         >
           <Aggregator />
-          <Secure />
+
           <LowTransaction />
           <PoolCreation />
+          <Secure />
         </Carousel>
         {/* </div> */}
       </>

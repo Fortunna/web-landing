@@ -17,7 +17,7 @@ export default function PoolCreation() {
               summary="Discover all the trending farms and pools imported directly on our platform."
             />
           </div>
-          <div className="-mb-[185px] flex justify-center relative overflow-hidden md:mt-0 mt-10">
+          <div className="md:-mb-[160px] -mb-[130px] flex justify-center relative overflow-hidden md:mt-0 mt-10">
             <Pool />
           </div>
         </div>
