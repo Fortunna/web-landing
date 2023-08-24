@@ -41,6 +41,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
   const headerStyles = classNames({
     "!bg-black !fixed": fixedHeader,
   });
+
   return (
     <>
       <div
