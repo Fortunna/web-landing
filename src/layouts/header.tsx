@@ -25,8 +25,6 @@ const navs = [
   // },
 ];
 export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
-  const videoRef = useRef("");
-  const [isRefresh, setIsRefresh] = useState(false);
   const [showMobile, setShowMobile] = useState(false);
   const router = useRouter();
 
