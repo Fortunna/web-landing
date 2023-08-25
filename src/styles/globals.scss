@@ -93,6 +93,11 @@
   }
 }
 
+#tsparticles {
+  height: 65vh;
+  filter: blur(30px);
+}
+
 .connectors {
   width: calc(100% + 20px) !important;
   height: auto !important;
@@ -293,5 +298,11 @@ input[type="range"]::-ms-thumb {
         }
       }
     }
+  }
+}
+
+@media (max-width: 700px) {
+  #tsparticles {
+    height: 300px;
   }
 }
