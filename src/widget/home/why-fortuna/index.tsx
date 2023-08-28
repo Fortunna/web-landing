@@ -146,8 +146,7 @@ export default function WhyFortuna() {
               <div className="md:w-[40%] md:mt-7 mt-5 mx-auto md:px-0 px-8">
                 <Typography
                   variant="heading"
-                  label="Fortuna-Fi provides the platform to stake across multi-chain, enhancing the opportunities to
-explore and benefit from multi-chain staking and yield farming rewards."
+                  label="Fortuna Finance offers an intuitive staking and farming platform with a robust selection of pools. Participate in Yield farming with our AI yield aggregator"
 
                   // Fortuna Finance revolutionizes DeFi with simplified solutions, an AI Yield Aggregator, popular pools, security, and low transaction fees, empowering users and projects  to earn and grow while shaping the future of decentralized finance."
                 />

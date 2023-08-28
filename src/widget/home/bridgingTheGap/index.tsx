@@ -329,7 +329,7 @@ export default function BridgingTheGapSection() {
             <Typography
               variant="body3"
               className="!tw-text-[20px]"
-              label="Fortuna Fi offers a platform where users can access popular pools across multi-chain protocols.
+              label="Fortuna Fi offers a platform where users can access popular pools across multiple protocols.
 Our StakePad provides project owners with a streamlined system to connect with liquidity
 providers, saving both cost at very affordable rates, time, and resources."
             />

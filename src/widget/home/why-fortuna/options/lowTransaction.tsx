@@ -14,7 +14,7 @@ export default function LowTransaction() {
           <div className="mb-10">
             <CardHeader
               title="Stakepad"
-              summary="We empower Project Owners with an intuitive platform to create Staking Pools, Generate Rewards, and Cultivate Liquidity Farms"
+              summary="An intuitive platform that enables effortless creation of staking and farming products , also serving as a bridge, enabling projects to connect with liquidity providers."
             />
           </div>
           <div className="absolute right-10 bottom-7">
