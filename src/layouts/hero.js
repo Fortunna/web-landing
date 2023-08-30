@@ -39,7 +39,7 @@ function particlesInit(tsParticles) {
 
 export default function App() {
   return (
-    <div className="overflow-hidden h-[60vh]" style={{ filter: "blur(3px)" }}>
+    <div className="overflow-hidden h-[60vh]" style={{ filter: "blur(0px)" }}>
       <div class="bg"></div>
       <div class="bg bg2"></div>
       <div class="bg bg3"></div>
