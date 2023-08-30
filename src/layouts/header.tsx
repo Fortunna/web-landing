@@ -401,7 +401,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
             </div>
           </div>
 
-          <div className="flex items-center md:mt-[15%] mt-[30%]">
+          <div className="flex items-center md:mt-[15%] mt-[100px]">
             <div className="md:w-1/2 ps-[8%]">
               <Typography
                 variant="semi-heading"
