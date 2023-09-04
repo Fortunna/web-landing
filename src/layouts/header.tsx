@@ -308,7 +308,7 @@ const navs = [
   },
   {
     title: "Docs",
-    to: "https://fortuna-defi.gitbook.io/fortuna-product-docs/",
+    to: "/docs.pdf",
   },
   {
     title: "Governance",
@@ -411,7 +411,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
               <Typography
                 variant="subtitle"
                 className="!font-aeonik-pro md:!text-[40px]  !text-[18px] md:mt-4 mt-2 md:!leading-[50px] !leading-normal"
-                label="Stake Smart, Earn More: Unlocking the Future of Staking Pools with AI Automation"
+                label="The future of DeFi - Staking, Yield Farming and AI Automation"
               />
             </div>
           </div>

@@ -14,7 +14,7 @@ export default function MobileHeader({
     },
     {
       title: "Docs",
-      to: "https://fortuna-defi.gitbook.io/fortuna-product-docs/",
+      to: "/docs.gif",
     },
     {
       title: "Governance",
