@@ -372,7 +372,7 @@ export default function RoadmapSection() {
           customDot={
             <CustomDot active={activeSlide} onClick={handleDotClick} />
           }
-          autoPlay={true}
+          // autoPlay={true}
           autoPlaySpeed={3000}
           keyBoardControl={true}
           transitionDuration={500}
@@ -385,51 +385,32 @@ export default function RoadmapSection() {
         >
           {roadmap.map((_road_map, index) => {
             return (
-              <div
-                key={index}
-                className="relative pt-48 pb-72 mt-[100px] overflow-hidden "
-              >
-                <svg
-                  width="1440"
-                  className="absolute top-[40%]"
-                  height="8"
-                  viewBox="0 0 1440 8"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    opacity="0.1"
-                    width="4554"
-                    height="8"
-                    fill="url(#paint0_linear_774_68800)"
-                  />
-                  <defs>
-                    <linearGradient
-                      id="paint0_linear_774_68800"
-                      x1="1.14852e-06"
-                      y1="8.00004"
-                      x2="4549.76"
-                      y2="-134.982"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop offset="0.4272" stop-color="#D84594" />
-                      <stop offset="0.4528" stop-color="#574EA0" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-
+              <div key={index} className="relative pt-48 pb-72 mt-[100px] ">
+                {/* <Pointer primary={index % 2 == 0 ? true : false} /> */}
+                <div
+                  className="h-2 w-full"
+                  style={{
+                    opacity: 0.1,
+                    background:
+                      "linear-gradient(90deg, #D84594 42.72%, #574EA0 45.28%)",
+                  }}
+                ></div>
                 {index % 2 == 0 ? (
                   <div className="absolute -top-[30px]">
                     <RoadMapDisplay label={_road_map.title} />
                   </div>
                 ) : null}
-
-                <Pointer primary={index % 2 == 0 ? true : false} />
+                <div style={{ marginRight: "-30px", marginTop: "-21px" }}>
+                  <Pointer primary={index % 2 == 0 ? true : false} />
+                </div>
 
                 <div className="relative">
                   {index % 2 == 0 ? (
                     <div className="relative">
-                      <div className="absolute w-full left-[4%] bottom-[-6px] ">
+                      <div
+                        style={{ width: "calc(100% + 8px)" }}
+                        className="absolute   bottom-[8px] left-[12px] "
+                      >
                         <TopConnector />
                       </div>
                     </div>
@@ -441,7 +422,7 @@ export default function RoadmapSection() {
                       </div>
 
                       <div className="relative">
-                        <div className="absolute w-full left-[4%] top-[-6px] ">
+                        <div className="absolute w-full  left-4 top-[-8px] ">
                           <BottomConnector />
                         </div>
                       </div>
