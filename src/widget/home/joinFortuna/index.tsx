@@ -12,6 +12,7 @@ export default function JonFortuna() {
           <div className="lg:grid lg:grid-cols-[60%_auto]">
             <div>
               <Typography
+                use="h3"
                 variant="title"
                 className="!font-aeonik-pro !leading-[100%]"
                 label="Join the fortuna

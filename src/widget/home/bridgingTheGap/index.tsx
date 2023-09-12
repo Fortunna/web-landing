@@ -313,7 +313,7 @@ export default function BridgingTheGapSection() {
 
           <div className="mb-4"></div>
 
-          <Typography variant="subtitle">
+          <Typography use="h3" variant="subtitle">
             <>
               {" "}
               Bridging the gap in DeFi for

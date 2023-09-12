@@ -306,6 +306,7 @@ export default function TokenomicsSection() {
               {/* <SectionTopHeader label="The Allocation" /> */}
 
               <Typography
+                use="h3"
                 className="md:text-[38px] !text-[24px] !font-aeonik-pro-bold"
                 variant="semi-subtitle"
                 label="Supported Networks"
@@ -354,7 +355,7 @@ export default function TokenomicsSection() {
             <SectionTopHeader label="LEARNING HUB" />
           </div>
 
-          <Typography variant="semi-subtitle" label="Learning Hub" />
+          <Typography use="h3" variant="semi-subtitle" label="Learning Hub" />
         </div>
       </div>
     </div>

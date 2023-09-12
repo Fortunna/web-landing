@@ -410,6 +410,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
               />
               <Typography
                 variant="subtitle"
+                use="h1"
                 className="!font-aeonik-pro md:!text-[40px]  !text-[18px] md:mt-4 mt-2 md:!leading-[50px] !leading-normal"
                 label="The future of DeFi - Staking, Yield Farming and AI Automation"
               />

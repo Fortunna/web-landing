@@ -71,6 +71,7 @@ export default function CommunityOwnedSection() {
       <div className="bg-defi bg-no-repeat !pt-[167px] bg-[85%_20px] w-full  md:bg-[length:400px_400px]  bg-[length:200px_200px] overflow-hidden">
         <div>
           <Typography
+            use="h3"
             className="md:text-start !text-center overflow-hidden !w-full md:px-0 px-5"
             variant="subtitle"
           >

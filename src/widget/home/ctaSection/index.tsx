@@ -12,6 +12,7 @@ export default function CtaSection() {
           <div>
             <Typography
               variant="title"
+              use="h3"
               className="!bg-text-gradient    !mb-[60px]  !text-transparent !bg-clip-text !text-[#F7F9FD]"
               label="Be a part of Fortuna Finance today"
             />
