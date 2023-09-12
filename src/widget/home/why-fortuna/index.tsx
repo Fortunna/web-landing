@@ -136,7 +136,7 @@ export default function WhyFortuna() {
                 />
               </div>
 
-              <Typography className="" variant="subtitle">
+              <Typography use="h3" className="" variant="subtitle">
                 <>
                   Multi-Chain Staking{" "}
                   <span className="text-text-cool">and Yield Farming</span>

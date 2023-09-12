@@ -48,7 +48,7 @@ export default function BuildingWithEaseSection() {
                 <Build />
               </div>
               <div>
-                <Typography variant="subtitle">
+                <Typography use="h3" variant="subtitle">
                   <>
                     Building an easy-to-use DeFi
                     <div className="text-[#dadada] md:block inline">

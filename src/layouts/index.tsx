@@ -29,6 +29,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Head>
         <link rel="icon" type="image/png" href="/favicon.png" />
         {/* <link rel="icon" type="image/x-icon" href="//favicon.ico" /> */}
+        <>
+          <meta
+            property="og:title"
+            content="The future of DeFi - Staking, Yield Farming and AI Automation"
+          />
+          <meta
+            property="og:description"
+            content="Fortuna Finance offers an intuitive staking and farming platform with a robust selection of pools. Participate in Yield farming with our AI yield aggregator"
+          />
+          <meta property="og:image" content="/og.png" />
+          <meta property="og:url" content="/" />
+        </>
+
         <title>Fortuna Fi - Multi chain staking platform</title>
       </Head>
       <Header fixedHeader={fixedHeader}></Header>
