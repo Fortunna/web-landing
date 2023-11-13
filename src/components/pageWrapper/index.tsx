@@ -4,7 +4,7 @@ import React from "react";
 type componentProps = {
   children: React.JSX.Element;
   className?: string;
-  x2: boolean;
+  x2?: boolean;
 };
 export default function PageWrapper({
   children,

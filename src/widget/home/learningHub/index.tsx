@@ -13,14 +13,15 @@ import Button from "@/components/button";
 const partners = [
   {
     img: "bg-learn-1",
-    title: `How Fortuna Works: Complete Guide Getting started with Fortuna Fi`,
+    title: `How Fortuna Works: Complete GuideGetting started with Fortuna Fi`,
     description:
       "Lorem ipsum dolor sit amet consectetur. Feugiat tristique at feugiat mi. Id at neque cursus euismod. Amet nullam risus ac purus mattis elit blandit. Quam quis ut cras et sed faucibus.",
   },
   {
     img: "bg-learn-2",
-    title: "Popular Pools in Ethereum: Top 5 pools on Ethereum",
-    description: "Lorem ipsum dolor sit amet consectetur. Ut sit est feugiat viverra elit id vitae scelerisque vestibulum. Dignissim suspendisse at est ac leo sociis lectus turpis dui. Habitant arcu montes cursus dui.",
+    title: "Popular Pools in Ethereum:Top 5 pools on Ethereum",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Ut sit est feugiat viverra elit id vitae scelerisque vestibulum. Dignissim suspendisse at est ac leo sociis lectus turpis dui. Habitant arcu montes cursus dui.",
   },
 ];
 
