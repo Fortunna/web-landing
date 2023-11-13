@@ -341,9 +341,10 @@ providers, saving both cost at very affordable rates, time, and resources."
           </div>
         </div>
 
-        <PageWrapper>
-          {/* <div className="md:grid md:grid-cols-4 gap-20 md:bg-[url(/semi-circle.png)] bg-[center_-62px] pt-[68px]"> */}
-          {/* {our_values.map((_value, index) => {
+        <div className="px-[6%]">
+          <PageWrapper>
+            {/* <div className="md:grid md:grid-cols-4 gap-20 md:bg-[url(/semi-circle.png)] bg-[center_-62px] pt-[68px]"> */}
+            {/* {our_values.map((_value, index) => {
               return (
                 <Value
                   index={index}
@@ -354,18 +355,19 @@ providers, saving both cost at very affordable rates, time, and resources."
                 />
               );
             })} */}
-          {/* </div> */}
-          <div className="md:grid md:grid-cols-[40%_auto] md:gap-10">
-            <div className="md:mb-0 mb-6">
-              <Launchpad />
+            {/* </div> */}
+            <div className="md:grid md:grid-cols-[40%_auto] md:gap-10">
+              <div className="md:mb-0 mb-6">
+                <Launchpad />
+              </div>
+              <div>
+                <Aggregator />
+                <div className="md:mt-20 mt-6"></div>
+                <EarnGrow />
+              </div>
             </div>
-            <div>
-              <Aggregator />
-              <div className="md:mt-20 mt-6"></div>
-              <EarnGrow />
-            </div>
-          </div>
-        </PageWrapper>
+          </PageWrapper>
+        </div>
       </div>
     </div>
   );

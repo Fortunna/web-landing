@@ -18,29 +18,27 @@ export default function BuildingWithEaseSection() {
           as="image"
         />
       </Head>
-      <div className="bg-black bg-star-tiny-building-with-ease bg-[100%_80%] -bg-fixed">
-        <div className="bg-[url(/stars.svsg.png)] bg-no-repeat bg-right-top">
-          <PageWrapper>
-            <div className="md:grid grid-cols-[30%_auto] md:gap-32 mb-[30px]">
-              <div className="block md:hidden mb-8">
-                <Ball />
-              </div>
-              <div className=" items-center  hidden">
-                <div></div>
-                {/* <Typography
+      <div className="bg-[url(/stars.svsg.png)] bg-no-repeat bg-right-top">
+        <PageWrapper>
+          <div className="md:grid grid-cols-[30%_auto] md:gap-32 mb-[30px]">
+            <div className="block md:hidden mb-8">
+              <Ball />
+            </div>
+            <div className=" items-center  hidden">
+              <div></div>
+              {/* <Typography
                   variant="body2"
                   className="!text-[#757185]"
                   label="With smart automation we provide a reliable solution for users seeking secure and transparent interactions with project in the defi ecosystem"
                 /> */}
-              </div>
-              <div className="md:block w-full hidden">
-                <div className="mx-auto ">
-                  <Ball />
-                </div>
+            </div>
+            <div className="md:block w-full hidden">
+              <div className="mx-auto ">
+                <Ball />
               </div>
             </div>
-          </PageWrapper>
-        </div>
+          </div>
+        </PageWrapper>
         <PageWrapper>
           <>
             <div className="md:grid md:grid-cols-[30%_auto] gap-44">

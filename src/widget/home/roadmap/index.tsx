@@ -3,6 +3,7 @@ import Typography from "@/components/typography";
 import Carousel from "react-multi-carousel";
 import { roadmap } from "./data";
 import Badge from "@/components/badge";
+import PageWrapper from "@/components/pageWrapper";
 
 const TopConnector = () => {
   return (
@@ -362,77 +363,79 @@ export default function RoadmapSection() {
           </div>
         </div>
         {/* <div className="grid grid-cols-4 gap-12"> */}
-        <Carousel
-          swipeable={true}
-          draggable={true}
-          showDots={true}
-          responsive={responsive}
-          ssr={true} // means to render carousel on server-side.
-          infinite={true}
-          customDot={
-            <CustomDot active={activeSlide} onClick={handleDotClick} />
-          }
-          // autoPlay={true}
-          autoPlaySpeed={3000}
-          keyBoardControl={true}
-          transitionDuration={500}
-          customLeftArrow={<></>}
-          customRightArrow={<></>}
-          // containerClass="carousel-container"
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          dotListClass="custom-dot-list-style"
-          itemClass="carousel-item-padding-40-px"
-        >
-          {roadmap.map((_road_map, index) => {
-            return (
-              <div key={index} className="relative pt-48 pb-72 mt-[100px] ">
-                {/* <Pointer primary={index % 2 == 0 ? true : false} /> */}
-                <div
-                  className="h-2 w-full"
-                  style={{
-                    opacity: 0.1,
-                    background:
-                      "linear-gradient(90deg, #D84594 42.72%, #574EA0 45.28%)",
-                  }}
-                ></div>
-                {index % 2 == 0 ? (
-                  <div className="absolute -top-[30px]">
-                    <RoadMapDisplay label={_road_map.title} />
-                  </div>
-                ) : null}
-                <div style={{ marginRight: "-30px", marginTop: "-21px" }}>
-                  <Pointer primary={index % 2 == 0 ? true : false} />
-                </div>
-
-                <div className="relative">
+        <PageWrapper>
+          <Carousel
+            swipeable={true}
+            draggable={true}
+            showDots={true}
+            responsive={responsive}
+            ssr={true} // means to render carousel on server-side.
+            infinite={true}
+            customDot={
+              <CustomDot active={activeSlide} onClick={handleDotClick} />
+            }
+            // autoPlay={true}
+            autoPlaySpeed={3000}
+            keyBoardControl={true}
+            transitionDuration={500}
+            customLeftArrow={<></>}
+            customRightArrow={<></>}
+            // containerClass="carousel-container"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px"
+          >
+            {roadmap.map((_road_map, index) => {
+              return (
+                <div key={index} className="relative pt-48 pb-72 mt-[100px] ">
+                  {/* <Pointer primary={index % 2 == 0 ? true : false} /> */}
+                  <div
+                    className="h-2 w-full"
+                    style={{
+                      opacity: 0.1,
+                      background:
+                        "linear-gradient(90deg, #D84594 42.72%, #574EA0 45.28%)",
+                    }}
+                  ></div>
                   {index % 2 == 0 ? (
-                    <div className="relative">
-                      <div
-                        style={{ width: "calc(100% + 8px)" }}
-                        className="absolute   bottom-[8px] left-[12px] "
-                      >
-                        <TopConnector />
-                      </div>
+                    <div className="absolute -top-[30px]">
+                      <RoadMapDisplay label={_road_map.title} />
                     </div>
                   ) : null}
-                  {index % 2 !== 0 ? (
-                    <>
-                      <div className="absolute top-[100px]">
-                        <RoadMapDisplay label={_road_map.title} />
-                      </div>
+                  <div style={{ marginRight: "-30px", marginTop: "-21px" }}>
+                    <Pointer primary={index % 2 == 0 ? true : false} />
+                  </div>
 
+                  <div className="relative">
+                    {index % 2 == 0 ? (
                       <div className="relative">
-                        <div className="absolute w-full  left-4 top-[-8px] ">
-                          <BottomConnector />
+                        <div
+                          style={{ width: "calc(100% + 8px)" }}
+                          className="absolute   bottom-[8px] left-[12px] "
+                        >
+                          <TopConnector />
                         </div>
                       </div>
-                    </>
-                  ) : null}
+                    ) : null}
+                    {index % 2 !== 0 ? (
+                      <>
+                        <div className="absolute top-[100px]">
+                          <RoadMapDisplay label={_road_map.title} />
+                        </div>
+
+                        <div className="relative">
+                          <div className="absolute w-full  left-4 top-[-8px] ">
+                            <BottomConnector />
+                          </div>
+                        </div>
+                      </>
+                    ) : null}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </Carousel>
+              );
+            })}
+          </Carousel>
+        </PageWrapper>
         {/* </div> */}
       </>
     </div>

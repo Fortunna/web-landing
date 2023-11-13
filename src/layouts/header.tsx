@@ -301,6 +301,9 @@ import Link from "next/link";
 import classNames from "classnames";
 import Typography from "@/components/typography";
 import Hero from "./hero";
+import PageWrapper from "@/components/pageWrapper";
+import WhyFortuna from "@/widget/home/why-fortuna";
+import BuildingWithEaseSection from "@/widget/home/buildingWithEase";
 const navs = [
   {
     title: "About",
@@ -336,16 +339,15 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
   });
 
   return (
-    <>
+    <div className=" bg-[url(/star-bg.png)] pb-[200px]">
       <div
         // onScroll={handleScroll}
         id="bg-wrapper"
-        className=" overflow-hidden bg-cover bg-center bg-no-repeat relative"
+        className=" overflow-hidden  bg-top bg-no-repeat relative bg-[url(/shade.png)] bg-[length:100%_auto] min-h-[400px]"
       >
-        <Hero />
-        <div className="absolute top-0 left-0 z-20">
+        <div className="">
           <div
-            className={`${headerStyles} transition-all z-20 absolute md:px-10 px-5 w-screen left-0`}
+            className={`${headerStyles} transition-all z-20  md:px-10 px-5 w-screen left-0`}
           >
             <div
               className={` flex justify-between items-center ${
@@ -401,21 +403,29 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
             </div>
           </div>
 
-          <div className="flex items-center md:mt-[15%] mt-[100px]">
-            <div className="md:w-1/2 ps-[8%]">
-              <Typography
-                variant="semi-heading"
-                className="!font-aeonik-pro md:!text-[15px] !text-[9px]"
-                label="FORTUNA FINANCE"
-              />
-              <Typography
-                variant="subtitle"
-                use="h1"
-                className="!font-aeonik-pro md:!text-[40px]  !text-[18px] md:mt-4 mt-2 md:!leading-[50px] !leading-normal"
-                label="The future of DeFi - Staking, Yield Farming and AI Automation"
-              />
+          <PageWrapper>
+            <div className="flex items-center md:mt-[15%] mt-[100px]">
+              <div className="">
+                <Typography
+                  variant="semi-heading"
+                  className="!font-aeonik-pro md:!text-[15px] !text-[9px]"
+                  label="FORTUNA FINANCE"
+                />
+                <Typography
+                  variant="subtitle"
+                  use="h1"
+                  className="!font-aeonik-pro md:!text-[40px]  !text-[18px] md:mt-4 mt-2 md:!leading-[50px] !leading-normal"
+                  label=""
+                >
+                  <>
+                    A.I Yield Optimization <div></div> for Staking & Farming
+                  </>
+                </Typography>
+              </div>
             </div>
-          </div>
+          </PageWrapper>
+
+          {/* <div className="mb-[500px]"></div> */}
         </div>
         {/* <video
           // ref={videoRef}\
@@ -433,10 +443,13 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
           className={`w-full h-full bg-[rgba(0,0,0,.3)]  bg-cover lg:px-[40px] px-4 absolute top-0 }`}
         > */}
         {/* </div> */}
+
+        <WhyFortuna />
+        <BuildingWithEaseSection />
       </div>
       {showMobile ? (
         <MobileHeader onClose={() => setShowMobile(false)} />
       ) : null}
-    </>
+    </div>
   );
 }

@@ -67,6 +67,63 @@ const data = [
       "Get support to bring users to the Interchain by providing services such as exchanges, wallets, and more.",
   },
   {
+    footerIcon: (
+      <svg
+        width={34}
+        height={32}
+        viewBox="0 0 34 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M17 30.6604L32 16.3083L17.0002 1.95703M17 30.6604L2 16.3083L17.0002 1.95703M17 30.6604L9.06396 16.3083L17.0002 1.95703M17 30.6604L24.9363 16.3083L17.0002 1.95703"
+          stroke="white"
+          strokeWidth="1.5"
+        />
+      </svg>
+    ),
+    icon: (
+      <svg
+        width={64}
+        height={65}
+        className="w-14"
+        viewBox="0 0 64 65"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx={32} cy="32.92" r={32} fill="#EDF0F4" />
+        <path
+          d="M31.9128 13.72L31.6582 14.5847V39.6736L31.9128 39.9276L43.5585 33.0437L31.9128 13.72Z"
+          fill="#343434"
+        />
+        <path
+          d="M31.9127 13.72L20.2666 33.0437L31.9127 39.9276V27.7501V13.72Z"
+          fill="#8C8C8C"
+        />
+        <path
+          d="M31.9128 42.1325L31.7693 42.3075V51.2445L31.9128 51.6634L43.5656 35.2522L31.9128 42.1325Z"
+          fill="#3C3C3B"
+        />
+        <path
+          d="M31.9127 51.6634V42.1325L20.2666 35.2522L31.9127 51.6634Z"
+          fill="#8C8C8C"
+        />
+        <path
+          d="M31.9126 39.9276L43.5584 33.0437L31.9126 27.7501V39.9276Z"
+          fill="#141414"
+        />
+        <path
+          d="M20.2666 33.0437L31.9127 39.9276V27.7501L20.2666 33.0437Z"
+          fill="#393939"
+        />
+      </svg>
+    ),
+    name: "Ethereum",
+    description:
+      "Get support to bring users to the Interchain by providing services such as exchanges, wallets, and more.",
+  },
+
+  {
     icon: (
       <svg
         width={60}
@@ -301,7 +358,7 @@ export default function TokenomicsSection() {
     <div className="bg-black md:pt-[198px] pt-20  bg-[url(/div.sc-7b2548cc-0.png)] bg-contain bg-bottom  bg-no-repeat">
       <div className=" bg-right-top bg-no-repeat bg-[length:150px_150px]">
         <PageWrapper>
-          <div className="md:grid md:grid-cols-[50%_auto] gap-24">
+          <div className="">
             <div>
               {/* <SectionTopHeader label="The Allocation" /> */}
 
@@ -312,7 +369,7 @@ export default function TokenomicsSection() {
                 label="Supported Networks"
               />
 
-              <div className="md:grid grid-cols-2 mt-4">
+              <div className="md:grid grid-cols-3 gap-8 mt-4">
                 {data.map((_d, index) => {
                   return (
                     <div
@@ -331,9 +388,6 @@ export default function TokenomicsSection() {
                   );
                 })}
               </div>
-            </div>
-            <div className="md:block hidden">
-              <Image src={fortuna} alt="fortuna" />
             </div>
           </div>
         </PageWrapper>
