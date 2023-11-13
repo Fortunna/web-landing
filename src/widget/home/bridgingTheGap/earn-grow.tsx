@@ -25,7 +25,7 @@ export default function EarnGrow() {
         <div className="relative">
           <div className="mt-16">
             <Typography
-              className="!font-inter-bold font-bold text-white md:!text-[35px] !text-[28px] !leading-[33px] md:!leading-[40px]"
+              className="!font-inter-bold font-bold text-white md:!text-[30px] !text-[28px] !leading-[33px] md:!leading-[40px]"
               variant="semi-subtitle"
               label="Earn and Grow"
             />

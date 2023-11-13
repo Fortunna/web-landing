@@ -327,7 +327,7 @@ export default function BridgingTheGapSection() {
             </>
           </Typography>
         </div>
-        <div>
+        <div className="">
           <div className="my-4 md:w-[40%] mx-auto">
             <Typography
               variant="body3"
@@ -342,7 +342,7 @@ export default function BridgingTheGapSection() {
           </div> */}
         </div>
 
-        <div className="px-[6%]">
+        <div className="px-[6%] mt-24">
           <PageWrapper>
             {/* <div className="md:grid md:grid-cols-4 gap-20 md:bg-[url(/semi-circle.png)] bg-[center_-62px] pt-[68px]"> */}
             {/* {our_values.map((_value, index) => {
@@ -357,13 +357,13 @@ export default function BridgingTheGapSection() {
               );
             })} */}
             {/* </div> */}
-            <div className="md:grid md:grid-cols-[40%_auto] md:gap-10">
+            <div className="md:grid md:grid-cols-[40%_auto] md:gap-6">
               <div className="md:mb-0 mb-6">
                 <Launchpad />
               </div>
               <div>
                 <Aggregator />
-                <div className="md:mt-20 mt-6"></div>
+                <div className="md:mt-6"></div>
                 <EarnGrow />
               </div>
             </div>

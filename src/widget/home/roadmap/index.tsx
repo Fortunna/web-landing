@@ -220,7 +220,13 @@ const Pointer = ({ primary }: { primary: boolean }) => {
   );
 };
 
-const RoadMapDisplay = ({ label }: { label: string[] }) => {
+const RoadMapDisplay = ({
+  label,
+  title,
+}: {
+  label: string[];
+  title: string;
+}) => {
   return (
     <div className=" ">
       <svg
@@ -251,16 +257,24 @@ const RoadMapDisplay = ({ label }: { label: string[] }) => {
           </linearGradient>
         </defs>
       </svg>
-      {label.map((_content, index) => {
-        return (
-          <Typography
-            key={index}
-            variant="body2"
-            className="!text-[rgba(255, 255, 255, 0.60) ] "
-            label={_content}
-          />
-        );
-      })}
+      <Typography
+        variant="body2"
+        className="!text-[rgba(255, 255, 255, 0.60) ] "
+        label={title}
+      />
+      <ul className="list-disc">
+        {label?.map((_content, index) => {
+          return (
+            <li className="!list-disc ps-2" key={index}>
+              <Typography
+                variant="body2"
+                className="!text-[rgba(255, 255, 255, 0.60) ] "
+                label={_content}
+              />
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
@@ -360,6 +374,12 @@ export default function RoadmapSection() {
               className="md:!text-[30px] !text-[25px]"
               label="See whats waiting for you..."
             />
+
+            <Typography
+              className="text-white w-[80%] mx-auto"
+              label=" With the help from our team, contributors and investors, these are
+              the milestones we are looking forward to achieving."
+            ></Typography>
           </div>
         </div>
         {/* <div className="grid grid-cols-4 gap-12"> */}
@@ -399,7 +419,10 @@ export default function RoadmapSection() {
                   ></div>
                   {index % 2 == 0 ? (
                     <div className="absolute -top-[30px]">
-                      <RoadMapDisplay label={_road_map.title} />
+                      <RoadMapDisplay
+                        title={_road_map.title}
+                        label={_road_map.content}
+                      />
                     </div>
                   ) : null}
                   <div style={{ marginRight: "-30px", marginTop: "-21px" }}>
@@ -420,7 +443,10 @@ export default function RoadmapSection() {
                     {index % 2 !== 0 ? (
                       <>
                         <div className="absolute top-[100px]">
-                          <RoadMapDisplay label={_road_map.title} />
+                          <RoadMapDisplay
+                            title={_road_map.title}
+                            label={_road_map.content}
+                          />
                         </div>
 
                         <div className="relative">

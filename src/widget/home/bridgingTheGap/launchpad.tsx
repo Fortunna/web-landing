@@ -50,11 +50,12 @@ export default function Launchpad() {
         <div className="mt-28 clear-both overflow-hidden"></div>
         <Image className="w-[300px] mb-9 " src={launchpad} alt="" />
         <Typography
-          className="!font-inter-bold font-bold text-white md:!text-[35px] !text-[28px] !leading-[33px] md:!leading-[40px]"
+          className="!font-inter-bold font-bold text-white md:!text-[30px] !text-[28px] !leading-[33px] md:!leading-[40px]"
           variant="semi-subtitle"
         >
           <>
-            Advanced <div /> launchpad for <div></div>staking
+            Seamless
+            <div /> Pool Creation <div></div>
           </>
         </Typography>
       </div>

@@ -13,13 +13,14 @@ import Button from "@/components/button";
 const partners = [
   {
     img: "bg-learn-1",
-    title: `How Fortuna Works: Complete Guide`,
-    description: "Getting started with Fortuna Fi",
+    title: `How Fortuna Works: Complete Guide Getting started with Fortuna Fi`,
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Feugiat tristique at feugiat mi. Id at neque cursus euismod. Amet nullam risus ac purus mattis elit blandit. Quam quis ut cras et sed faucibus.",
   },
   {
     img: "bg-learn-2",
-    title: `Popular Pools in Ethereum:`,
-    description: "Top 5 pools on Ethereum",
+    title: "Popular Pools in Ethereum: Top 5 pools on Ethereum",
+    description: "Lorem ipsum dolor sit amet consectetur. Ut sit est feugiat viverra elit id vitae scelerisque vestibulum. Dignissim suspendisse at est ac leo sociis lectus turpis dui. Habitant arcu montes cursus dui.",
   },
 ];
 
@@ -41,18 +42,18 @@ export default function LearningHub() {
   }) => {
     return (
       <div
-        className={`${image} bg-center bg-[length:100%_100%] md:px-[48px] px-8 pb-[48px] rounded-[8px] overflow-hidden md:pt-[150px] pt-32`}
+        className={`${image} bg-center bg-[length:100%_100%] md:px-[35px] px-8 pb-[48px] rounded-[8px] overflow-hidden md:pt-[95px] pt-12`}
       >
         {/* <div className="!mt-[150px]"></div> */}
 
         <Typography
           variant="body3"
-          className="md:!text-[24px] !text-[21px] py-[8px] !leading-normal !font-aeonik-pro !text-white "
+          className="md:!text-[20px] !text-[21px] py-[8px] !leading-normal !font-aeonik-pro !text-white !leading-7 "
           label={title}
         />
         <Typography
           variant="heading"
-          className="!font-inter-light !text-[14px] !text-white leading-6"
+          className="!font-inter-light !text-[13px] !text-white !leading-5"
           label={description}
         />
 
