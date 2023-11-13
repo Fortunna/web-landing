@@ -7,14 +7,13 @@ export default function Aggregator() {
   return (
     <div>
       <div className={`${cardClass} border-2 md:mb-0 mb-10 `}>
-        <div className="px-5 md:px-[33px] py-[31px] overflow-hidden">
+        <div className="px-5 md:px-[25px] py-[23px] overflow-hidden">
           <CardBorder img={gradient2} />
           <div>
             <div className="md:mb-10 ">
               <CardHeader
                 title="AI Yield Aggregator"
-                summary="Experience unparalleled profit potential with an AI-driven yield aggregator. Effortlessly
-maximize earnings across chains through intelligent yield optimizers ."
+                summary="Our yield optimizer scans the DeFi market to find and invest in the safest and highest yield generating pools"
               />
             </div>
 

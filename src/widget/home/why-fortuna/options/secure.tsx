@@ -7,15 +7,14 @@ export default function Secure() {
   return (
     <div>
       <div className={`${cardClass}`}>
-        <div className=" px-5 md:px-[33px] py-[31px] overflow-hidden">
+        <div className=" px-5 md:px-[25px] py-[23px] overflow-hidden">
           <CardBorder img={gradient2} />
 
           <div className="relative overflow-hidden">
             <div className="md:flex">
               <CardHeader
-                title="Secure - ZERO Risk "
-                summary="Fortuna smart contracts are built with robust security architecture, audited by industry standard
-auditors."
+                title="Secure"
+                summary="All our smart contracts are thoroughly audited and all the forms locked are covered by insurance."
               />
               <div className="md:w-1/2 relative overflow-hidden md:mt-0 mt-10">
                 <Key />

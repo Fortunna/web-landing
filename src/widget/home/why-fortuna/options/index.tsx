@@ -23,10 +23,18 @@ export const CardHeader = ({
   return (
     <div className=" text-start">
       <div></div>
-      <Typography variant="semi-heading" label={title} />
+      <Typography
+        variant="semi-heading"
+        className="!font-atilla"
+        label={title}
+      />
       <div className="mt-[8px]"></div>
-      <div className="md:w-[60%]">
-        <Typography variant="body3" label={summary} />
+      <div className="md:w-[70%]">
+        <Typography
+          variant="body0.5"
+          className="!text-white !font-normal"
+          label={summary}
+        />
       </div>
     </div>
   );

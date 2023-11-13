@@ -24,7 +24,9 @@ module.exports = {
       fontFamily: {
         sans: ["Aeonik Pro", ...defaultTheme.fontFamily.sans],
         "aeonik-pro": "Aeonik Pro",
+        "fira-sans": "Fira Sans",
         "aeonik-pro-bold": "Aeonik Pro Bold",
+        atilla: "Atilla",
         "aeonik-fono": "Aeonik Fono",
         "aeonik-fono-bold": "Aeonik Fono Bold",
         poppins: "Poppins",

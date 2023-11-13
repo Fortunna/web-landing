@@ -29,7 +29,17 @@ export default function WhyFortuna() {
         <link rel="preload" href="/why-bg.png" as="image" />
       </Head>
 
-      <div className="">
+      <div className="text-center">
+        <Typography
+          variant="subtitle"
+          use="h1"
+          className="!font-atilla md:!text-[50px]  !text-[18px] py-[130px] md:!leading-[50px] !leading-[50px]"
+          label=""
+        >
+          <>
+            Multi-Chain Staking <div></div> Solutions
+          </>
+        </Typography>
         <div className="text-center ">
           <div className="">
             {/* <div className="md:mb-6 mb-5">
@@ -144,22 +154,22 @@ export default function WhyFortuna() {
             {/* </div> */}
             <PageWrapper>
               <div>
-                <div className="md:grid grid-cols-2 gap-10  hidden">
+                <div className="md:grid grid-cols-2 gap-4  hidden">
                   <div>
                     {/* <RenderWhenInView triggerOnce={false}> */}
                     <Aggregator />
                     {/* </RenderWhenInView> */}
-                    <div className="mt-[23px]">
+                    <div className="mt-[12px]">
                       <Secure />
                     </div>
                   </div>
                   <div className="">
-                    <div>
+                    <div className="">
+                      <PoolCreation />
+                    </div>
+                    <div className="mt-[12px]">
                       {" "}
                       <LowTransaction />
-                    </div>
-                    <div className="mt-[22px]">
-                      <PoolCreation />
                     </div>
                   </div>
                 </div>

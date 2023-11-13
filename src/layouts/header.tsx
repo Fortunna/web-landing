@@ -339,7 +339,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
   });
 
   return (
-    <div className=" bg-[url(/star-bg.png)] pb-[200px]">
+    <div className=" bg-[url(/star-bg.png)]">
       <div
         // onScroll={handleScroll}
         id="bg-wrapper"
@@ -389,7 +389,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
                   {navs.map((_nav, index) => {
                     return (
                       <Link key={index} href={_nav.to}>
-                        <nav className="!text-white px-3 !text-[19px] !font-aeonik-pro">
+                        <nav className="!text-white px-3 !text-[19px] !font-fira-sans">
                           {_nav.title}
                         </nav>
                       </Link>
@@ -404,17 +404,17 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
           </div>
 
           <PageWrapper>
-            <div className="flex items-center md:mt-[15%] mt-[100px]">
+            <div className="flex items-center mt-[143px]">
               <div className="">
                 <Typography
                   variant="semi-heading"
-                  className="!font-aeonik-pro md:!text-[15px] !text-[9px]"
+                  className="!font-atilla md:!text-[14px] !text-[9px]"
                   label="FORTUNA FINANCE"
                 />
                 <Typography
                   variant="subtitle"
                   use="h1"
-                  className="!font-aeonik-pro md:!text-[40px]  !text-[18px] md:mt-4 mt-2 md:!leading-[50px] !leading-normal"
+                  className="!font-atilla md:!text-[40px]  !text-[18px] md:mt-4 mt-2 md:!leading-[50px] !leading-normal"
                   label=""
                 >
                   <>

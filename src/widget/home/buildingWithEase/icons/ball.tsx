@@ -5,7 +5,7 @@ import ballRoute from "../../../../../public/ball.png";
 export default function Ball() {
   return (
     <Image
-      className="inline-block max-w-full md:w-[256px] md:h-[256px] w-[140px] h-[140px]"
+      className="inline-block max-w-full w-[120px] h-auto float-right"
       src={ballRoute}
       alt="Key"
     />
