@@ -43,7 +43,7 @@ export default function BuildingWithEaseSection() {
         </PageWrapper>
         <PageWrapper>
           <>
-            <div className="md:grid md:grid-cols-[30%_auto] gap-44">
+            <div className="md:grid md:grid-cols-[30%_auto] gap-x-32">
               <div className="md:block hidden">
                 <Build />
               </div>

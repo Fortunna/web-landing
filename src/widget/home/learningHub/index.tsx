@@ -21,7 +21,7 @@ const partners = [
     img: "bg-learn-2",
     title: "Popular Pools in Ethereum:Top 5 pools on Ethereum",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Ut sit est feugiat viverra elit id vitae scelerisque vestibulum. Dignissim suspendisse at est ac leo sociis lectus turpis dui. Habitant arcu montes cursus dui.",
+      "Lorem ipsum dolor sit amet consectetur. Ut sit est feugiat viverra elit id vitae scelerisque vestibulum. Dignissim suspendisse at est ac leo sociis lectus turpis dui. Habitant arcu.",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function LearningHub() {
   }) => {
     return (
       <div
-        className={`${image} bg-center bg-[length:100%_100%] md:px-[35px] px-8 pb-[48px] rounded-[8px] overflow-hidden md:pt-[95px] pt-12`}
+        className={`${image} bg-center bg-[length:100%_100%] md:px-[35px] px-8 pb-[28px] rounded-[8px] overflow-hidden md:pt-[95px] pt-12`}
       >
         {/* <div className="!mt-[150px]"></div> */}
 
@@ -54,7 +54,7 @@ export default function LearningHub() {
         />
         <Typography
           variant="heading"
-          className="!font-inter-light !text-[13px] !text-white !leading-5"
+          className="!font-inter-light !text-[13px] !text-white !leading-[19px]"
           label={description}
         />
 
@@ -100,10 +100,23 @@ export default function LearningHub() {
     );
   };
   return (
-    <div className="bg-black">
+    <div className="bg-black mt-[-100px]">
       <PageWrapper className="!px-10%">
         <>
-          {" "}
+          <div className="text-center flex justify-center pb-12">
+            <div>
+              <div className="flex justify-center">
+                <SectionTopHeader label="LEARNING HUB" />
+              </div>
+
+              <Typography
+                use="h3"
+                className="md:text-[38px] !text-[24px]  !font-aeonik-pro-bold"
+                variant="semi-subtitle"
+                label="Learning Hub"
+              />
+            </div>
+          </div>
           {/* <div className="grid grid-cols-4 gap-12"> */}
           <Carousel
             swipeable={true}

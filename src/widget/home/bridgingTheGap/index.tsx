@@ -331,7 +331,7 @@ export default function BridgingTheGapSection() {
           <div className="my-4 md:w-[40%] mx-auto">
             <Typography
               variant="body3"
-              className="!tw-text-[20px]"
+              className="!tw-text-[20px] !leading-[20px]"
               label="Our AI scans available pools for the highest yield opportunities, evaluates data , estimate costs and allocates your investments to maximize returns , in any given market condition"
             />
           </div>

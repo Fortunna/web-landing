@@ -262,7 +262,7 @@ const RoadMapDisplay = ({
         className="!text-[rgba(255, 255, 255, 0.60) ] "
         label={title}
       />
-      <ul className="list-disc">
+      <ul className="list-disc marker:text-[#fff9]">
         {label?.map((_content, index) => {
           return (
             <li className="!list-disc ps-2" key={index}>
@@ -360,8 +360,8 @@ export default function RoadmapSection() {
     }, 2000);
   }, [top_connector_ref]);
   return (
-    <div className="bg-black pt-[120px] ps-5 overflow-hidden bg-[url(/nox-gradient-1.png)] bg-no-repeat bg-right">
-      <>
+    <div className="bg-black pt-[120px] overflow-hidden bg-[url(/nox-gradient-1.png)] bg-no-repeat bg-right">
+      <div className="bg-[url(/nox-gradient2.png)] bg-[length:400px] bg-no-repeat">
         {" "}
         <div className="text-center flex justify-center">
           <div>
@@ -463,7 +463,7 @@ export default function RoadmapSection() {
           </Carousel>
         </PageWrapper>
         {/* </div> */}
-      </>
+      </div>
     </div>
   );
 }

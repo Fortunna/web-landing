@@ -16,7 +16,9 @@ export default function PageWrapper({
     "lg:px-[15%]": !x2,
   });
   return (
-    <div className={`${styles} max-w-full w-full overflow-hidden ${className}`}>
+    <div
+      className={`${styles} l w-full overflow-hidden max-w-[1400px] mx-auto ${className}`}
+    >
       {children}
     </div>
   );

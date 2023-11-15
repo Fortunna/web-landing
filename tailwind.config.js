@@ -20,6 +20,7 @@ module.exports = {
         transparent: "rgba(255, 255, 255, 0.08)",
         "transparent-1": "rgba(29, 28, 32, 0.79)",
         "card-transparent": "rgba(9, 6, 23, 0.53)",
+        "cards-transparent-2": "rgba(26, 26, 50, 0.69)",
       },
       fontFamily: {
         sans: ["Aeonik Pro", ...defaultTheme.fontFamily.sans],

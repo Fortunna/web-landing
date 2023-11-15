@@ -345,89 +345,90 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
         id="bg-wrapper"
         className=" overflow-hidden  bg-top bg-no-repeat relative bg-[url(/shade.png)] bg-[length:100%_auto] min-h-[400px]"
       >
-        <div className="">
-          <div
-            className={`${headerStyles} transition-all z-20  md:px-10 px-5 w-screen left-0`}
-          >
+        <div className="bg-[url(/vector.png)] bg-[length:450px]  bg-no-repeat bg-[-30%_200px]">
+          <div className="">
             <div
-              className={` flex justify-between items-center ${
-                fixedHeader ? "md:py-[20px] shadow-md" : "md:py-[35px]"
-              } py-[10px] `}
+              className={`${headerStyles} transition-all z-20  md:px-10 px-5 w-screen left-0`}
             >
-              <AppLogo />
-              <div className=" md:hidden flex items-center cursor-pointer">
-                <a
-                  target="_blank"
-                  href="https://app.fortunafi.io/"
-                  className="mr-3"
-                >
-                  <Button size="small" label="Launch App" />
-                </a>
+              <div
+                className={` flex justify-between items-center ${
+                  fixedHeader ? "md:py-[20px] shadow-md" : "md:py-[35px]"
+                } py-[10px] `}
+              >
+                <AppLogo />
+                <div className=" md:hidden flex items-center cursor-pointer">
+                  <a
+                    target="_blank"
+                    href="https://app.fortunafi.io/"
+                    className="mr-3"
+                  >
+                    <Button size="small" label="Launch App" />
+                  </a>
 
-                <svg
-                  className="w-[30px]"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="44"
-                  height="44"
-                  onClick={() => setShowMobile(true)}
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="#e5e7ed"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M4 6l16 0" />
-                  <path d="M4 12l16 0" />
-                  <path d="M4 18l16 0" />
-                </svg>
-              </div>
-
-              <div className="md:flex hidden">
-                <div className="md:flex mr-9 items-center">
-                  {navs.map((_nav, index) => {
-                    return (
-                      <Link key={index} href={_nav.to}>
-                        <nav className="!text-white px-3 !text-[19px] !font-fira-sans">
-                          {_nav.title}
-                        </nav>
-                      </Link>
-                    );
-                  })}
+                  <svg
+                    className="w-[30px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="44"
+                    height="44"
+                    onClick={() => setShowMobile(true)}
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#e5e7ed"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 6l16 0" />
+                    <path d="M4 12l16 0" />
+                    <path d="M4 18l16 0" />
+                  </svg>
                 </div>
-                <Link href={"https://app.fortunafi.io/"} target="_blank">
-                  <Button size="default" label="Launch App" />
-                </Link>
+
+                <div className="md:flex hidden">
+                  <div className="md:flex mr-9 items-center">
+                    {navs.map((_nav, index) => {
+                      return (
+                        <Link key={index} href={_nav.to}>
+                          <nav className="!text-white px-3 !text-[19px] !font-fira-sans">
+                            {_nav.title}
+                          </nav>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                  <Link href={"https://app.fortunafi.io/"} target="_blank">
+                    <Button size="default" label="Launch App" />
+                  </Link>
+                </div>
               </div>
             </div>
+
+            <PageWrapper>
+              <div className="flex items-center mt-[100px]">
+                <div className="">
+                  <Typography
+                    variant="semi-heading"
+                    className="!font-atilla md:!text-[14px] !text-[9px]"
+                    label="FORTUNA FINANCE"
+                  />
+                  <Typography
+                    variant="subtitle"
+                    use="h1"
+                    className="!font-atilla md:!text-[40px]  !text-[18px] md:mt-4 mt-2 md:!leading-[50px] !leading-normal"
+                    label=""
+                  >
+                    <>
+                      A.I Yield Optimization <div></div> for Staking & Farming
+                    </>
+                  </Typography>
+                </div>
+              </div>
+            </PageWrapper>
+
+            {/* <div className="mb-[500px]"></div> */}
           </div>
-
-          <PageWrapper>
-            <div className="flex items-center mt-[143px]">
-              <div className="">
-                <Typography
-                  variant="semi-heading"
-                  className="!font-atilla md:!text-[14px] !text-[9px]"
-                  label="FORTUNA FINANCE"
-                />
-                <Typography
-                  variant="subtitle"
-                  use="h1"
-                  className="!font-atilla md:!text-[40px]  !text-[18px] md:mt-4 mt-2 md:!leading-[50px] !leading-normal"
-                  label=""
-                >
-                  <>
-                    A.I Yield Optimization <div></div> for Staking & Farming
-                  </>
-                </Typography>
-              </div>
-            </div>
-          </PageWrapper>
-
-          {/* <div className="mb-[500px]"></div> */}
-        </div>
-        {/* <video
+          {/* <video
           // ref={videoRef}\
           playsInline
           muted
@@ -439,13 +440,16 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
           Your browser does not support the video tag.
         </video> */}
 
-        {/* <div
+          {/* <div
           className={`w-full h-full bg-[rgba(0,0,0,.3)]  bg-cover lg:px-[40px] px-4 absolute top-0 }`}
         > */}
-        {/* </div> */}
+          {/* </div> */}
 
-        <WhyFortuna />
-        <BuildingWithEaseSection />
+          <div className=" bg-[url(/shade-group-2.png)] bg-[length:420px] bg-no-repeat bg-[-30px_450px]">
+            <WhyFortuna />
+            <BuildingWithEaseSection />
+          </div>
+        </div>
       </div>
       {showMobile ? (
         <MobileHeader onClose={() => setShowMobile(false)} />
