@@ -33,7 +33,7 @@ export default function WhyFortuna() {
         <Typography
           variant="subtitle"
           use="h1"
-          className="!font-atilla md:!text-[50px]  !text-[18px] md:py-[110px] py-10 md:!leading-[50px] !md:leading-[50px] !leading-[25px]"
+          className="!font-atilla md:!text-[50px]  !text-[18px] md:py-[110px] py-10 md:!leading-[50px] md:!leading-[50px] !leading-[25px]"
           label=""
         >
           <>

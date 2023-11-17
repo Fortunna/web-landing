@@ -315,7 +315,7 @@ export default function BridgingTheGapSection() {
 
           <Typography
             use="h3"
-            className="!font-atilla !md:text-[45px] !text-[25px] !md:leading-[50px] leading-[30px]"
+            className="!font-atilla md:!text-[45px] !text-[25px] md:!leading-[50px] leading-[30px]"
             variant="subtitle"
           >
             <>
@@ -331,7 +331,7 @@ export default function BridgingTheGapSection() {
           <div className="my-4 md:w-[40%] mx-auto">
             <Typography
               variant="body3"
-              className="!md:tw-text-[20px] !md:tw-text-[15px]  !leading-[20px]"
+              className="md:!tw-text-[20px] md:!tw-text-[15px]  !leading-[20px]"
               label="Our AI scans available pools for the highest yield opportunities, evaluates data , estimate costs and allocates your investments to maximize returns , in any given market condition"
             />
           </div>
