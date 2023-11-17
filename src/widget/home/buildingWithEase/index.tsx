@@ -50,7 +50,7 @@ export default function BuildingWithEaseSection() {
               <div>
                 <Typography
                   use="h3"
-                  className="!font-atilla !text-[45px] !leading-[50px]"
+                  className="!font-atilla !md:text-[45px] !text-[25px] !md:leading-[50px] leading-[30px]"
                   variant="subtitle"
                 >
                   <>

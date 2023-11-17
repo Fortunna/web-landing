@@ -345,7 +345,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
         id="bg-wrapper"
         className=" overflow-hidden  bg-top bg-no-repeat relative bg-[url(/shade.png)] bg-[length:100%_auto] min-h-[400px]"
       >
-        <div className="bg-[url(/vector.png)] bg-[length:450px]  bg-no-repeat bg-[-30%_200px]">
+        <div className="bg-[url(/vector.png)] md:bg-[length:450px] bg-[length:250px]  bg-no-repeat md:bg-[-30%_200px] bg-[-90%_200px]">
           <div className="">
             <div
               className={`${headerStyles} transition-all z-20  md:px-10 px-5 w-screen left-0`}
@@ -405,7 +405,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
             </div>
 
             <PageWrapper>
-              <div className="flex items-center mt-[100px]">
+              <div className="flex items-center md:mt-[100px] mt-10">
                 <div className="">
                   <Typography
                     variant="semi-heading"
@@ -445,7 +445,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
         > */}
           {/* </div> */}
 
-          <div className=" bg-[url(/shade-group-2.png)] bg-[length:420px] bg-no-repeat bg-[-30px_450px]">
+          <div className=" bg-[url(/shade-group-2.png)] md:bg-[length:420px] bg-[length:200px] bg-no-repeat bg-[-30px_450px]">
             <WhyFortuna />
             <BuildingWithEaseSection />
           </div>

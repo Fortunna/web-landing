@@ -12,7 +12,7 @@ export default function EarnGrow() {
     <Link
       href={"https://app.fortunafi.io/earn/farms"}
       target="_blank"
-      className={`bg-[#171717] text-start block bg-right-bottom bg-no-repeat p-8 cursor-pointer rounded-[20px] ${hoverStyles}`}
+      className={`bg-[#171717] text-start block bg-right-bottom bg-no-repeat p-8 md:mt-0 mt-6 cursor-pointer rounded-[20px] ${hoverStyles}`}
     >
       <Typography
         variant="body0.5"

@@ -13,7 +13,7 @@ export default function PageWrapper({
 }: componentProps) {
   const styles = classNames({
     "lg:px-[20%]": x2,
-    "lg:px-[15%]": !x2,
+    "lg:px-[15%] px-5": !x2,
   });
   return (
     <div

@@ -13,15 +13,13 @@ import Button from "@/components/button";
 const partners = [
   {
     img: "bg-learn-1",
-    title: `How Fortuna Works: Complete GuideGetting started with Fortuna Fi`,
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Feugiat tristique at feugiat mi. Id at neque cursus euismod. Amet nullam risus ac purus mattis elit blandit. Quam quis ut cras et sed faucibus.",
+    title: `Popular Pools in Ethereum:Top 5 pools on Ethereum`,
+    description: "Top 5 pools on Ethereum",
   },
   {
     img: "bg-learn-2",
-    title: "Popular Pools in Ethereum:Top 5 pools on Ethereum",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Ut sit est feugiat viverra elit id vitae scelerisque vestibulum. Dignissim suspendisse at est ac leo sociis lectus turpis dui. Habitant arcu.",
+    title: "How Fortuna Works: Complete Guide",
+    description: "Getting started with Fortuna Fi",
   },
 ];
 
@@ -100,11 +98,11 @@ export default function LearningHub() {
     );
   };
   return (
-    <div className="bg-black mt-[-100px]">
+    <div className="bg-black  pt-10  md:pt-0 md:mt-[-100px]">
       <PageWrapper className="!px-10%">
         <>
           <div className="text-center flex justify-center pb-12">
-            <div>
+            <div className="md:mt-0 ">
               <div className="flex justify-center">
                 <SectionTopHeader label="LEARNING HUB" />
               </div>

@@ -301,17 +301,17 @@ const Network = ({
 export default function TokenomicsSection() {
   const [currentNetwork, setCurrentNetwork] = useState(0);
   return (
-    <div className="bg-black md:pt-[198px] pb-[450px] pt-20  bg-[url(/div.sc-7b2548cc-0.png)] bg-[length:100%] bg-[-50%]  bg-no-repeat">
+    <div className="bg-black md:pt-[198px] md:pb-[450px]   bg-[url(/div.sc-7b2548cc-0.png)] bg-[length:100%] bg-[-50%]  bg-no-repeat">
       <div className=" bg-right-top bg-no-repeat bg-[length:150px_150px]">
         <PageWrapper>
           <div className="">
             <div>
               {/* <SectionTopHeader label="The Allocation" /> */}
 
-              <div className="w-[80%] mx-auto">
+              <div className="md:w-[80%] mx-auto">
                 <Typography
                   use="h3"
-                  className="md:text-[38px] !text-[24px] mb-40 !font-aeonik-pro-bold"
+                  className="md:text-[38px] !text-[24px] md:mb-40 mb-10 !font-aeonik-pro-bold"
                   variant="semi-subtitle"
                   label="Supported Networks"
                 />
