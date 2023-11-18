@@ -21,17 +21,17 @@ export default function Aggregator() {
       />
 
       {/* <div className="mt-20"></div> */}
-      <div className="md:grid md:grid-cols-[30%_auto] min-h-[230px] md:bg-[url(/brain.png)] bg-no-repeat  bg-[length:500px_auto] bg-[right_-30px]">
+      <div className="md:grid md:grid-cols-[65%_auto] min-h-[230px] md:bg-[url(/brain.png)] bg-no-repeat  bg-[length:500px_auto] bg-[-56%_-32px]">
         <div>
           <div className="w-[120%] md:hidden my-[-30px]">
             <Images src={brain} alt="" />
           </div>
           <div className="md:mt-16 ">
             <Typography
-              className="!font-inter-bold font-bold text-white md:!text-[35px] !text-[26px] !leading-[33px] md:!leading-[40px]"
+              className="!font-inter-bold font-bold text-white md:!text-[30px] !text-[26px] !leading-[33px] md:!leading-[40px]"
               variant="semi-subtitle"
-              label="AI Yield 
-Aggregator"
+              label="Multi-Chain 
+Yield Optimizer"
             />
           </div>
         </div>

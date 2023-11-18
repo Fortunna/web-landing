@@ -302,8 +302,8 @@ export default function BridgingTheGapSection() {
             // backgroundPosition: "left -1000px",
           }
         }
-        className=" bg-shade bg-contain  text-center bg-no-repeat
-         md:py-[98px] pt-[98px]
+        className=" bg-shade bg-contain  mt-28 text-center bg-no-repeat
+         
       "
       >
         <div className=" mx-auto md:px0 px-4" id="about">
@@ -313,37 +313,39 @@ export default function BridgingTheGapSection() {
 
           <div className="mb-4"></div>
 
-          <Typography use="h3" variant="subtitle">
+          <Typography
+            use="h3"
+            className="!font-atilla md:!text-[45px] !text-[25px] md:!leading-[50px] leading-[30px]"
+            variant="subtitle"
+          >
             <>
               {" "}
-              Bridging the gap in DeFi for
+              Utilizing A.I technology
               <div className="text-[#dadada] md:block inline">
-                {" "}
-                Projects and Users:
+                to provide superior <div></div>yields
               </div>
             </>
           </Typography>
         </div>
-        <div>
+        <div className="">
           <div className="my-4 md:w-[40%] mx-auto">
             <Typography
               variant="body3"
-              className="!tw-text-[20px]"
-              label="Fortuna Fi offers a platform where users can access popular pools across multiple protocols.
-Our StakePad provides project owners with a streamlined system to connect with liquidity
-providers, saving both cost at very affordable rates, time, and resources."
+              className="md:!tw-text-[20px] md:!tw-text-[15px]  !leading-[20px]"
+              label="Our AI scans available pools for the highest yield opportunities, evaluates data , estimate costs and allocates your investments to maximize returns , in any given market condition"
             />
           </div>
-          <div className=" bg-[url(/semi-cricle-kkk-shade.png)] mb-6  bg-cover bg-[center_-35px] ">
+          {/* <div className=" bg-[url(/semi-cricle-kkk-shade.png)] mb-6  bg-cover bg-[center_-35px] !font-aeonik-pro ">
             <div className="!text-caption-1 inline-block bg-no-repeat !font-inter border-[1px] !border-[#2a282f] md:mt-4 mt-6 py-3 mb-5 px-7 !text-[#F4F0FF] rounded-[8px]">
               What we offer
             </div>
-          </div>
+          </div> */}
         </div>
 
-        <PageWrapper>
-          {/* <div className="md:grid md:grid-cols-4 gap-20 md:bg-[url(/semi-circle.png)] bg-[center_-62px] pt-[68px]"> */}
-          {/* {our_values.map((_value, index) => {
+        <div className="px-[6%] mt-24">
+          <PageWrapper>
+            {/* <div className="md:grid md:grid-cols-4 gap-20 md:bg-[url(/semi-circle.png)] bg-[center_-62px] pt-[68px]"> */}
+            {/* {our_values.map((_value, index) => {
               return (
                 <Value
                   index={index}
@@ -354,18 +356,19 @@ providers, saving both cost at very affordable rates, time, and resources."
                 />
               );
             })} */}
-          {/* </div> */}
-          <div className="md:grid md:grid-cols-[40%_auto] md:gap-10">
-            <div className="md:mb-0 mb-6">
-              <Launchpad />
+            {/* </div> */}
+            <div className="md:grid md:grid-cols-[40%_auto] md:gap-6">
+              <div className="md:mb-0 mb-6">
+                <Launchpad />
+              </div>
+              <div>
+                <Aggregator />
+                <div className="md:mt-6"></div>
+                <EarnGrow />
+              </div>
             </div>
-            <div>
-              <Aggregator />
-              <div className="md:mt-20 mt-6"></div>
-              <EarnGrow />
-            </div>
-          </div>
-        </PageWrapper>
+          </PageWrapper>
+        </div>
       </div>
     </div>
   );

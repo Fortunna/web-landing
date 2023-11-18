@@ -2,22 +2,14 @@ import Badge from "@/components/badge";
 import PageWrapper from "@/components/pageWrapper";
 import Typography from "@/components/typography";
 import React from "react";
-import Yield from "./icons/yield";
-import Key from "./icons/key";
-import Pool from "./icons/pool";
-import Fee from "./icons/fee";
-import gradient1 from "../../../../public/border-gradient-1.png";
-import gradient2 from "../../../../public/border-gradient-2.png";
-import gradient3 from "../../../../public/border-gradient-3.png";
-import gradient4 from "../../../../public/border-gradient-4.png";
 import Image, { StaticImageData } from "next/image";
 import Aggregator from "./options/aggregator";
 import Secure from "./options/secure";
 import PoolCreation from "./options/pool";
 import LowTransaction from "./options/lowTransaction";
 import WhyFortunaMobile from "./mobile-view";
-import { AnimateFadeIn, RenderWhenInView } from "@/animations";
 import Head from "next/head";
+import BuildingWithEaseSection from "../buildingWithEase";
 
 const CardBorder = ({ img }: { img: StaticImageData }) => {
   return (
@@ -37,11 +29,20 @@ export default function WhyFortuna() {
         <link rel="preload" href="/why-bg.png" as="image" />
       </Head>
 
-      <div className="text-center bg-black  bg-right-top md:bg-[length:500px_auto] bg-[length:300px_auto] bg-[url(/group-39969.png)]  bg-no-repeat">
-        <div className="bg-[url(/dome-lines.svg.png)]  md:bg-[length:350px_auto] bg-[length:300px_auto]  bg-no-repeat bg-right-top">
-          <div className="bg-[url(/_ball.png)] md:bg-[length:3%] bg-[length:20px]  bg-no-repeat bg-[5%_50px]">
-            <div className="  pt:mt-10 md:pb-32 py-20 bg-no-repeat">
-              <div className="md:mb-6 mb-5">
+      <div className="text-center">
+        <Typography
+          variant="subtitle"
+          use="h1"
+          className="!font-atilla md:!text-[50px]  !text-[18px] md:py-[110px] py-10 md:!leading-[50px] md:!leading-[50px] !leading-[25px]"
+          label=""
+        >
+          <>
+            Multi-Chain Staking <div></div> Solutions
+          </>
+        </Typography>
+        <div className="text-center ">
+          <div className="">
+            {/* <div className="md:mb-6 mb-5">
                 <Badge
                   leftComponent={
                     <svg
@@ -134,52 +135,50 @@ export default function WhyFortuna() {
                   }
                   label="News : dApp v1 just launched"
                 />
-              </div>
+              </div> */}
 
-              <Typography use="h3" className="" variant="subtitle">
+            {/* <Typography use="h3" className="" variant="subtitle">
                 <>
                   Multi-Chain Staking{" "}
                   <span className="text-text-cool">and Yield Farming</span>
                 </>
-              </Typography>
+              </Typography> */}
 
-              <div className="md:w-[40%] md:mt-7 mt-5 mx-auto md:px-0 px-8">
-                <Typography
+            {/* <div className="md:w-[40%] md:mt-7 mt-5 mx-auto md:px-0 px-8"> */}
+            {/* <Typography
                   variant="heading"
                   label="Fortuna Finance offers an intuitive staking and farming platform with a robust selection of pools. Participate in Yield farming with our AI yield aggregator"
 
                   // Fortuna Finance revolutionizes DeFi with simplified solutions, an AI Yield Aggregator, popular pools, security, and low transaction fees, empowering users and projects  to earn and grow while shaping the future of decentralized finance."
-                />
-              </div>
-              <div className="md:mt-[140px] mt-[75px]"></div>
-              <PageWrapper>
-                <div>
-                  <div className="md:grid grid-cols-2 gap-10  hidden">
-                    <div>
-                      {/* <RenderWhenInView triggerOnce={false}> */}
-                      <Aggregator />
-                      {/* </RenderWhenInView> */}
-                      <div className="mt-[23px]">
-                        <Secure />
-                      </div>
-                    </div>
-                    <div className="">
-                      <div>
-                        {" "}
-                        <LowTransaction />
-                      </div>
-                      <div className="mt-[22px]">
-                        <PoolCreation />
-                      </div>
+                /> */}
+            {/* </div> */}
+            <PageWrapper>
+              <div>
+                <div className="md:grid grid-cols-2 gap-4  hidden">
+                  <div>
+                    {/* <RenderWhenInView triggerOnce={false}> */}
+                    <Aggregator />
+                    {/* </RenderWhenInView> */}
+                    <div className="mt-[12px]">
+                      <Secure />
                     </div>
                   </div>
-
-                  <div className="md:hidden block">
-                    <WhyFortunaMobile />
+                  <div className="">
+                    <div className="">
+                      <PoolCreation />
+                    </div>
+                    <div className="mt-[12px]">
+                      {" "}
+                      <LowTransaction />
+                    </div>
                   </div>
                 </div>
-              </PageWrapper>
-            </div>
+
+                <div className="md:hidden block">
+                  <WhyFortunaMobile />
+                </div>
+              </div>
+            </PageWrapper>
           </div>
         </div>
       </div>

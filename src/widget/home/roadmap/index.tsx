@@ -3,6 +3,7 @@ import Typography from "@/components/typography";
 import Carousel from "react-multi-carousel";
 import { roadmap } from "./data";
 import Badge from "@/components/badge";
+import PageWrapper from "@/components/pageWrapper";
 
 const TopConnector = () => {
   return (
@@ -219,7 +220,13 @@ const Pointer = ({ primary }: { primary: boolean }) => {
   );
 };
 
-const RoadMapDisplay = ({ label }: { label: string[] }) => {
+const RoadMapDisplay = ({
+  label,
+  title,
+}: {
+  label: string[];
+  title: string;
+}) => {
   return (
     <div className=" ">
       <svg
@@ -250,16 +257,24 @@ const RoadMapDisplay = ({ label }: { label: string[] }) => {
           </linearGradient>
         </defs>
       </svg>
-      {label.map((_content, index) => {
-        return (
-          <Typography
-            key={index}
-            variant="body2"
-            className="!text-[rgba(255, 255, 255, 0.60) ] "
-            label={_content}
-          />
-        );
-      })}
+      <Typography
+        variant="body2"
+        className="!text-[rgba(255, 255, 255, 0.60) ] "
+        label={title}
+      />
+      <ul className="list-disc marker:text-[#fff9]">
+        {label?.map((_content, index) => {
+          return (
+            <li className="!list-disc ps-2" key={index}>
+              <Typography
+                variant="body2"
+                className="!text-[rgba(255, 255, 255, 0.60) ] "
+                label={_content}
+              />
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
@@ -345,8 +360,8 @@ export default function RoadmapSection() {
     }, 2000);
   }, [top_connector_ref]);
   return (
-    <div className="bg-black pt-[120px] ps-5 overflow-hidden bg-[url(/nox-gradient-1.png)] bg-no-repeat bg-right">
-      <>
+    <div className="bg-black pt-[120px] overflow-hidden bg-[url(/nox-gradient-1.png)] bg-no-repeat bg-right">
+      <div className="bg-[url(/nox-gradient2.png)] bg-[length:400px] bg-no-repeat">
         {" "}
         <div className="text-center flex justify-center">
           <div>
@@ -359,82 +374,96 @@ export default function RoadmapSection() {
               className="md:!text-[30px] !text-[25px]"
               label="See whats waiting for you..."
             />
+
+            <Typography
+              className="text-white w-[80%] mx-auto"
+              label=" With the help from our team, contributors and investors, these are
+              the milestones we are looking forward to achieving."
+            ></Typography>
           </div>
         </div>
         {/* <div className="grid grid-cols-4 gap-12"> */}
-        <Carousel
-          swipeable={true}
-          draggable={true}
-          showDots={true}
-          responsive={responsive}
-          ssr={true} // means to render carousel on server-side.
-          infinite={true}
-          customDot={
-            <CustomDot active={activeSlide} onClick={handleDotClick} />
-          }
-          // autoPlay={true}
-          autoPlaySpeed={3000}
-          keyBoardControl={true}
-          transitionDuration={500}
-          customLeftArrow={<></>}
-          customRightArrow={<></>}
-          // containerClass="carousel-container"
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          dotListClass="custom-dot-list-style"
-          itemClass="carousel-item-padding-40-px"
-        >
-          {roadmap.map((_road_map, index) => {
-            return (
-              <div key={index} className="relative pt-48 pb-72 mt-[100px] ">
-                {/* <Pointer primary={index % 2 == 0 ? true : false} /> */}
-                <div
-                  className="h-2 w-full"
-                  style={{
-                    opacity: 0.1,
-                    background:
-                      "linear-gradient(90deg, #D84594 42.72%, #574EA0 45.28%)",
-                  }}
-                ></div>
-                {index % 2 == 0 ? (
-                  <div className="absolute -top-[30px]">
-                    <RoadMapDisplay label={_road_map.title} />
-                  </div>
-                ) : null}
-                <div style={{ marginRight: "-30px", marginTop: "-21px" }}>
-                  <Pointer primary={index % 2 == 0 ? true : false} />
-                </div>
-
-                <div className="relative">
+        <PageWrapper>
+          <Carousel
+            swipeable={true}
+            draggable={true}
+            showDots={true}
+            responsive={responsive}
+            ssr={true} // means to render carousel on server-side.
+            infinite={true}
+            customDot={
+              <CustomDot active={activeSlide} onClick={handleDotClick} />
+            }
+            // autoPlay={true}
+            autoPlaySpeed={3000}
+            keyBoardControl={true}
+            transitionDuration={500}
+            customLeftArrow={<></>}
+            customRightArrow={<></>}
+            // containerClass="carousel-container"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px"
+          >
+            {roadmap.map((_road_map, index) => {
+              return (
+                <div key={index} className="relative pt-48 pb-72 mt-[100px] ">
+                  {/* <Pointer primary={index % 2 == 0 ? true : false} /> */}
+                  <div
+                    className="h-2 w-full"
+                    style={{
+                      opacity: 0.1,
+                      background:
+                        "linear-gradient(90deg, #D84594 42.72%, #574EA0 45.28%)",
+                    }}
+                  ></div>
                   {index % 2 == 0 ? (
-                    <div className="relative">
-                      <div
-                        style={{ width: "calc(100% + 8px)" }}
-                        className="absolute   bottom-[8px] left-[12px] "
-                      >
-                        <TopConnector />
-                      </div>
+                    <div className="absolute -top-[30px]">
+                      <RoadMapDisplay
+                        title={_road_map.title}
+                        label={_road_map.content}
+                      />
                     </div>
                   ) : null}
-                  {index % 2 !== 0 ? (
-                    <>
-                      <div className="absolute top-[100px]">
-                        <RoadMapDisplay label={_road_map.title} />
-                      </div>
+                  <div style={{ marginRight: "-30px", marginTop: "-21px" }}>
+                    <Pointer primary={index % 2 == 0 ? true : false} />
+                  </div>
 
+                  <div className="relative">
+                    {index % 2 == 0 ? (
                       <div className="relative">
-                        <div className="absolute w-full  left-4 top-[-8px] ">
-                          <BottomConnector />
+                        <div
+                          style={{ width: "calc(100% + 8px)" }}
+                          className="absolute   bottom-[8px] left-[12px] "
+                        >
+                          <TopConnector />
                         </div>
                       </div>
-                    </>
-                  ) : null}
+                    ) : null}
+                    {index % 2 !== 0 ? (
+                      <>
+                        <div className="absolute top-[100px]">
+                          <RoadMapDisplay
+                            title={_road_map.title}
+                            label={_road_map.content}
+                          />
+                        </div>
+
+                        <div className="relative">
+                          <div className="absolute w-full  left-4 top-[-8px] ">
+                            <BottomConnector />
+                          </div>
+                        </div>
+                      </>
+                    ) : null}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </Carousel>
+              );
+            })}
+          </Carousel>
+        </PageWrapper>
         {/* </div> */}
-      </>
+      </div>
     </div>
   );
 }

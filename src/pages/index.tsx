@@ -16,8 +16,8 @@ import React from "react";
 export default function index() {
   return (
     <Layout>
-      <WhyFortuna />
-      <BuildingWithEaseSection />
+      <div className="relative"></div>
+
       <BridgingTheGapSection />
       <CommunityOwnedSection />
       <RoadMapSection />

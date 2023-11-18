@@ -68,7 +68,7 @@ export default function CommunityOwnedSection() {
         alt="Defi"
       /> */}
       <div className="overflow-hidden"></div>
-      <div className="bg-defi bg-no-repeat !pt-[167px] bg-[85%_20px] w-full  md:bg-[length:400px_400px]  bg-[length:200px_200px] overflow-hidden">
+      <div className="bg-defi bg-no-repeat !pt-[167px] bg-[4%_20px] w-full  md:bg-[length:300px]  bg-[length:200px_200px] overflow-hidden">
         <div>
           <Typography
             use="h3"
@@ -77,7 +77,7 @@ export default function CommunityOwnedSection() {
           >
             <>
               A Transparent DeFi
-              <div className="text-[#dadada] md:block inline">Ecosystem</div>
+              <div className="text-[#dadada] md:block inline">Platform</div>
             </>
           </Typography>
 

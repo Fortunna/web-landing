@@ -14,7 +14,8 @@ export default function CtaSection() {
               variant="title"
               use="h3"
               className="!bg-text-gradient    !mb-[60px]  !text-transparent !bg-clip-text !text-[#F7F9FD]"
-              label="Be a part of Fortuna Finance today"
+              label="Join the world of
+permissionless DeFi today"
             />
 
             <Link href={"https://app.fortunafi.io/"}>

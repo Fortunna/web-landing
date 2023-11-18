@@ -13,13 +13,13 @@ import Button from "@/components/button";
 const partners = [
   {
     img: "bg-learn-1",
-    title: `How Fortuna Works: Complete Guide`,
-    description: "Getting started with Fortuna Fi",
+    title: `Popular Pools in Ethereum:Top 5 pools on Ethereum`,
+    description: "Top 5 pools on Ethereum",
   },
   {
     img: "bg-learn-2",
-    title: `Popular Pools in Ethereum:`,
-    description: "Top 5 pools on Ethereum",
+    title: "How Fortuna Works: Complete Guide",
+    description: "Getting started with Fortuna Fi",
   },
 ];
 
@@ -41,18 +41,18 @@ export default function LearningHub() {
   }) => {
     return (
       <div
-        className={`${image} bg-center bg-[length:100%_100%] md:px-[48px] px-8 pb-[48px] rounded-[8px] overflow-hidden md:pt-[150px] pt-32`}
+        className={`${image} bg-center bg-[length:100%_100%] md:px-[35px] px-8 pb-[28px] rounded-[8px] overflow-hidden md:pt-[95px] pt-12`}
       >
         {/* <div className="!mt-[150px]"></div> */}
 
         <Typography
           variant="body3"
-          className="md:!text-[24px] !text-[21px] py-[8px] !leading-normal !font-aeonik-pro !text-white "
+          className="md:!text-[20px] !text-[21px] py-[8px] !leading-normal !font-aeonik-pro !text-white !leading-7 "
           label={title}
         />
         <Typography
           variant="heading"
-          className="!font-inter-light !text-[14px] !text-white leading-6"
+          className="!font-inter-light !text-[13px] !text-white !leading-[19px]"
           label={description}
         />
 
@@ -98,10 +98,23 @@ export default function LearningHub() {
     );
   };
   return (
-    <div className="bg-black">
+    <div className="bg-black  pt-10  md:pt-0 md:mt-[-100px]">
       <PageWrapper className="!px-10%">
         <>
-          {" "}
+          <div className="text-center flex justify-center pb-12">
+            <div className="md:mt-0 ">
+              <div className="flex justify-center">
+                <SectionTopHeader label="LEARNING HUB" />
+              </div>
+
+              <Typography
+                use="h3"
+                className="md:text-[38px] !text-[24px]  !font-aeonik-pro-bold"
+                variant="semi-subtitle"
+                label="Learning Hub"
+              />
+            </div>
+          </div>
           {/* <div className="grid grid-cols-4 gap-12"> */}
           <Carousel
             swipeable={true}
