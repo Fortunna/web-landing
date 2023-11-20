@@ -42,7 +42,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <meta property="og:url" content="/" />
         </>
 
-        <title>Fortuna Fi - Multi chain staking platform</title>
+        <title>Fortuna Finance - AI enabled multi chain staking platform</title>
       </Head>
       <Header fixedHeader={fixedHeader}></Header>
 
