@@ -32,7 +32,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <>
           <meta
             property="og:title"
-            content="The future of DeFi - Staking, Yield Farming and AI Automation"
+            content="Fortuna Finance - AI enabled multi chain staking platform"
           />
           <meta
             property="og:description"

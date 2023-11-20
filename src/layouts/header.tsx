@@ -314,8 +314,8 @@ const navs = [
     to: "/docs.pdf",
   },
   {
-    title: "Governance",
-    to: "#",
+    title: "Product",
+    to: "https://app.fortunafi.io/",
   },
   // {
   //   title: "Faq",
