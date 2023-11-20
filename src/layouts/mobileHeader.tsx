@@ -17,8 +17,8 @@ export default function MobileHeader({
       to: "/docs.gif",
     },
     {
-      title: "Governance",
-      to: "#",
+      title: "Product",
+      to: "https://app.fortunafi.io/",
     },
     // {
     //   title: "Faq",

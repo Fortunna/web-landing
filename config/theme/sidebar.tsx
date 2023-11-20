@@ -241,8 +241,8 @@ export const TOP_MENU_DATA = [
     ),
   },
   {
-    name: "Governance",
-    to: "/docs.pdf",
+    name: "Product",
+    to: "https://app.fortunafi.io/",
     icon: (
       <svg
         width="24"
