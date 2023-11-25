@@ -12,7 +12,7 @@ export default function Aggregator() {
     <Link
       href={"https://app.fortunafi.io/earn/farms"}
       target="_blank"
-      className={`bg-[#171717] text-start block md:bg-[url(/brain.png)]   bg-[length:500px_auto] bg-[121px_25px] bg-no-repeat p-8 cursor-pointer rounded-[20px] ${hoverStyles}`}
+      className={`bg-[#171717] text-start block md:bg-[url(/brain.png)]   bg-[length:500px_auto] bg-[141px_25px] bg-no-repeat p-8 cursor-pointer rounded-[20px] ${hoverStyles}`}
     >
       <Typography
         variant="body0.5"
