@@ -313,10 +313,10 @@ const navs = [
     title: "Docs",
     to: "/docs.pdf",
   },
-  {
-    title: "Product",
-    to: "https://app.fortunafi.io/",
-  },
+  // {
+  //   title: "Product",
+  //   to: "https://app.fortunafi.io/",
+  // },
   // {
   //   title: "Faq",
   //   to: "/faq",
@@ -326,33 +326,30 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
   const [showMobile, setShowMobile] = useState(false);
   const router = useRouter();
 
-  useEffect(() => {
-    const id = router?.asPath?.replace("/", "");
-    if (id) {
-      const _item = document?.querySelector(id);
-      console.log(_item);
-    }
-  }, []);
-
-  const headerStyles = classNames({
-    "!bg-black !fixed": fixedHeader,
-  });
+  // useEffect(() => {
+  //   const id = router?.asPath?.replace("/", "");
+  //   if (id) {
+  //     const _item = document?.querySelector(id);
+  //     console.log(_item);
+  //   }
+  // }, []);
 
   return (
     <div className=" bg-[url(/star-bg.png)]">
       <div
         // onScroll={handleScroll}
         id="bg-wrapper"
-        className=" overflow-hidden  bg-top bg-no-repeat relative bg-[url(/shade.png)] bg-[length:100%_auto] min-h-[400px]"
+        className=" overflow-hidden  bg-top bg-no-repeat relative bg-[url(/bg-blur.png)] bg-[length:100%_100%] min-h-[200px]"
       >
-        <div className="bg-[url(/vector.png)] md:bg-[length:450px] bg-[length:250px]  bg-no-repeat md:bg-[-30%_200px] bg-[-90%_200px]">
+        <div className="bg-[url(/vector.png)] md:bg-[length:420px] bg-[length:200px]  bg-no-repeat md:bg-[-300px_100px] bg-[-100px_200px]">
           <div className="">
             <div
-              className={`${headerStyles} transition-all z-20  md:px-10 px-5 w-screen left-0`}
+              className={`transition-all z-20  md:px-[5%] px-5 w-screen left-0`}
             >
               <div
                 className={` flex justify-between items-center ${
-                  fixedHeader ? "md:py-[20px] shadow-md" : "md:py-[35px]"
+                  ""
+                  // fixedHeader ? "md:py-[20px] shadow-md" : "md:py-[35px]"
                 } py-[10px] `}
               >
                 <AppLogo />
@@ -445,10 +442,16 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
         > */}
           {/* </div> */}
 
-          <div className=" bg-[url(/shade-group-2.png)] md:bg-[length:420px] bg-[length:200px] bg-no-repeat bg-[-30px_450px]">
-            <WhyFortuna />
-            <BuildingWithEaseSection />
-          </div>
+          <Typography
+            variant="subtitle"
+            use="h1"
+            className="!font-atilla md:!text-[50px] mb-72 text-center !text-[18px] md:py-[110px] py-10 md:!leading-[50px] md:!leading-[50px] !leading-[25px]"
+            label=""
+          >
+            <>
+              Multi-Chain Staking <div></div> Solutions
+            </>
+          </Typography>
         </div>
       </div>
       {showMobile ? (

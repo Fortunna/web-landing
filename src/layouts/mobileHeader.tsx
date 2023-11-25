@@ -16,10 +16,10 @@ export default function MobileHeader({
       title: "Docs",
       to: "/docs.gif",
     },
-    {
-      title: "Product",
-      to: "https://app.fortunafi.io/",
-    },
+    // {
+    //   title: "Product",
+    //   to: "https://app.fortunafi.io/",
+    // },
     // {
     //   title: "Faq",
     //   to: "/faq",
