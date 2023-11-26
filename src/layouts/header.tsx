@@ -342,7 +342,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
         className=" overflow-hidden  bg-top bg-no-repeat relative bg-[url(/bg-blur.png)] bg-[length:100%_100%] min-h-[200px]"
       >
         <div className="bg-[url(/vector.png)] md:bg-[length:450px] bg-[length:200px]  bg-no-repeat md:bg-[-300px_100px] bg-[-100px_200px]">
-          <div className="bg-[url(/star_b.png)] bg-no-repeat bg-[80%_50%] ">
+          <div className="bg-[url(/star_b.png)] bg-no-repeat bg-[length:100px] bg-[80%_70%] ">
             <div className="">
               <div
                 className={`transition-all z-20  md:px-[10%] px-5 w-screen left-0`}
@@ -430,7 +430,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
             <Typography
               variant="subtitle"
               use="h1"
-              className="!font-atilla md:!text-[50px] mb-72 text-center !text-[18px] md:py-[110px] py-10 md:!leading-[50px] md:!leading-[50px] !leading-[25px]"
+              className="!font-atilla md:!text-[45px] mb-72 text-center !text-[18px] md:py-[110px] py-10 md:!leading-[50px] md:!leading-[50px] !leading-[25px]"
               label=""
             >
               <>
