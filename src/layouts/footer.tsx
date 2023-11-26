@@ -23,7 +23,14 @@ export default function Footer() {
             />
           </div>
           <div className=" items-center justify-center mb-10 flex md:hidden">
-            <Twitter fill="rgba(239, 237, 253, 0.70)" />
+            <Link
+              target="_blank"
+              href={
+                "https://x.com/fortunafi_io/status/1728407980339511732?s=46"
+              }
+            >
+              <Twitter fill="rgba(239, 237, 253, 0.70)" />
+            </Link>
             <div className="mx-3"></div>
             <Discord fill="rgba(239, 237, 253, 0.70)" />
           </div>

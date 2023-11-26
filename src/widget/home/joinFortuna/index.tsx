@@ -43,7 +43,14 @@ community"
                       //   className="md:mr-0 mr-3"
                       leftComponent={
                         <div className="mr-2">
-                          <Twitter />
+                          <Link
+                            target="_blank"
+                            href={
+                              "https://x.com/fortunafi_io/status/1728407980339511732?s=46"
+                            }
+                          >
+                            <Twitter />
+                          </Link>
                         </div>
                       }
                       label="Twitter"
