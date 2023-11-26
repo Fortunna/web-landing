@@ -339,7 +339,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
       <div
         // onScroll={handleScroll}
         id="bg-wrapper"
-        className=" overflow-hidden  bg-top bg-no-repeat relative bg-[url(/bg-blur.png)] bg-[length:100%_100%] min-h-[200px]"
+        className=" overflow-hidden  bg-top bg-no-repeat relative bg-[url(/bg-blur-2.png)] bg-[length:100%_100%] min-h-[200px]"
       >
         <div className="bg-[url(/vector.png)] md:bg-[length:450px] bg-[length:200px]  bg-no-repeat md:bg-[-300px_100px] bg-[-100px_200px]">
           <div className="bg-[url(/star_b.png)] bg-no-repeat bg-[length:100px] bg-[80%_70%] ">
