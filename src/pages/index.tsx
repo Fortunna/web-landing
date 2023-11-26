@@ -19,8 +19,8 @@ export default function index() {
       <div className="relative"></div>
 
       <div className="bg-[url(/star.png)]">
-        <div className=" bg-[url(/shade-group-2.png)] md:bg-[length:45%] bg-[length:200px] bg-no-repeat bg-[-86px_100px]">
-          <div className="bg-[url(/star_b.png)] bg-no-repeat bg-[80%_0] relative">
+        <div className=" bg-[url(/shade-group-2.png)] md:bg-[length:660px] bg-[length:200px] bg-no-repeat bg-[-120px_100px]">
+          <div className=" relative">
             <div className="-mt-80">
               <WhyFortuna />
             </div>
