@@ -12,7 +12,7 @@ export default function Aggregator() {
     <Link
       href={"https://app.fortunafi.io/earn/farms"}
       target="_blank"
-      className={`bg-[#171717] text-start block bg-right-bottom bg-no-repeat p-8 cursor-pointer rounded-[20px] ${hoverStyles}`}
+      className={`bg-[#171717] text-start block md:bg-[url(/brain.png)]   bg-[length:500px_auto] bg-[700%_25px] bg-no-repeat p-8 cursor-pointer rounded-[20px] ${hoverStyles}`}
     >
       <Typography
         variant="body0.5"
@@ -21,7 +21,7 @@ export default function Aggregator() {
       />
 
       {/* <div className="mt-20"></div> */}
-      <div className="md:grid md:grid-cols-[65%_auto] min-h-[230px] md:bg-[url(/brain.png)] bg-no-repeat  bg-[length:500px_auto] bg-[-56%_-32px]">
+      <div className="md:grid md:grid-cols-[65%_auto] min-h-[230px]">
         <div>
           <div className="w-[120%] md:hidden my-[-30px]">
             <Images src={brain} alt="" />

@@ -18,49 +18,51 @@ export default function BuildingWithEaseSection() {
           as="image"
         />
       </Head>
-      <PageWrapper>
-        <div className="md:block w-full hidden mb-[150px] mt-[20px]">
-          <div className="mx-auto ">
-            <Ball />
-          </div>
-        </div>
-      </PageWrapper>
-      <div className="bg-[url(/stars.svsg.png)] bg-no-repeat bg-right-top">
+      <div className=" pb-28">
         <PageWrapper>
-          <div className="md:grid grid-cols-[30%_auto] md:gap-32 mb-[30px]">
-            <div className="block md:hidden mb-8">
+          <div className="md:block w-full hidden mb-[150px] mt-[20px]">
+            <div className="mx-auto ">
               <Ball />
             </div>
-            <div className=" items-center  hidden">
-              <div></div>
-              {/* <Typography
+          </div>
+        </PageWrapper>
+        <div className="bg-[url(/stars.svsg.png)] bg-no-repeat bg-right-top">
+          <PageWrapper>
+            <div className="md:grid grid-cols-[30%_auto] md:gap-32 mb-[30px]">
+              <div className="block md:hidden mb-8">
+                <Ball />
+              </div>
+              <div className=" items-center  hidden">
+                <div></div>
+                {/* <Typography
                   variant="body2"
                   className="!text-[#757185]"
                   label="With smart automation we provide a reliable solution for users seeking secure and transparent interactions with project in the defi ecosystem"
                 /> */}
-            </div>
-          </div>
-        </PageWrapper>
-        <PageWrapper>
-          <>
-            <div className="md:grid md:grid-cols-[30%_auto] gap-x-32">
-              <div className="md:block hidden">
-                <Build />
               </div>
-              <div>
-                <Typography
-                  use="h3"
-                  className="!font-atilla md:!text-[45px] !text-[25px] md:!leading-[50px] leading-[30px]"
-                  variant="subtitle"
-                >
-                  <>
-                    Building an easy to use <div></div> DeFi staking <div></div>
-                    <div className="text-[#dadada] md:block inline">
-                      platform for everyone
-                    </div>
-                  </>
-                </Typography>
-                {/* <div className="w-[80%] md:my-10 mt-[25px] mb-[18px]">
+            </div>
+          </PageWrapper>
+          <PageWrapper>
+            <>
+              <div className="md:grid md:grid-cols-[30%_auto] gap-x-32">
+                <div className="md:block hidden">
+                  <Build />
+                </div>
+                <div>
+                  <Typography
+                    use="h3"
+                    className="!font-atilla md:!text-[45px] !text-[25px] md:!leading-[50px] leading-[30px]"
+                    variant="subtitle"
+                  >
+                    <>
+                      Building an easy to use <div></div> DeFi staking{" "}
+                      <div></div>
+                      <div className="text-[#dadada] md:block inline">
+                        platform for everyone
+                      </div>
+                    </>
+                  </Typography>
+                  {/* <div className="w-[80%] md:my-10 mt-[25px] mb-[18px]">
                   <Typography
                     variant="body3"
                     label="At our core we provide a user-friendly platform for accessing staking pools and liquidity
@@ -68,32 +70,33 @@ providers for DeFi projects. Stake your assets for instant passive income stream
 full control over your funds"
                   />
                 </div> */}
-                <Link
-                  className="mt-20 block"
-                  href={"https://app.fortunafi.io/"}
-                >
-                  <Button
-                    rounded
-                    size="big"
-                    theme="secondary"
-                    label="Launch App"
-                  />
-                </Link>
-                \
+                  <Link
+                    className="mt-20 block"
+                    href={"https://app.fortunafi.io/"}
+                  >
+                    <Button
+                      rounded
+                      size="big"
+                      theme="secondary"
+                      label="Launch App"
+                    />
+                  </Link>
+                  \
+                </div>
               </div>
-            </div>
-            {/* <div className=" items-center w-[80%] mt-[80px] mb-[40px] mx-auto flex md:hidden"> */}
-            {/* <Typography
+              {/* <div className=" items-center w-[80%] mt-[80px] mb-[40px] mx-auto flex md:hidden"> */}
+              {/* <Typography
               variant="body2"
               className="!text-[#757185]"
               label="With smart automation we provide a reliable solution for users seeking secure and transparent interactions with project in the defi ecosystem"
             /> */}
-            {/* </div> */}
-            <div className="block md:hidden md:mt-0 mt-10">
-              <Build />
-            </div>
-          </>
-        </PageWrapper>
+              {/* </div> */}
+              <div className="block md:hidden md:mt-0 mt-10">
+                <Build />
+              </div>
+            </>
+          </PageWrapper>
+        </div>
       </div>
     </>
   );

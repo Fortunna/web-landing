@@ -18,6 +18,18 @@ export default function index() {
     <Layout>
       <div className="relative"></div>
 
+      <div className="bg-[url(/star.png)]">
+        <div className=" bg-[url(/shade-group-2.png)] md:bg-[length:660px] bg-[length:200px] bg-no-repeat bg-[-120px_100px]">
+          <div className=" relative">
+            <div className="-mt-80">
+              <WhyFortuna />
+            </div>
+
+            <BuildingWithEaseSection />
+          </div>
+        </div>
+      </div>
+
       <BridgingTheGapSection />
       <CommunityOwnedSection />
       <RoadMapSection />

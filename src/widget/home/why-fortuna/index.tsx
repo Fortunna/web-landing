@@ -30,16 +30,6 @@ export default function WhyFortuna() {
       </Head>
 
       <div className="text-center">
-        <Typography
-          variant="subtitle"
-          use="h1"
-          className="!font-atilla md:!text-[50px]  !text-[18px] md:py-[110px] py-10 md:!leading-[50px] md:!leading-[50px] !leading-[25px]"
-          label=""
-        >
-          <>
-            Multi-Chain Staking <div></div> Solutions
-          </>
-        </Typography>
         <div className="text-center ">
           <div className="">
             {/* <div className="md:mb-6 mb-5">

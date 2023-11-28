@@ -2,6 +2,7 @@ import Button from "@/components/button";
 import { Discord, Read, Twitter } from "@/components/icons";
 import PageWrapper from "@/components/pageWrapper";
 import Typography from "@/components/typography";
+import Link from "next/link";
 import React from "react";
 
 export default function JonFortuna() {
@@ -42,7 +43,14 @@ community"
                       //   className="md:mr-0 mr-3"
                       leftComponent={
                         <div className="mr-2">
-                          <Twitter />
+                          <Link
+                            target="_blank"
+                            href={
+                              "https://x.com/fortunafi_io/status/1728407980339511732?s=46"
+                            }
+                          >
+                            <Twitter />
+                          </Link>
                         </div>
                       }
                       label="Twitter"
@@ -79,17 +87,19 @@ community"
 
             <div className="md:flex md:items-center justify-end">
               <div className="md:mt-0 mt-10">
-                <Button
-                  rounded
-                  size="big"
-                  leftComponent={
-                    <div className="mr-2">
-                      <Read />
-                    </div>
-                  }
-                  label="Read FAQs"
-                  theme="dark"
-                />
+                <Link href={"http://localhost:3000/docs.pdf"} target="_blank">
+                  <Button
+                    rounded
+                    size="big"
+                    leftComponent={
+                      <div className="mr-2">
+                        <Read />
+                      </div>
+                    }
+                    label="Read Docs"
+                    theme="dark"
+                  />
+                </Link>
               </div>
             </div>
           </div>

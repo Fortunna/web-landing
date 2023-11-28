@@ -302,7 +302,7 @@ export default function BridgingTheGapSection() {
             // backgroundPosition: "left -1000px",
           }
         }
-        className=" bg-shade bg-contain  mt-28 text-center bg-no-repeat
+        className=" bg-shade bg-contain   text-center bg-no-repeat
          
       "
       >
