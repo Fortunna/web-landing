@@ -1,16 +1,13 @@
 import { AnimateFadeIn, RenderWhenInView } from "@/animations";
 import AppLogo from "@/components/logo";
+import Link from "next/link";
 import React, { MouseEventHandler } from "react";
 
-export default function MobileHeader({
-  onClose,
-}: {
-  onClose: MouseEventHandler<SVGSVGElement>;
-}) {
+export default function MobileHeader({ onClose }: { onClose: () => void }) {
   const navs = [
     {
       title: "About",
-      to: "/about",
+      to: "/#about",
     },
     {
       title: "Docs",
@@ -61,12 +58,14 @@ export default function MobileHeader({
               <div>
                 <RenderWhenInView triggerOnce={false}>
                   <AnimateFadeIn delay={index / 7}>
-                    <nav
-                      className="!text-white px-3 py-5 !font-aeonik-pro block w-full"
-                      key={index}
-                    >
-                      {_nav.title}
-                    </nav>
+                    <Link onClick={() => onClose()} href={_nav.to}>
+                      <nav
+                        className="!text-white px-3 py-5 !font-aeonik-pro block w-full"
+                        key={index}
+                      >
+                        {_nav.title}
+                      </nav>
+                    </Link>
                   </AnimateFadeIn>
                 </RenderWhenInView>
               </div>
