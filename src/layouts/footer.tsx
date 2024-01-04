@@ -1,4 +1,4 @@
-import { Discord, Twitter } from "@/components/icons";
+import { Discord, TelegramIcon, Twitter } from "@/components/icons";
 import AppLogo from "@/components/logo";
 import PageWrapper from "@/components/pageWrapper";
 import Typography from "@/components/typography";
@@ -23,31 +23,26 @@ export default function Footer() {
             />
           </div>
           <div className=" items-center justify-center mb-10 flex md:hidden">
-            <Link
-              target="_blank"
-              href={
-                "https://x.com/fortunafi_io/status/1728407980339511732?s=46"
-              }
-            >
+            <a target="_blank" href={"https://twitter.com/fortunafi_io"}>
               <Twitter fill="rgba(239, 237, 253, 0.70)" />
-            </Link>
+            </a>
             <div className="mx-3"></div>
-            <Discord fill="rgba(239, 237, 253, 0.70)" />
+            <a target="_blank" href={"https://t.me/fortunafi_io"}>
+              <TelegramIcon fill="rgba(239, 237, 253, 0.70)" />
+            </a>
           </div>
           <div className="lg:block  flex items-center justify-center">
             <AppLogo />
           </div>
           <div className=" items-center md:flex justify-end hidden min-w-[30%]">
-            <Link
-              target="_blank"
-              href={
-                "https://x.com/fortunafi_io/status/1728407980339511732?s=46"
-              }
-            >
+            <a target="_blank" href={"https://twitter.com/fortunafi_io"}>
               <Twitter fill="rgba(239, 237, 253, 0.70)" />
-            </Link>
+            </a>
             <div className="mx-3"></div>
-            <Discord fill="rgba(239, 237, 253, 0.70)" />
+            <a target="_blank" href={"https://t.me/fortunafi_io"}>
+              {" "}
+              <TelegramIcon fill="rgba(239, 237, 253, 0.70)" />
+            </a>
           </div>
           <div className="block text-center my-10 md:hidden">
             <Typography

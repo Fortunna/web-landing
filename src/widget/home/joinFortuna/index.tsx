@@ -1,5 +1,5 @@
 import Button from "@/components/button";
-import { Discord, Read, Twitter } from "@/components/icons";
+import { Discord, Read, TelegramIcon, Twitter } from "@/components/icons";
 import PageWrapper from "@/components/pageWrapper";
 import Typography from "@/components/typography";
 import Link from "next/link";
@@ -33,7 +33,11 @@ community"
               <div>
                 <div className="mt-10"></div>
                 <div className="md:inline-block ">
-                  <div>
+                  <a
+                    target="_blank"
+                    className="block"
+                    href={"https://twitter.com/fortunafi_io"}
+                  >
                     <Button
                       rounded
                       size="big"
@@ -43,35 +47,34 @@ community"
                       //   className="md:mr-0 mr-3"
                       leftComponent={
                         <div className="mr-2">
-                          <Link
-                            target="_blank"
-                            href={
-                              "https://x.com/fortunafi_io/status/1728407980339511732?s=46"
-                            }
-                          >
-                            <Twitter />
-                          </Link>
+                          <Twitter />
                         </div>
                       }
+                      className="w-full"
+                      wrapperClass="w-full"
                       label="Twitter"
                       theme="dark"
                     />
-                  </div>
+                  </a>
 
                   <div className="mt-3 md:mr-0 mr-3"></div>
-                  <div>
+                  <a
+                    className="block"
+                    target="_blank"
+                    href="https://t.me/fortunafi_io"
+                  >
                     <Button
                       rounded
                       size="big"
                       theme="dark"
-                      label="Discord"
+                      label="Telegram"
                       leftComponent={
                         <div className="mr-2">
-                          <Discord />
+                          <TelegramIcon fill="#fff" />
                         </div>
                       }
                     />
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -87,7 +90,10 @@ community"
 
             <div className="md:flex md:items-center justify-end">
               <div className="md:mt-0 mt-10">
-                <Link href={"http://localhost:3000/docs.pdf"} target="_blank">
+                <Link
+                  href={"https://fortuna-finance-1.gitbook.io/fortuna-finance/"}
+                  target="_blank"
+                >
                   <Button
                     rounded
                     size="big"

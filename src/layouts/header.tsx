@@ -311,7 +311,7 @@ const navs = [
   },
   {
     title: "Docs",
-    to: "/docs.pdf",
+    to: "https://fortuna-finance-1.gitbook.io/fortuna-finance/",
   },
   // {
   //   title: "Product",
@@ -342,7 +342,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
         className=" overflow-hidden  bg-top bg-no-repeat relative bg-[url(/bg-blur-2.png)] bg-[length:100%_100%] min-h-[200px]"
       >
         <div className="bg-[url(/vector.png)] md:bg-[length:450px] bg-[length:200px]  bg-no-repeat md:bg-[-300px_100px] bg-[-100px_200px]">
-          <div className="bg-[url(/star_b.png)]  max-w-[1400px]  bg-no-repeat bg-[length:100px] bg-[80%_70%] ">
+          <div className="bg-[url(/star_b.png)]  max-w-[1400px] !mx-auto bg-no-repeat bg-[length:100px] bg-[80%_70%] ">
             <div className="">
               <div
                 className={`transition-all z-20  md:px-[10%] px-5 w-screen left-0`}
