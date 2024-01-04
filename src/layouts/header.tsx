@@ -311,7 +311,7 @@ const navs = [
   },
   {
     title: "Docs",
-    to: "/docs.pdf",
+    to: "https://fortuna-finance-1.gitbook.io/fortuna-finance/",
   },
   // {
   //   title: "Product",

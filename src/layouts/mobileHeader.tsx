@@ -14,7 +14,7 @@ export default function MobileHeader({
     },
     {
       title: "Docs",
-      to: "/docs.gif",
+      to: "https://fortuna-finance-1.gitbook.io/fortuna-finance/",
     },
     // {
     //   title: "Product",

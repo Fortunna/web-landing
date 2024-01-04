@@ -30,8 +30,7 @@ export default function Aggregator() {
             <Typography
               className="!font-inter-bold font-bold text-white md:!text-[30px] !text-[26px] !leading-[33px] md:!leading-[40px]"
               variant="semi-subtitle"
-              label="Multi-Chain 
-Yield Optimizer"
+              label="Multi-Chain Yield Optimizer"
             />
           </div>
         </div>
