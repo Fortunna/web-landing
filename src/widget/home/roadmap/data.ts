@@ -15,11 +15,10 @@ export const roadmap = [
   {
     title: 'Q1 2024',
     content: [
-      'dApp v1 Launch',
-      'A.I Aggregator Development',
-      'Awareness Campaign',
+      'Stakepad v1 Mainnet',
+      'Smart Contracts Audit',
+      'A.I Aggregator v1 Testnet',
       'IDO',
-      'Public Testnet Campaign',
       'CEX + DEX listing',
     ],
   },
@@ -27,7 +26,6 @@ export const roadmap = [
     title: 'Q2 2024',
     content: [
       'Strategic Partnerships',
-      'Scaling and Performance Optimization of the dApp',
       'A.I Yield Aggregator Beta Release',
       'More CEX listings',
     ],
@@ -35,7 +33,7 @@ export const roadmap = [
   {
     title: 'Q3 2024',
     content: [
-      'A.I Yield Aggregator Public Release',
+      'Yield Aggregator Public Release',
       'Governance Program Launch',
       'Cross-Chain dApp Integration ',
     ],
