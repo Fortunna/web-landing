@@ -1,13 +1,13 @@
-import PageWrapper from "@/components/pageWrapper";
-import Typography from "@/components/typography";
-import React, { useState } from "react";
-import DoughnutChart from "./chart";
-import fortuna from "../../../../public/fortuna.png";
-import Image from "next/image";
-import SectionTopHeader from "@/widget/common/sectionTopHeader";
-import fortunaMobile from "../../../../public/fortuna-mobile.png";
-import FM from "../../../../public/financial-bg-mobile.png";
-import classNames from "classnames";
+import PageWrapper from '@/components/pageWrapper';
+import Typography from '@/components/typography';
+import React, { useState } from 'react';
+import DoughnutChart from './chart';
+import fortuna from '../../../../public/fortuna.png';
+import Image from 'next/image';
+import SectionTopHeader from '@/widget/common/sectionTopHeader';
+import fortunaMobile from '../../../../public/fortuna-mobile.png';
+import FM from '../../../../public/financial-bg-mobile.png';
+import classNames from 'classnames';
 
 const data = [
   {
@@ -63,9 +63,9 @@ const data = [
         />
       </svg>
     ),
-    name: "Ethereum",
+    name: 'Ethereum',
     description:
-      "Get support to bring users to the Interchain by providing services such as exchanges, wallets, and more.",
+      'Get support to bring users to the Interchain by providing services such as exchanges, wallets, and more.',
   },
 
   {
@@ -114,9 +114,9 @@ const data = [
         </defs>
       </svg>
     ),
-    name: "BNB",
+    name: 'BNB',
     description:
-      "Grow the economy of your chain by connecting to Cosmos Hub services using IBC protocol.",
+      'Grow the economy of your chain by connecting to Cosmos Hub services using IBC protocol.',
     footerIcon: (
       <svg
         width={33}
@@ -210,9 +210,9 @@ const data = [
         </defs>
       </svg>
     ),
-    name: "Polygon",
+    name: 'Polygon',
     description:
-      "Grow the economy of your chain by connecting to Cosmos Hub services using IBC protocol.",
+      'Grow the economy of your chain by connecting to Cosmos Hub services using IBC protocol.',
     footerIcon: (
       <svg
         className="w-7 h-auto"
@@ -263,7 +263,7 @@ const Network = ({
   return (
     <div
       className={` bg-[#090617] md:mb-0 mb-3 network ${
-        active ? "active" : ""
+        active ? 'active' : ''
       } p-6 rounded-lg hover:!bg-cards-transparent-2 transition-all  hover:scale-95`}
     >
       {icon}
@@ -301,7 +301,7 @@ const Network = ({
 export default function TokenomicsSection() {
   const [currentNetwork, setCurrentNetwork] = useState(0);
   return (
-    <div className="bg-black md:pt-[198px] md:pb-[450px]   bg-[url(/div.sc-7b2548cc-0.png)] bg-[length:100%] bg-[-50%]  bg-no-repeat">
+    <div className="bg-black pt-[120px] md:pt-[198px] pb-[100px] md:pb-[450px]   bg-[url(/div.sc-7b2548cc-0.png)] bg-[length:100%] bg-[-50%]  bg-no-repeat">
       <div className=" bg-right-top bg-no-repeat bg-[length:150px_150px]">
         <PageWrapper>
           <div className="">

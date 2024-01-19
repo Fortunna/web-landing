@@ -1,9 +1,9 @@
-import React, { MouseEventHandler, useEffect, useRef, useState } from "react";
-import Typography from "@/components/typography";
-import Carousel from "react-multi-carousel";
-import { roadmap } from "./data";
-import Badge from "@/components/badge";
-import PageWrapper from "@/components/pageWrapper";
+import React, { MouseEventHandler, useEffect, useRef, useState } from 'react';
+import Typography from '@/components/typography';
+import Carousel from 'react-multi-carousel';
+import { roadmap } from './data';
+import Badge from '@/components/badge';
+import PageWrapper from '@/components/pageWrapper';
 
 const TopConnector = () => {
   return (
@@ -41,7 +41,7 @@ const BottomConnector = () => {
     <svg
       width={201}
       height={73}
-      className="connectors"
+      className="connectors -z-1"
       viewBox="0 0 201 73"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -164,7 +164,7 @@ const Pointer = ({ primary }: { primary: boolean }) => {
           width="16"
           height="16"
           rx="8"
-          fill={"#00031B"}
+          fill={'#00031B'}
           shape-rendering="crispEdges"
         />
         <rect x="10" y="10" width="8" height="8" rx="4" fill="#EE4492" />
@@ -228,41 +228,43 @@ const RoadMapDisplay = ({
   title: string;
 }) => {
   return (
-    <div className=" ">
-      <svg
-        width={22}
-        className="mb-4"
-        height={22}
-        viewBox="0 0 22 22"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
-          stroke="url(#paint0_linear_772_53544)"
-          strokeWidth={2}
-          strokeDasharray="2 4"
+    <div className="ml-1">
+      <div className="flex gap-2">
+        <svg
+          width={22}
+          className="mb-4"
+          height={22}
+          viewBox="0 0 22 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
+            stroke="url(#paint0_linear_772_53544)"
+            strokeWidth={2}
+            strokeDasharray="2 4"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_772_53544"
+              x1={22}
+              y1="7.774"
+              x2="-0.776"
+              y2="7.779"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#414FA2" />
+              <stop offset={1} stopColor="#EE4492" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <Typography
+          variant="body3"
+          className="!text-[rgba(255, 255, 255, 0.60) ]"
+          label={title}
         />
-        <defs>
-          <linearGradient
-            id="paint0_linear_772_53544"
-            x1={22}
-            y1="7.774"
-            x2="-0.776"
-            y2="7.779"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="#414FA2" />
-            <stop offset={1} stopColor="#EE4492" />
-          </linearGradient>
-        </defs>
-      </svg>
-      <Typography
-        variant="body2"
-        className="!text-[rgba(255, 255, 255, 0.60) ] "
-        label={title}
-      />
-      <ul className="list-disc marker:text-[#fff9]">
+      </div>
+      <ul className="list-disc ml-[23px] marker:text-[#fff9]">
         {label?.map((_content, index) => {
           return (
             <li className="!list-disc ps-2" key={index}>
@@ -318,7 +320,7 @@ export default function RoadmapSection() {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4,
+      items: 5,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -326,7 +328,7 @@ export default function RoadmapSection() {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 2,
+      items: 1,
     },
   };
 
@@ -339,8 +341,8 @@ export default function RoadmapSection() {
   }) => {
     return (
       <button
-        className={`bg-[#676767] w-[10px] h-[10px] rounded mx-2 ${
-          active ? "!bg-white" : ""
+        className={`bg-[#676767] z-50 lg:hidden w-[10px] h-[10px] rounded mx-2 ${
+          active ? '!bg-white' : ''
         }`}
         onClick={onClick}
       />
@@ -360,9 +362,9 @@ export default function RoadmapSection() {
     }, 2000);
   }, [top_connector_ref]);
   return (
-    <div className="bg-black pt-[120px] overflow-hidden bg-[url(/nox-gradient-1.png)] bg-no-repeat bg-right">
-      <div className="bg-[url(/nox-gradient2.png)] bg-[length:400px] bg-no-repeat">
-        {" "}
+    <div className="bg-black pt-[120px] gradient-roadmap-1">
+      <div className="gradient-roadmap-2 bg-no-repeat">
+        {' '}
         <div className="text-center flex justify-center">
           <div>
             <div className="flex justify-center">
@@ -383,49 +385,49 @@ export default function RoadmapSection() {
           </div>
         </div>
         {/* <div className="grid grid-cols-4 gap-12"> */}
-        <PageWrapper>
+        <PageWrapper isOverflowHiden>
           <Carousel
             swipeable={true}
             draggable={true}
             showDots={true}
             responsive={responsive}
             ssr={true} // means to render carousel on server-side.
-            infinite={true}
+            infinite={false}
             customDot={
               <CustomDot active={activeSlide} onClick={handleDotClick} />
             }
-            // autoPlay={true}
+            autoPlay={true}
             autoPlaySpeed={3000}
             keyBoardControl={true}
             transitionDuration={500}
             customLeftArrow={<></>}
             customRightArrow={<></>}
-            // containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
-            dotListClass="custom-dot-list-style"
-            itemClass="carousel-item-padding-40-px"
+            rewind={true}
+            removeArrowOnDeviceType={['tablet', 'mobile']}
+            renderButtonGroupOutside={true}
+            rewindWithAnimation={true}
           >
             {roadmap.map((_road_map, index) => {
               return (
-                <div key={index} className="relative pt-48 pb-72 mt-[100px] ">
+                <div key={index} className="relative pt-72 pb-72 mt-[100px] ">
                   {/* <Pointer primary={index % 2 == 0 ? true : false} /> */}
                   <div
                     className="h-2 w-full"
                     style={{
                       opacity: 0.1,
                       background:
-                        "linear-gradient(90deg, #D84594 42.72%, #574EA0 45.28%)",
+                        'linear-gradient(90deg, #D84594 42.72%, #574EA0 45.28%)',
                     }}
                   ></div>
                   {index % 2 == 0 ? (
-                    <div className="absolute -top-[30px]">
+                    <div className="absolute -top-[50px]  z-10">
                       <RoadMapDisplay
                         title={_road_map.title}
                         label={_road_map.content}
                       />
                     </div>
                   ) : null}
-                  <div style={{ marginRight: "-30px", marginTop: "-21px" }}>
+                  <div style={{ marginRight: '-30px', marginTop: '-21px' }}>
                     <Pointer primary={index % 2 == 0 ? true : false} />
                   </div>
 
@@ -433,7 +435,7 @@ export default function RoadmapSection() {
                     {index % 2 == 0 ? (
                       <div className="relative">
                         <div
-                          style={{ width: "calc(100% + 8px)" }}
+                          style={{ width: 'calc(100% + 8px)' }}
                           className="absolute   bottom-[8px] left-[12px] "
                         >
                           <TopConnector />
@@ -442,7 +444,7 @@ export default function RoadmapSection() {
                     ) : null}
                     {index % 2 !== 0 ? (
                       <>
-                        <div className="absolute top-[100px]">
+                        <div className="absolute top-[120px] z-10">
                           <RoadMapDisplay
                             title={_road_map.title}
                             label={_road_map.content}
@@ -450,7 +452,7 @@ export default function RoadmapSection() {
                         </div>
 
                         <div className="relative">
-                          <div className="absolute w-full  left-4 top-[-8px] ">
+                          <div className="absolute w-full lg:left-[16.5px] left-[14px] top-[-8px] ">
                             <BottomConnector />
                           </div>
                         </div>

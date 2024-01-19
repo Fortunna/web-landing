@@ -1,23 +1,22 @@
-import Button from "@/components/button";
-import { Discord, Read, TelegramIcon, Twitter } from "@/components/icons";
-import PageWrapper from "@/components/pageWrapper";
-import Typography from "@/components/typography";
-import Link from "next/link";
-import React from "react";
+import Button from '@/components/button';
+import { Discord, Read, TelegramIcon, Twitter } from '@/components/icons';
+import PageWrapper from '@/components/pageWrapper';
+import Typography from '@/components/typography';
+import Link from 'next/link';
+import React from 'react';
 
 export default function JonFortuna() {
   return (
     <div className="bg-black md:pt-[120px] pt-20">
       <PageWrapper className="md:!px-[18%]">
-        <div className="md:px-[52px] px-[20px] overflow-hidden md:py-[66px] py-[40px] rounded-[20px] bg-[url('/join-bg.png')] bg-cover">
+        <div className="md:px-[52px] px-[20px] overflow-hidden md:py-[66px] py-[40px] rounded-[20px] bg-[url('/join-bg.webp')] bg-cover">
           <div className="lg:grid lg:grid-cols-[60%_auto]">
             <div>
               <Typography
                 use="h3"
                 variant="title"
                 className="!font-aeonik-pro !leading-[100%]"
-                label="Join the fortuna
-community"
+                label="Join the fortuna community"
               />
 
               <div className="md:w-[70%] mt-[30px]">
@@ -36,7 +35,7 @@ community"
                   <a
                     target="_blank"
                     className="block"
-                    href={"https://twitter.com/fortunafi_io"}
+                    href={'https://twitter.com/fortunafi_io'}
                   >
                     <Button
                       rounded
@@ -91,7 +90,7 @@ community"
             <div className="md:flex md:items-center justify-end">
               <div className="md:mt-0 mt-10">
                 <Link
-                  href={"https://fortuna-finance-1.gitbook.io/fortuna-finance/"}
+                  href={'https://fortuna-finance-1.gitbook.io/fortuna-finance/'}
                   target="_blank"
                 >
                   <Button

@@ -1,20 +1,21 @@
-import Badge from "@/components/badge";
-import PageWrapper from "@/components/pageWrapper";
-import Typography from "@/components/typography";
-import React from "react";
-import Image, { StaticImageData } from "next/image";
-import Aggregator from "./options/aggregator";
-import Secure from "./options/secure";
-import PoolCreation from "./options/pool";
-import LowTransaction from "./options/lowTransaction";
-import WhyFortunaMobile from "./mobile-view";
-import Head from "next/head";
-import BuildingWithEaseSection from "../buildingWithEase";
+import Badge from '@/components/badge';
+import PageWrapper from '@/components/pageWrapper';
+import Typography from '@/components/typography';
+import React from 'react';
+import Image, { StaticImageData } from 'next/image';
+import Aggregator from './options/aggregator';
+import Secure from './options/secure';
+import PoolCreation from './options/pool';
+import LowTransaction from './options/lowTransaction';
+import WhyFortunaMobile from './mobile-view';
+import Head from 'next/head';
+import BuildingWithEaseSection from '../buildingWithEase';
+import { cardClass } from './options';
 
 const CardBorder = ({ img }: { img: StaticImageData }) => {
   return (
     <Image
-      style={{ width: "100%" }}
+      style={{ width: '100%' }}
       className="absolute top-0 left-0"
       src={img}
       alt=""
@@ -25,7 +26,7 @@ export default function WhyFortuna() {
   return (
     <>
       <Head>
-        <link rel="preload" href="/group-39958.png" as="image" />
+        <link rel="preload" href="/group-39958.webp" as="image" />
         <link rel="preload" href="/why-bg.png" as="image" />
       </Head>
 
@@ -147,18 +148,28 @@ export default function WhyFortuna() {
                 <div className="md:grid grid-cols-2 gap-4  hidden">
                   <div>
                     {/* <RenderWhenInView triggerOnce={false}> */}
-                    <Aggregator />
+                    <div
+                      className={`${cardClass} border-2 md:mb-0 mb-10 hover:bg-[#311e41] hover:scale-95  hover:shadow-md shadow-white transition-all`}
+                    >
+                      <Aggregator />
+                    </div>
                     {/* </RenderWhenInView> */}
-                    <div className="mt-[12px]">
+                    <div
+                      className={`${cardClass} mt-[12px] border-2 md:mb-0 mb-10 hover:bg-[#311e41] hover:scale-95  hover:shadow-md shadow-white transition-all`}
+                    >
                       <Secure />
                     </div>
                   </div>
                   <div className="">
-                    <div className="">
+                    <div
+                      className={`${cardClass} relative border-2 md:mb-0 mb-10 hover:bg-[#311e41] hover:scale-95  hover:shadow-md shadow-white transition-all`}
+                    >
                       <PoolCreation />
                     </div>
-                    <div className="mt-[12px]">
-                      {" "}
+                    <div
+                      className={`${cardClass} h-[390px]  mt-[12px] border-2 md:mb-0 mb-10 hover:bg-[#311e41] hover:scale-95  hover:shadow-md shadow-white transition-all`}
+                    >
+                      {' '}
                       <LowTransaction />
                     </div>
                   </div>
