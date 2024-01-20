@@ -1,12 +1,12 @@
-import PageWrapper from "@/components/pageWrapper";
-import React from "react";
-import Build from "./icons/build";
-import Typography from "@/components/typography";
-import Button from "@/components/button";
-import Ball from "./icons/ball";
-import { AnimateFadeIn, RenderWhenInView } from "@/animations";
-import Link from "next/link";
-import Head from "next/head";
+import PageWrapper from '@/components/pageWrapper';
+import React from 'react';
+import Build from './icons/build';
+import Typography from '@/components/typography';
+import Button from '@/components/button';
+import Ball from './icons/ball';
+import { AnimateFadeIn, RenderWhenInView } from '@/animations';
+import Link from 'next/link';
+import Head from 'next/head';
 
 export default function BuildingWithEaseSection() {
   return (
@@ -26,7 +26,7 @@ export default function BuildingWithEaseSection() {
             </div>
           </div>
         </PageWrapper>
-        <div className="bg-[url(/stars.svsg.png)] bg-no-repeat bg-right-top">
+        <div className="bg-[url(/star.pngg)] bg-no-repeat bg-right-top">
           <PageWrapper>
             <div className="md:grid grid-cols-[30%_auto] md:gap-32 mb-[30px]">
               <div className="block md:hidden mb-8">
@@ -55,7 +55,7 @@ export default function BuildingWithEaseSection() {
                     variant="subtitle"
                   >
                     <>
-                      Building an easy to use <div></div> DeFi staking{" "}
+                      Building an easy to use <div></div> DeFi staking{' '}
                       <div></div>
                       <div className="text-[#dadada] md:block inline">
                         platform for everyone
@@ -72,7 +72,7 @@ full control over your funds"
                 </div> */}
                   <Link
                     className="mt-20 block"
-                    href={"https://app.fortunafi.io/"}
+                    href={'https://app.fortunafi.io/'}
                   >
                     <Button
                       rounded
