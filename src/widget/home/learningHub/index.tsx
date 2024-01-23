@@ -1,25 +1,25 @@
-import React, { MouseEventHandler, useState } from "react";
-import Image from "next/image";
-import team1 from "../../../../public/team.png";
-import team2 from "../../../../public/team.png";
-import team3 from "../../../../public/team.png";
-import team4 from "../../../../public/team.png";
-import Typography from "@/components/typography";
-import PageWrapper from "@/components/pageWrapper";
-import SectionTopHeader from "@/widget/common/sectionTopHeader";
-import Carousel from "react-multi-carousel";
-import Button from "@/components/button";
+import React, { MouseEventHandler, useState } from 'react';
+import Image from 'next/image';
+import team1 from '../../../../public/team.png';
+import team2 from '../../../../public/team.png';
+import team3 from '../../../../public/team.png';
+import team4 from '../../../../public/team.png';
+import Typography from '@/components/typography';
+import PageWrapper from '@/components/pageWrapper';
+import SectionTopHeader from '@/widget/common/sectionTopHeader';
+import Carousel from 'react-multi-carousel';
+import Button from '@/components/button';
 
 const partners = [
   {
-    img: "bg-learn-1",
-    title: `Popular Pools in Ethereum:Top 5 pools on Ethereum`,
-    description: "Top 5 pools on Ethereum",
+    img: 'bg-learn-1',
+    title: `Popular Pools in Ethereum: Top 5 pools on Ethereum`,
+    description: 'Top 5 pools on Ethereum',
   },
   {
-    img: "bg-learn-2",
-    title: "How Fortuna Works: Complete Guide",
-    description: "Getting started with Fortuna Fi",
+    img: 'bg-learn-2',
+    title: 'How Fortuna Works: Complete Guide',
+    description: 'Getting started with Fortuna Fi',
   },
 ];
 
@@ -41,22 +41,24 @@ export default function LearningHub() {
   }) => {
     return (
       <div
-        className={`${image} bg-center bg-[length:100%_100%] md:px-[35px] px-8 pb-[28px] rounded-[8px] overflow-hidden md:pt-[95px] pt-12`}
+        className={`${image} bg-center h-full flex flex-col justify-between bg-[length:100%_100%] md:px-[35px] px-8 pb-[28px] rounded-[8px] overflow-hidden md:pt-[95px] pt-12`}
       >
         {/* <div className="!mt-[150px]"></div> */}
 
         <Typography
           variant="body3"
-          className="md:!text-[20px] !text-[21px] py-[8px] !leading-normal !font-aeonik-pro !text-white !leading-7 "
+          className="md:!text-[20px] !text-[21px] py-[8px] !leading-normal !font-aeonik-pro !text-white "
           label={title}
         />
-        <Typography
-          variant="heading"
-          className="!font-inter-light !text-[13px] !text-white !leading-[19px]"
-          label={description}
-        />
+        <div>
+          <Typography
+            variant="heading"
+            className="!font-inter-light !text-[13px] !text-white !leading-[19px]"
+            label={description}
+          />
 
-        <Button className="!mt-[30px]" theme="white" label="Learn more" />
+          <Button className="!mt-[30px]" theme="white" label="Learn more" />
+        </div>
       </div>
     );
   };
@@ -91,7 +93,7 @@ export default function LearningHub() {
     return (
       <button
         className={`bg-[#676767] w-[10px] h-[10px] rounded mx-2 ${
-          active ? "!bg-white" : ""
+          active ? '!bg-white' : ''
         }`}
         onClick={onClick}
       />
@@ -133,13 +135,13 @@ export default function LearningHub() {
             customLeftArrow={<></>}
             customRightArrow={<></>}
             // containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
+            removeArrowOnDeviceType={['tablet', 'mobile']}
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
           >
             {partners.map((partner, index) => {
               return (
-                <div key={index} className="relative pb-24 pr-7">
+                <div key={index} className="relative h-full pb-24 pr-7">
                   <SingleSection
                     description={partner.description}
                     title={partner.title}

@@ -342,7 +342,11 @@ input[type="range"]::-ms-thumb {
 
 .mobile-why-fortuna-view {
   .react-multi-carousel-dot-list {
-    justify-content: flex-start;
+    justify-content: center;
+  }
+
+  .react-multi-carousel-track {
+    max-height: 400px;
   }
 }
 

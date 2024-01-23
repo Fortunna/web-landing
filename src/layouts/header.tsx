@@ -75,11 +75,11 @@
 // //                   height="44"
 // //                   onClick={() => setShowMobile(true)}
 // //                   viewBox="0 0 24 24"
-// //                   stroke-width="1.5"
+// //                   strokeWidth="1.5"
 // //                   stroke="#e5e7ed"
 // //                   fill="none"
-// //                   stroke-linecap="round"
-// //                   stroke-linejoin="round"
+// //                   strokeLinecap="round"
+// //                   strokeLinejoin="round"
 // //                 >
 // //                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
 // //                   <path d="M4 6l16 0" />
@@ -221,11 +221,11 @@
 //                 height="44"
 //                 onClick={() => setShowMobile(true)}
 //                 viewBox="0 0 24 24"
-//                 stroke-width="1.5"
+//                 strokeWidth="1.5"
 //                 stroke="#e5e7ed"
 //                 fill="none"
-//                 stroke-linecap="round"
-//                 stroke-linejoin="round"
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
 //               >
 //                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
 //                 <path d="M4 6l16 0" />
@@ -292,26 +292,26 @@
 //   );
 // }
 
-import Button from "@/components/button";
-import AppLogo from "@/components/logo";
-import { useRouter } from "next/router";
-import React, { useEffect, useRef, useState } from "react";
-import MobileHeader from "./mobileHeader";
-import Link from "next/link";
-import classNames from "classnames";
-import Typography from "@/components/typography";
-import Hero from "./hero";
-import PageWrapper from "@/components/pageWrapper";
-import WhyFortuna from "@/widget/home/why-fortuna";
-import BuildingWithEaseSection from "@/widget/home/buildingWithEase";
+import Button from '@/components/button';
+import AppLogo from '@/components/logo';
+import { useRouter } from 'next/router';
+import React, { useEffect, useRef, useState } from 'react';
+import MobileHeader from './mobileHeader';
+import Link from 'next/link';
+import classNames from 'classnames';
+import Typography from '@/components/typography';
+import Hero from './hero';
+import PageWrapper from '@/components/pageWrapper';
+import WhyFortuna from '@/widget/home/why-fortuna';
+import BuildingWithEaseSection from '@/widget/home/buildingWithEase';
 const navs = [
   {
-    title: "About",
-    to: "#about",
+    title: 'About',
+    to: '#about',
   },
   {
-    title: "Docs",
-    to: "https://fortuna-finance-1.gitbook.io/fortuna-finance/",
+    title: 'Docs',
+    to: 'https://fortuna-finance-1.gitbook.io/fortuna-finance/',
   },
   // {
   //   title: "Product",
@@ -322,7 +322,7 @@ const navs = [
   //   to: "/faq",
   // },
 ];
-export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
+export default function Header() {
   const [showMobile, setShowMobile] = useState(false);
   const router = useRouter();
 
@@ -339,71 +339,73 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
       <div
         // onScroll={handleScroll}
         id="bg-wrapper"
-        className=" overflow-hidden  bg-top bg-no-repeat relative bg-[url(/bg-blur-2.png)] bg-[length:100%_100%] min-h-[200px]"
+        className=" overflow-hidden  bg-top bg-no-repeat relative bg-[url(/bg-blur-2.webp)] bg-[length:100%_100%] min-h-[200px]"
       >
-        <div className="bg-[url(/vector.png)] md:bg-[length:450px] bg-[length:200px]  bg-no-repeat md:bg-[-300px_100px] bg-[-100px_200px]">
-          <div className="bg-[url(/star_b.png)]  !mx-auto bg-no-repeat bg-[length:100px] bg-[80%_70%] ">
-            <div className="">
+        <div className="bg-[url(/vector.png)] md:bg-[length:450px] bg-[length:200px] bg-no-repeat md:bg-[-300px_100px] bg-[-100px_200px]">
+          <div className="bg-[url(/star_b.png)] !mx-auto bg-no-repeat bg-[length:100px] bg-[80%_70%] ">
+            <div>
               <div
-                className={`transition-all z-20  md:px-[10%] px-5 w-screen left-0`}
+                className={`transition-all fixed flex justify-center bg-transparent bg-opacity-50 backdrop-blur-xl z-20 md:px-[10%] px-5 w-screen left-0`}
               >
-                <div
-                  className={` flex justify-between items-center ${
-                    ""
-                    // fixedHeader ? "md:py-[20px] shadow-md" : "md:py-[35px]"
-                  } py-[10px] `}
-                >
-                  <AppLogo />
-                  <div className=" md:hidden flex items-center cursor-pointer">
-                    <a
-                      target="_blank"
-                      href="https://app.fortunafi.io/"
-                      className="mr-3"
-                    >
-                      <Button size="small" label="Launch App" />
-                    </a>
+                <div className="flex w-full max-w-[1400px] justify-center">
+                  <div
+                    className={` flex w-full justify-between items-center  ${
+                      ''
+                      // fixedHeader ? "md:py-[20px] shadow-md" : "md:py-[35px]"
+                    } py-[10px] `}
+                  >
+                    <AppLogo />
+                    <div className=" md:hidden flex items-center cursor-pointer">
+                      <a
+                        target="_blank"
+                        href="https://app.fortunafi.io/"
+                        className="mr-3"
+                      >
+                        <Button size="small" label="Launch App" />
+                      </a>
 
-                    <svg
-                      className="w-[30px]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="44"
-                      height="44"
-                      onClick={() => setShowMobile(true)}
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="#e5e7ed"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M4 6l16 0" />
-                      <path d="M4 12l16 0" />
-                      <path d="M4 18l16 0" />
-                    </svg>
-                  </div>
-
-                  <div className="md:flex hidden">
-                    <div className="md:flex mr-9 items-center">
-                      {navs.map((_nav, index) => {
-                        return (
-                          <Link key={index} href={_nav.to}>
-                            <nav className="!text-white px-3 !text-[19px] !font-fira-sans">
-                              {_nav.title}
-                            </nav>
-                          </Link>
-                        );
-                      })}
+                      <svg
+                        className="w-[30px]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="44"
+                        height="44"
+                        onClick={() => setShowMobile(true)}
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="#e5e7ed"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 6l16 0" />
+                        <path d="M4 12l16 0" />
+                        <path d="M4 18l16 0" />
+                      </svg>
                     </div>
-                    <Link href={"https://app.fortunafi.io/"} target="_blank">
-                      <Button size="default" label="Launch App" />
-                    </Link>
+
+                    <div className="md:flex hidden">
+                      <div className="md:flex mr-9 items-center">
+                        {navs.map((_nav, index) => {
+                          return (
+                            <Link key={index} href={_nav.to}>
+                              <nav className="!text-white px-3 !text-[19px] !font-fira-sans">
+                                {_nav.title}
+                              </nav>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                      <Link href={'https://app.fortunafi.io/'} target="_blank">
+                        <Button size="default" label="Launch App" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
 
               <PageWrapper>
-                <div className="flex items-center md:mt-[100px] mt-10">
+                <div className="flex items-center md:mt-[100px] mt-14">
                   <div className="">
                     <Typography
                       variant="semi-heading"
@@ -417,7 +419,7 @@ export default function Header({ fixedHeader }: { fixedHeader: boolean }) {
                       label=""
                     >
                       <>
-                        A.I Yield Optimization <div></div> for Staking & Farming
+                        A.I Yield Optimization <br /> for Staking & Farming
                       </>
                     </Typography>
                   </div>

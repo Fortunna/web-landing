@@ -1,22 +1,22 @@
-import Button from "@/components/button";
-import Typography from "@/components/typography";
-import React, { useState } from "react";
-import Image from "next/image";
-import { ArrowUp, Curve, Dai, Usdc, Usdt } from "@/components/icons";
-import ActivityChart from "./activityChart";
-import FarmActionModal from "./actionModal";
+import Button from '@/components/button';
+import Typography from '@/components/typography';
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { ArrowUp, Curve, Dai, Usdc, Usdt } from '@/components/icons';
+import ActivityChart from './activityChart';
+import FarmActionModal from './actionModal';
 
 const activeTokenData = [
   {
-    value: "1000 DAI",
+    value: '1000 DAI',
     icon: <Dai />,
   },
   {
-    value: "950 USDC",
+    value: '950 USDC',
     icon: <Usdc />,
   },
   {
-    value: "11085 USDT",
+    value: '11085 USDT',
     icon: <Usdt />,
   },
 ];
@@ -27,7 +27,7 @@ const Assets = () => {
       {activeTokenData.map((token, index) => {
         return (
           <div
-            className={`flex items-center ${index ? "mt-2" : null} `}
+            className={`flex items-center ${index ? 'mt-2' : null} `}
             key={index}
           >
             {token.icon}
@@ -47,7 +47,7 @@ export default function FarmList({ onOpenActionModal }: any) {
 
   return (
     <div
-      style={{ backgroundColor: "rgba(27, 28, 32, 0.6)" }}
+      style={{ backgroundColor: 'rgba(27, 28, 32, 0.6)' }}
       className="lg:p-[32px] p-[20px]"
     >
       <div className="lg:flex lg:flex-row justify-between">
@@ -69,7 +69,7 @@ export default function FarmList({ onOpenActionModal }: any) {
 
           <div className="grid lg:grid-cols-4  grid-cols-2  gap-10 mt-[32px] ">
             <div className="md:mb-0">
-              {" "}
+              {' '}
               <Typography
                 variant="body3"
                 className="!font-poppins-light text-light-2"
@@ -148,9 +148,9 @@ export default function FarmList({ onOpenActionModal }: any) {
                     <path
                       d="M0.705078 5.3125L5.39258 0.625M5.39258 0.625H0.705078M5.39258 0.625V5.3125"
                       stroke="#FCFCFC"
-                      stroke-width="0.9375"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="0.9375"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </g>
                   <defs>

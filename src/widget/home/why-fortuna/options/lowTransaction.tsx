@@ -10,7 +10,7 @@ export default function LowTransaction() {
       <div className=" overflow-hidden">
         <CardBorder img={gradient4} />
 
-        <div className="mb-10">
+        <div className="md:mb-10">
           <CardHeader
             title="Stakepad"
             summary="Enabling effortless creation of staking and farming products"

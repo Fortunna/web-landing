@@ -1,16 +1,16 @@
-import Typography from "@/components/typography";
-import React from "react";
-import brain from "../../../../public/brain.png";
-import Images from "next/image";
-import Link from "next/link";
+import Typography from '@/components/typography';
+import React from 'react';
+import brain from '../../../../public/brain.png';
+import Images from 'next/image';
+import Link from 'next/link';
 
 export default function Aggregator() {
   const hoverStyles =
-    "hover:bg-[#311e41] hover:scale-95  hover:shadow-md shadow-white transition-all ";
+    'hover:bg-[#311e41] hover:scale-95  hover:shadow-md shadow-white transition-all ';
 
   return (
     <Link
-      href={"https://app.fortunafi.io/earn/farms"}
+      href={'https://app.fortunafi.io/earn/farms'}
       target="_blank"
       className={`bg-[#171717] text-start block md:bg-[url(/brain.png)]   bg-[length:500px_auto] !bg-[700%_25px] bg-no-repeat p-8 cursor-pointer rounded-[20px] ${hoverStyles}`}
     >
@@ -24,7 +24,7 @@ export default function Aggregator() {
       <div className="md:grid md:grid-cols-[65%_auto] min-h-[230px]">
         <div>
           <div className="w-[120%] md:hidden my-[-30px]">
-            <Images src={brain} alt="" />
+            <Images src={brain} loading="eager" alt="" />
           </div>
           <div className="md:mt-16 ">
             <Typography

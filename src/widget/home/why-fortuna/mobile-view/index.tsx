@@ -1,12 +1,12 @@
-import React, { MouseEventHandler, useState } from "react";
-import Typography from "@/components/typography";
-import PageWrapper from "@/components/pageWrapper";
-import SectionTopHeader from "@/widget/common/sectionTopHeader";
-import Carousel from "react-multi-carousel";
-import Aggregator from "../options/aggregator";
-import Secure from "../options/secure";
-import LowTransaction from "../options/lowTransaction";
-import PoolCreation from "../options/pool";
+import React, { MouseEventHandler, useState } from 'react';
+import Typography from '@/components/typography';
+import PageWrapper from '@/components/pageWrapper';
+import SectionTopHeader from '@/widget/common/sectionTopHeader';
+import Carousel from 'react-multi-carousel';
+import Aggregator from '../options/aggregator';
+import Secure from '../options/secure';
+import LowTransaction from '../options/lowTransaction';
+import PoolCreation from '../options/pool';
 
 export default function WhyFortunaMobile() {
   const [activeSlide, setActiveSlide] = useState(0); // Track the active slide
@@ -17,7 +17,7 @@ export default function WhyFortunaMobile() {
 
   const responsive = {
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 768, min: 0 },
       items: 1,
     },
   };
@@ -32,14 +32,14 @@ export default function WhyFortunaMobile() {
     return (
       <button
         className={`bg-[#676767]  w-[10px] h-[10px] rounded mx-2 ${
-          active ? "!bg-white" : ""
+          active ? '!bg-white' : ''
         }`}
         onClick={onClick}
       />
     );
   };
   return (
-    <PageWrapper className="!px-10% !px-0 mobile-why-fortuna-view">
+    <PageWrapper className="!px-10% !px-0 max-h-[500px] mobile-why-fortuna-view">
       <>
         {/* <div className="grid grid-cols-4 gap-12"> */}
         <Carousel
@@ -59,8 +59,7 @@ export default function WhyFortunaMobile() {
           customLeftArrow={<></>}
           customRightArrow={<></>}
           // containerClass="carousel-container"
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          dotListClass="custom-dot-list-style"
+          removeArrowOnDeviceType={['tablet', 'mobile']}
           itemClass="carousel-item-padding-40-px"
         >
           <Aggregator />

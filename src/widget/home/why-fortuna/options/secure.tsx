@@ -9,7 +9,7 @@ export default function Secure() {
       <CardBorder img={gradient2} />
 
       <div className="relative overflow-hidden">
-        <div className="md:flex">
+        <div className="flex flex-row md:flex-row">
           <CardHeader
             title="Secure"
             summary="All our smart contracts are thoroughly audited and all the forms locked are covered by insurance."
