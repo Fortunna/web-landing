@@ -1,35 +1,35 @@
-import Typography from "@/components/typography";
-import React from "react";
-import Image from "next/image";
-import cash from "../../../../public/cash.png";
-import coin from "../../../../public/coin.png";
-import gold from "../../../../public/gold.png";
-import chart from "../../../../public/chart.png";
-import PageWrapper from "@/components/pageWrapper";
-import defi from "../../../../public/defi.png";
-import { AnimateFadeIn, RenderWhenInView } from "@/animations";
+import Typography from '@/components/typography';
+import React from 'react';
+import Image from 'next/image';
+import cash from '../../../../public/cash.png';
+import coin from '../../../../public/coin.png';
+import gold from '../../../../public/gold.png';
+import chart from '../../../../public/chart.png';
+import PageWrapper from '@/components/pageWrapper';
+import defi from '../../../../public/defi.png';
+import { AnimateFadeIn, RenderWhenInView } from '@/animations';
 // import fortunaMobile from "../../../../public/fortuna-mobile.png";
-import img from "public/div.lazy-background-image.png";
+import img from 'public/div.lazy-background-image.png';
 export default function CommunityOwnedSection() {
   const values = [
     {
-      value: "$0",
-      label: "Total Value Locked",
+      value: '$0',
+      label: 'Total Value Locked',
       img: coin,
     },
     {
-      value: "$0",
-      label: "Total Locked FTN",
+      value: '$0',
+      label: 'Total Locked FTN',
       img: gold,
     },
     {
-      value: "$0",
-      label: "Circulating Market Cap",
+      value: '$0',
+      label: 'Circulating Market Cap',
       img: cash,
     },
     {
-      value: "$0",
-      label: "Circulating Supply",
+      value: '$0',
+      label: 'Circulating Supply',
       img: chart,
     },
   ];
@@ -44,8 +44,10 @@ export default function CommunityOwnedSection() {
     icon: React.ReactElement;
   }) => {
     return (
-      <div className="text-center  ">
-        <div className="mx-auto in inline-block">{icon}</div>
+      <div className="text-center">
+        <div className="mx-auto min-w-[28px] min-h-[28px] in inline-block">
+          {icon}
+        </div>
         <Typography
           className="md:!text-[40px] text-[21px] !font-aeonik-fono text-[#F4F0FF]"
           label={value}
@@ -96,7 +98,7 @@ export default function CommunityOwnedSection() {
                   <div
                     key={index}
                     className={` overflow-hidden relative ${
-                      index > 1 ? "md:mt-0 mt-12" : ""
+                      index > 1 ? 'md:mt-0 mt-12' : ''
                     }`}
                   >
                     <Value
@@ -105,6 +107,7 @@ export default function CommunityOwnedSection() {
                       icon={
                         <Image
                           alt="asset"
+                          loading="eager"
                           className="md:w-10 w-8"
                           src={_value.img}
                         />

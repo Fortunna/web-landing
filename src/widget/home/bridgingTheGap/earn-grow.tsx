@@ -1,16 +1,16 @@
-import Typography from "@/components/typography";
-import React from "react";
-import brain from "../../../../public/brain.png";
-import Images from "next/image";
-import earn from "../../../../public/Graphic-Transactions.png";
-import Link from "next/link";
+import Typography from '@/components/typography';
+import React from 'react';
+import brain from '../../../../public/brain.png';
+import earn from '../../../../public/Graphic-Transactions.png';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function EarnGrow() {
   const hoverStyles =
-    "hover:bg-[#311e41] hover:scale-95 hover:shadow-md shadow-white transition-all ";
+    'hover:bg-[#311e41] hover:scale-95 hover:shadow-md shadow-white transition-all ';
   return (
     <Link
-      href={"https://app.fortunafi.io/earn/farms"}
+      href={'https://app.fortunafi.io/earn/farms'}
       target="_blank"
       className={`bg-[#171717] text-start block bg-right-bottom bg-no-repeat p-8 md:mt-0 mt-6 cursor-pointer rounded-[20px] ${hoverStyles}`}
     >
@@ -56,7 +56,12 @@ export default function EarnGrow() {
         </div>
         <div className="relative flex items-center justify-center">
           <div className="">
-            <Images src={earn} className="!w-[200px] h-auto" alt="" />
+            <Image
+              src={earn}
+              className="!w-[200px] h-auto"
+              loading="eager"
+              alt=""
+            />
           </div>
         </div>
       </div>

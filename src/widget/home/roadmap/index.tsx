@@ -18,7 +18,7 @@ const TopConnector = () => {
       <path
         d="M199.876 71C185.346 29.917 146.311 0.5 100.438 0.5C54.565 0.5 15.53 29.917 1 71"
         stroke="url(#paint0_linear_772_53487)"
-        stroke-linecap="round"
+        strokeLinecap="round"
       />
       <defs>
         <linearGradient
@@ -29,8 +29,8 @@ const TopConnector = () => {
           y2="75.465"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#414FA2" />
-          <stop offset="1" stop-color="#EE4492" stop-opacity="0" />
+          <stop stopColor="#414FA2" />
+          <stop offset="1" stopColor="#EE4492" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>
@@ -165,7 +165,7 @@ const Pointer = ({ primary }: { primary: boolean }) => {
           height="16"
           rx="8"
           fill={'#00031B'}
-          shape-rendering="crispEdges"
+          shapeRendering="crispEdges"
         />
         <rect x="10" y="10" width="8" height="8" rx="4" fill="#EE4492" />
         <rect
@@ -175,8 +175,8 @@ const Pointer = ({ primary }: { primary: boolean }) => {
           height="14"
           rx="7"
           stroke="#EE4492"
-          stroke-width="2"
-          shape-rendering="crispEdges"
+          strokeWidth="2"
+          shapeRendering="crispEdges"
         />
       </g>
       <defs>
@@ -187,9 +187,9 @@ const Pointer = ({ primary }: { primary: boolean }) => {
           width="28"
           height="28"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"

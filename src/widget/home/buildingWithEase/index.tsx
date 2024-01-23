@@ -26,7 +26,7 @@ export default function BuildingWithEaseSection() {
             </div>
           </div>
         </PageWrapper>
-        <div className="bg-[url(/star.pngg)] bg-no-repeat bg-right-top">
+        <div className="">
           <PageWrapper>
             <div className="md:grid grid-cols-[30%_auto] md:gap-32 mb-[30px]">
               <div className="block md:hidden mb-8">

@@ -58,11 +58,11 @@ module.exports = {
         'caption-3': '15px',
       },
       backgroundImage: {
-        'why-bg-1': 'url(/div.sc-7dd06286-1.png)',
+        'why-bg-1': 'url(/div.sc-7dd06286-1.webp)',
         'learn-1': 'url(/learn-bg-1.png)',
         'learn-2': 'url(/learn-2.png)',
         'round-bg': 'url(/round-bg.png)',
-        'why-bg-1': 'url(/div.sc-7dd06286-1.png)',
+        'why-bg-1': 'url(/div.sc-7dd06286-1.webp)',
         shade: 'url(/bg-bridging.png)',
         star: 'url(/star.png)',
         defi: 'url(/defi.webp)',

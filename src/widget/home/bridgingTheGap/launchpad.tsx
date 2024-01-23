@@ -1,15 +1,15 @@
-import Typography from "@/components/typography";
-import React from "react";
-import launchpad from "public/launchpad.png";
-import Image from "next/image";
-import Link from "next/link";
+import Typography from '@/components/typography';
+import React from 'react';
+import launchpad from 'public/launchpad.png';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Launchpad() {
   const hoverStyles =
-    "hover:bg-[#311e41] hover:scale-95  hover:shadow-md shadow-white transition-all ";
+    'hover:bg-[#311e41] hover:scale-95  hover:shadow-md shadow-white transition-all ';
   return (
     <Link
-      href={"https://app.fortunafi.io/earn/farms"}
+      href={'https://app.fortunafi.io/earn/farms'}
       target="_blank"
       className={`${hoverStyles} bg-[#171717] block md:h-full cursor-pointer md:pb-[150px] text-start rounded-[20px] p-8`}
     >
@@ -48,7 +48,12 @@ export default function Launchpad() {
         </svg>
 
         <div className="mt-28 clear-both overflow-hidden"></div>
-        <Image className="w-[300px] mb-9 " src={launchpad} alt="" />
+        <Image
+          className="w-[300px] mb-9"
+          loading="eager"
+          src={launchpad}
+          alt=""
+        />
         <Typography
           className="!font-inter-bold font-bold text-white md:!text-[30px] !text-[28px] !leading-[33px] md:!leading-[40px]"
           variant="semi-subtitle"
