@@ -87,6 +87,7 @@ export default function CommunityOwnedSection() {
             width={70}
             className="mx-auto md:block hidden mt-[58px]"
             height={70}
+            loading="eager"
             src={img}
             alt=""
           />
