@@ -14,7 +14,7 @@ export default function Secure() {
             title="Secure"
             summary="All our smart contracts are thoroughly audited and all the forms locked are covered by insurance."
           />
-          <div className="md:w-1/2 relative overflow-hidden md:mt-0 mt-10">
+          <div className="w-1/3 relative  md:mt-0 mt-10">
             <Key />
           </div>
         </div>

@@ -349,7 +349,7 @@ export default function Header() {
               >
                 <div className="flex w-full max-w-[1400px] justify-center">
                   <div
-                    className={` flex w-full justify-between items-center  ${
+                    className={` flex w-full justify-between items-center  min-w-[310px] ${
                       ''
                       // fixedHeader ? "md:py-[20px] shadow-md" : "md:py-[35px]"
                     } py-[10px] `}
@@ -405,7 +405,7 @@ export default function Header() {
               </div>
 
               <PageWrapper>
-                <div className="flex items-center md:mt-[100px] mt-14">
+                <div className="flex items-center md:mt-[100px] mt-28">
                   <div className="">
                     <Typography
                       variant="semi-heading"
@@ -432,11 +432,11 @@ export default function Header() {
             <Typography
               variant="subtitle"
               use="h1"
-              className="!font-atilla md:!text-[45px] mb-72 text-center !text-[18px] md:py-[110px] py-10 md:!leading-[50px] md:!leading-[50px] !leading-[25px]"
+              className="!font-atilla md:!text-[45px] mb-72 text-center !text-[18px] md:py-[110px] py-12 md:!leading-[50px] !leading-[25px]"
               label=""
             >
               <>
-                Multi-Chain Staking <div></div> Solutions
+                Multi-Chain Staking <br /> Solutions
               </>
             </Typography>
           </div>
