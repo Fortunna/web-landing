@@ -1,12 +1,12 @@
-import Badge from "@/components/badge";
-import PageWrapper from "@/components/pageWrapper";
-import Typography from "@/components/typography";
-import React from "react";
-import Image from "next/image";
-import divider from "../../../../public/divider.png";
-import Launchpad from "./launchpad";
-import Aggregator from "./aggregator";
-import EarnGrow from "./earn-grow";
+import Badge from '@/components/badge';
+import PageWrapper from '@/components/pageWrapper';
+import Typography from '@/components/typography';
+import React from 'react';
+import Image from 'next/image';
+import divider from '../../../../public/divider.png';
+import Launchpad from './launchpad';
+import Aggregator from './aggregator';
+import EarnGrow from './earn-grow';
 
 const our_values = [
   {
@@ -62,9 +62,9 @@ const our_values = [
         </defs>
       </svg>
     ),
-    title: "Stakepad",
+    title: 'Stakepad',
     summary:
-      "Empowering projects to create custom pools/farms for their tokens in a matter of minutes and with minimal comissions",
+      'Empowering projects to create custom pools/farms for their tokens in a matter of minutes and with minimal comissions',
   },
   {
     icon: (
@@ -121,9 +121,9 @@ const our_values = [
         </defs>
       </svg>
     ),
-    title: "A.I Aggregator",
+    title: 'A.I Aggregator',
     summary:
-      "Maximize your yields with the power of artificial intelligence in a passive and effortless manner , with full control of the risk level ",
+      'Maximize your yields with the power of artificial intelligence in a passive and effortless manner , with full control of the risk level ',
   },
   {
     icon: (
@@ -190,9 +190,9 @@ const our_values = [
         </defs>
       </svg>
     ),
-    title: "Earn and Grow",
+    title: 'Earn and Grow',
     summary:
-      "Stake your tokens for passive income and participate in yield farming to maximize your returns.",
+      'Stake your tokens for passive income and participate in yield farming to maximize your returns.',
   },
   {
     icon: (
@@ -248,9 +248,9 @@ const our_values = [
         </defs>
       </svg>
     ),
-    title: "Governance",
+    title: 'Governance',
     summary:
-      "Be an active participant in our decentralized decision-making process and shape the future of our platform",
+      'Be an active participant in our decentralized decision-making process and shape the future of our platform',
   },
 ];
 
@@ -319,7 +319,7 @@ export default function BridgingTheGapSection() {
             variant="subtitle"
           >
             <>
-              {" "}
+              {' '}
               Utilizing A.I technology
               <div className="text-[#dadada] md:block inline">
                 to provide superior <div></div>yields
@@ -358,7 +358,7 @@ export default function BridgingTheGapSection() {
             })} */}
             {/* </div> */}
             <div className="md:grid md:grid-cols-[40%_auto] md:gap-6">
-              <div className="md:mb-0 mb-6">
+              <div className="md:mb-0 mb-6 overflow-hidden">
                 <Launchpad />
               </div>
               <div>

@@ -144,32 +144,29 @@ export default function WhyFortuna() {
                 /> */}
             {/* </div> */}
             <PageWrapper>
-              <div>
-                <div className="md:grid grid-cols-2 gap-4  hidden">
-                  <div>
-                    {/* <RenderWhenInView triggerOnce={false}> */}
+              <>
+                <div className="md:grid grid-cols-2 gap-4 hidden">
+                  <div className="flex flex-col gap-4">
                     <div
-                      className={`${cardClass} border-2 md:mb-0 mb-10 hover:bg-[#311e41] hover:scale-95  hover:shadow-md shadow-white transition-all`}
+                      className={`${cardClass} h-2/3 border-2 hover:bg-[#311e41] hover:scale-95 hover:shadow-md shadow-white transition-all`}
                     >
                       <Aggregator />
                     </div>
-                    {/* </RenderWhenInView> */}
                     <div
-                      className={`${cardClass} mt-[12px] border-2 md:mb-0 mb-10 hover:bg-[#311e41] hover:scale-95  hover:shadow-md shadow-white transition-all`}
+                      className={`${cardClass} h-1/3 min-h-[220px] border-2 hover:bg-[#311e41] hover:scale-95 hover:shadow-md shadow-white transition-all`}
                     >
                       <Secure />
                     </div>
                   </div>
-                  <div className="">
+                  <div className="flex flex-col gap-4">
                     <div
-                      className={`${cardClass} relative border-2 md:mb-0 mb-10 hover:bg-[#311e41] hover:scale-95  hover:shadow-md shadow-white transition-all`}
+                      className={`${cardClass} h-1/3 overflow-hidden relative border-2 hover:bg-[#311e41] hover:scale-95 hover:shadow-md shadow-white transition-all`}
                     >
                       <PoolCreation />
                     </div>
                     <div
-                      className={`${cardClass} h-[390px]  mt-[12px] border-2 md:mb-0 mb-10 hover:bg-[#311e41] hover:scale-95  hover:shadow-md shadow-white transition-all`}
+                      className={`${cardClass} h-2/3 min-h-[440px] w-full border-2 hover:bg-[#311e41] hover:scale-95 hover:shadow-md shadow-white transition-all`}
                     >
-                      {' '}
                       <LowTransaction />
                     </div>
                   </div>
@@ -178,7 +175,7 @@ export default function WhyFortuna() {
                 <div className="md:hidden block">
                   <WhyFortunaMobile />
                 </div>
-              </div>
+              </>
             </PageWrapper>
           </div>
         </div>

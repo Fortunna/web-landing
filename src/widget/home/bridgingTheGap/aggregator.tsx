@@ -12,7 +12,7 @@ export default function Aggregator() {
     <Link
       href={'https://app.fortunafi.io/earn/farms'}
       target="_blank"
-      className={`bg-[#171717] text-start block md:bg-[url(/brain.png)]   bg-[length:500px_auto] !bg-[700%_25px] bg-no-repeat p-8 cursor-pointer rounded-[20px] ${hoverStyles}`}
+      className={`bg-[#171717] text-start block md:bg-[url(/brain.png)]   bg-[length:500px_auto] !bg-[100px_-50px] bg-no-repeat p-8 cursor-pointer rounded-[20px] ${hoverStyles}`}
     >
       <Typography
         variant="body0.5"
@@ -30,7 +30,12 @@ export default function Aggregator() {
             <Typography
               className="!font-inter-bold font-bold text-white md:!text-[30px] !text-[26px] !leading-[33px] md:!leading-[40px]"
               variant="semi-subtitle"
-              label="Multi-Chain Yield Optimizer"
+              label="Multi-Chain"
+            />
+            <Typography
+              className="!font-inter-bold font-bold text-white whitespace-nowrap md:!text-[30px] !text-[26px] !leading-[33px] md:!leading-[40px]"
+              variant="semi-subtitle"
+              label="Yield Optimizer"
             />
           </div>
         </div>

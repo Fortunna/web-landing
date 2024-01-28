@@ -82,6 +82,10 @@ module.exports = {
       lineHeight: {
         'leading-24': '24px',
       },
+      screens: {
+        screen500: { min: '500px' },
+        screen421: { min: '421px' },
+      },
     },
   },
   plugins: [],
