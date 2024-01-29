@@ -1,8 +1,8 @@
 import Typography from '@/components/typography';
 import React from 'react';
 import brain from '../../../../public/brain.png';
-import Images from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Aggregator() {
   const hoverStyles =
@@ -24,7 +24,7 @@ export default function Aggregator() {
       <div className="md:grid md:grid-cols-[65%_auto] min-h-[230px]">
         <div>
           <div className="w-[120%] md:hidden my-[-30px]">
-            <Images src={brain} loading="eager" alt="" />
+            <Image src={brain} loading="eager" alt="" />
           </div>
           <div className="md:mt-16 ">
             <Typography

@@ -311,7 +311,7 @@ const navs = [
   },
   {
     title: 'Docs',
-    to: 'https://fortuna-finance-1.gitbook.io/fortuna-finance/',
+    to: 'https://fortuna-finance-1.gitbook.io/documentation/',
   },
   // {
   //   title: "Product",
@@ -335,10 +335,11 @@ export default function Header() {
   // }, []);
 
   return (
-    <div className=" bg-[url(/star-bg.png)]">
+    <div rel="preload" className=" bg-[url(/star-bg.png)]">
       <div
         // onScroll={handleScroll}
         id="bg-wrapper"
+        rel="preload"
         className=" overflow-hidden  bg-top bg-no-repeat relative bg-[url(/bg-blur-2.webp)] bg-[length:100%_100%] min-h-[200px]"
       >
         <div className="bg-[url(/vector.png)] md:bg-[length:450px] bg-[length:200px] bg-no-repeat md:bg-[-300px_100px] bg-[-100px_200px]">

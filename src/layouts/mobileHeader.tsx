@@ -1,17 +1,17 @@
-import { AnimateFadeIn, RenderWhenInView } from "@/animations";
-import AppLogo from "@/components/logo";
-import Link from "next/link";
-import React, { MouseEventHandler } from "react";
+import { AnimateFadeIn, RenderWhenInView } from '@/animations';
+import AppLogo from '@/components/logo';
+import Link from 'next/link';
+import React, { MouseEventHandler } from 'react';
 
 export default function MobileHeader({ onClose }: { onClose: () => void }) {
   const navs = [
     {
-      title: "About",
-      to: "/#about",
+      title: 'About',
+      to: '/#about',
     },
     {
-      title: "Docs",
-      to: "https://fortuna-finance-1.gitbook.io/fortuna-finance/",
+      title: 'Docs',
+      to: 'https://fortuna-finance-1.gitbook.io/documentation/',
     },
     // {
     //   title: "Product",
@@ -25,7 +25,7 @@ export default function MobileHeader({ onClose }: { onClose: () => void }) {
 
   return (
     <div
-      style={{ backdropFilter: "blur(8px)" }}
+      style={{ backdropFilter: 'blur(8px)' }}
       className="h-screen w-full bg-[rgba(0,0,0,.7)] fixed top-0 z-30 px-4 py-[20px]"
     >
       <div className="flex justify-between">
