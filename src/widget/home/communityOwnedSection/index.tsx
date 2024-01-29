@@ -71,7 +71,7 @@ export default function CommunityOwnedSection() {
       /> */}
       <div className="overflow-hidden"></div>
       <div className="bg-defi bg-no-repeat !pt-[167px] bg-[4%_20px] w-full  md:bg-[length:300px]  bg-[length:200px_200px] overflow-hidden">
-        <div>
+        <div className="text-white">
           <Typography
             use="h3"
             className="md:text-start !text-center overflow-hidden !w-full md:px-0 px-5"
@@ -79,7 +79,7 @@ export default function CommunityOwnedSection() {
           >
             <>
               A Transparent DeFi
-              <div className="text-[#dadada] md:block inline">Platform</div>
+              <div className="md:block inline"> Platform</div>
             </>
           </Typography>
 
