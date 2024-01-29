@@ -90,7 +90,7 @@ export default function JonFortuna() {
             <div className="md:flex md:items-center justify-end">
               <div className="md:mt-0 mt-10">
                 <Link
-                  href={'https://fortuna-finance-1.gitbook.io/fortuna-finance/'}
+                  href={'https://fortuna-finance-1.gitbook.io/documentation/'}
                   target="_blank"
                 >
                   <Button
